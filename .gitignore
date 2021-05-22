@@ -23,3 +23,4 @@ data/
 *,cover
 node_modules
 frontend/dist
+.cache*

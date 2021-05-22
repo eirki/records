@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from operator import itemgetter
 import os
 from typing import Optional, TypedDict
 
@@ -10,7 +11,12 @@ from spotipy.oauth2 import SpotifyOAuth
 
 from . import config
 
-scope = "user-library-read"
+scope = [
+    "user-library-read",
+    "user-read-playback-state",
+    "user-modify-playback-state",
+    "user-read-currently-playing",
+]
 
 
 class CacheHandler(spotipy.cache_handler.CacheHandler):
@@ -54,18 +60,46 @@ def check_auth() -> tuple[bool, SpotifyOAuth]:
     return authed, auth_manager
 
 
-def albums(spotify: Spotify) -> list:
-    results = spotify.current_user_saved_albums(limit=1, offset=4)
-    return [
+def play(spotify: Spotify, uri: str) -> None:
+    spotify.start_playback(context_uri=uri)
+
+
+def albums(spotify: Spotify) -> dict[str, list[dict]]:
+    album_data = []
+    results = spotify.current_user_saved_albums(limit=20)
+    album_data.extend(results["items"])
+    while results["next"]:
+        results = spotify.next(results)
+        album_data.extend(results["items"])
+        print(len(album_data))
+    albums = [
         {
             "name": album["album"]["name"],
+            "id": album["album"]["id"],
+            "uri": album["album"]["uri"],
             "artists": album["album"]["artists"],
             "release_date": album["album"]["release_date"],
             "images": album["album"]["images"],
             "added_at": album["added_at"],
         }
-        for album in results["items"]
+        for album in album_data
     ]
+    by_artist = sorted(
+        albums,
+        key=lambda album: (
+            album["artists"][0]["name"].lower().removeprefix("the "),
+            album["release_date"],
+        ),
+    )
+    by_date = sorted(
+        albums,
+        key=itemgetter("added_at"),
+        reverse=True,
+    )[:10]
+    data = {"all_albums": by_artist, "recent_albums": by_date}
+    with open("blarg.json", "w") as f:
+        json.dump(data, f)
+    return data
 
 
 class AlbumResponse(TypedDict):

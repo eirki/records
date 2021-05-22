@@ -7,7 +7,7 @@ import replace from '@rollup/plugin-replace'
 import alias from '@rollup/plugin-alias'
 import scss from 'rollup-plugin-scss'
 import esbuild from 'rollup-plugin-esbuild'
-import svg from 'rollup-plugin-svg'
+import svg from 'rollup-plugin-vue-inline-svg'
 
 function makeConfig(page, dev) {
   const res = {

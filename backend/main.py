@@ -1,9 +1,8 @@
 import sys
-import typing as t
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.gzip import GZipMiddleware
-from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
+from fastapi.responses import JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from spotipy import Spotify
@@ -41,24 +40,24 @@ async def redirect(code: str) -> RedirectResponse:
     return RedirectResponse("/")
 
 
-@app.get("/albums")
-async def albums(
-    request: Request,
-) -> t.Union[RedirectResponse, HTMLResponse, JSONResponse]:
+@app.get("/")
+async def root(request: Request):
     authed, auth_manager = api.check_auth()
     if not authed:
         return RedirectResponse(auth_manager.get_authorize_url())
     spotify = Spotify(auth_manager=auth_manager)
     albums = api.albums(spotify)
-    return JSONResponse(content=albums)
-
-
-@app.get("/")
-async def root(request: Request):
     return templates.TemplateResponse(
         "index.html",
-        {
-            "request": request,
-            "albums": albums,
-        },
+        {"request": request, "data": albums},
     )
+
+
+@app.get("/play")
+async def play(uri: str):
+    authed, auth_manager = api.check_auth()
+    if not authed:
+        return JSONResponse({"success": False}, status_code=500)
+    spotify = Spotify(auth_manager=auth_manager)
+    api.play(spotify, uri)
+    return JSONResponse({"success": True}, status_code=200)

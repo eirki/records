@@ -1,23 +1,21 @@
 <template>
-  <div class="p-3"></div>
+  <Home :all_albums="all_albums" :recent_albums="recent_albums" />
 </template>
 
 <script>
 import Vue from "vue";
 export { Vue };
 
-import Album from "./components/Album.vue";
+import Home from "./components/Home.vue";
 
 export default {
   props: {
-    albums: Array,
+    all_albums: Array,
+    recent_albums: Array,
   },
   components: {
-    Album,
+    Home,
   },
 };
 </script>
 
-<style lang="scss">
-@import "base";
-</style>
