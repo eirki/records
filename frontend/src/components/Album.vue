@@ -1,66 +1,77 @@
 <template>
-  <div class="container" :style="`width: ${size}px`">
+  <div
+    class="container"
+    :style="`width: ${size}px; height: ${size}px;padding: ${padding}px`"
+    ref="elem"
+    v-on:click="play"
+  >
     <img
       class="album-art"
       :src="artUrl"
       :alt="name"
       width="100%"
       height="100%"
+      @mouseover="showImage = true"
+      @mouseleave="showImage = false"
     />
-    <div class="text-box">
-      <div class="album-info" v-if="cardSize > 192">
-        <p>
-          <b>
-            {{ name }}
-          </b>
-        </p>
-        <p v-for="artist in artists" :key="artist.name">
-          {{ artist.name }}
-        </p>
-      </div>
-      <div v-on:click="play">
-        <PlayIcon
-          :width="iconSize"
-          :height="iconSize"
-          viewBox="0 0 16 16"
-          class="play-icon"
-        />
-      </div>
+    <div class="overlay">
+      <img
+        :src="this.images[0].url"
+        :alt="name"
+        :width="overlay_size"
+        :height="overlay_size"
+        v-show="showImage"
+        :style="{
+          position: 'relative',
+          top: topHalf ? `-${size}px` : `-${topOffset}px`,
+          left: leftHalf ? `${size}px` : `-${leftOffset}px`,
+        }"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import PlayIcon from "bootstrap-icons/icons/play-circle-fill.svg";
+function checkLocation(self) {
+  let { left, top, bottom, right } = self.$refs.elem.getBoundingClientRect();
+  self.topHalf = self.parent_height / 2 > (top + bottom) / 2;
+  // console.log(self.topHalf);
+  self.leftHalf = self.parent_width / 2 > (left + right) / 2;
+  // console.log(self.leftHalf);
+}
 
 export default {
-  components: {
-    PlayIcon,
-  },
   props: {
     album: Object,
     size: Number,
+    overlay_mult: Number,
+    index: Number,
+    padding: { type: Number, default: 0 },
+    parent_height: { type: Number, default: window.innerHeight },
+    parent_width: { type: Number, default: window.innerWidth },
   },
   data() {
     return {
-      hover: false,
-      name: this.album.name,
-      artists: this.album.artists,
+      showImage: false,
       uri: this.album.uri,
       images: this.album.images,
-      added_at: this.album.added_at,
+      name: this.album.name,
       playUrl: "",
+      topHalf: false,
+      leftHalf: false,
     };
   },
   computed: {
-    cardSize() {
-      return this.size + 1;
+    overlay_size() {
+      return this.size * this.overlay_mult - this.padding * 2;
     },
-    iconSize() {
-      return this.size / 3;
+    leftOffset() {
+      return this.size * this.overlay_mult;
+    },
+    topOffset() {
+      return this.size * this.overlay_mult;
     },
     artUrl() {
-      console.log(this.size);
       if (this.size <= 64) {
         return this.images[2].url;
       } else if (this.size <= 300) {
@@ -74,6 +85,13 @@ export default {
     let tmp = new URL("http://example.com");
     tmp.search = new URLSearchParams({ uri: this.uri }).toString();
     this.playUrl = "/play" + tmp.search;
+  },
+  mounted() {
+    checkLocation(this);
+    window.addEventListener("resize", () => checkLocation(this));
+  },
+  updated() {
+    checkLocation(this);
   },
   methods: {
     play() {
@@ -97,56 +115,22 @@ export default {
 
 <style scoped>
 .container {
-  position: relative;
-  width: 50%;
-  background-color: #333;
-
-  margin: 5px;
+  position: static;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.container:hover {
+  outline: 1px solid white;
+  outline-offset: -3px;
+  /* border: solid;
+   */
+  /* border-color: white; */
 }
 
-.album-art {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: 0.2s ease;
-  backface-visibility: hidden;
-}
-
-.text-box {
-  font-family: Sans-Serif;
-  color: white;
-  font-size: 16px;
-  transition: 0.2s ease;
-  opacity: 0;
-}
-
-.container:hover .album-art {
-  opacity: 0.3;
-}
-
-.container:hover .text-box {
-  opacity: 1;
-}
-
-.play-icon {
+.overlay {
+  box-sizing: border-box;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-  transition: all 0.1s ease-in-out;
-}
-
-.play-icon:hover {
-  color: #108954;
-}
-
-.album-info {
-  position: absolute;
-  top: 1px;
-  left: 1px;
+  z-index: 10;
 }
 </style>
 
