@@ -1,0 +1,20 @@
+version: "3"
+services:
+  records_server:
+    container_name: records_server
+    build: .
+    env_file:
+      - .env
+    command: "venv/bin/uvicorn backend.main:app --host 0.0.0.0 --port 5006"
+    expose:
+      - 5006
+    ports:
+      - "5006:5006"
+    networks:
+      - nginx_network
+    restart: always
+
+networks:
+  nginx_network:
+    external:
+      name: nginx_default
