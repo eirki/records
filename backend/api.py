@@ -4,6 +4,7 @@ import json
 from operator import itemgetter
 import os
 from typing import Optional, TypedDict
+import uuid
 
 import spotipy
 from spotipy import Spotify
@@ -22,23 +23,23 @@ scope = [
 
 class CacheHandler(spotipy.cache_handler.CacheHandler):
     def __init__(self):
-        cache_path = ".cache"
-        username = "default_username"
-        cache_path += "-" + str(username)
-        self.cache_path = cache_path
+        self.cache_path = ".cache_" + str(uuid.uuid4())
 
-    def get_cached_token(self) -> Optional[str]:
-        print("get_cached_token")
+    def get_cached_token(self) -> Optional[dict]:
         if not os.path.exists(self.cache_path):
             return None
         with open(self.cache_path) as f:
             token_info = json.load(f)
         return token_info
 
-    def save_token_to_cache(self, token_info: str) -> None:
+    def save_token_to_cache(self, token_info: dict) -> None:
         print("save_token_to_cache")
         with open(self.cache_path, "w") as file_:
-            file_.write(json.dumps(token_info))
+            json.dump(token_info, file_)
+        self.token_info = token_info
+
+    def delete_cached_token(self) -> None:
+        os.remove(self.cache_path)
 
 
 def auther(cache) -> SpotifyOAuth:
@@ -53,12 +54,16 @@ def auther(cache) -> SpotifyOAuth:
     )
 
 
-def check_auth() -> tuple[bool, SpotifyOAuth]:
+def check_auth(
+    stored_token: dict | None,
+) -> tuple[bool, SpotifyOAuth, Optional[CacheHandler]]:
     cache_handler = CacheHandler()
+    if stored_token:
+        cache_handler.save_token_to_cache(stored_token)
     auth_manager = auther(cache_handler)
-    token = cache_handler.get_cached_token()
-    authed = token is not None and auth_manager.validate_token(token)
-    return authed, auth_manager
+    new_token = cache_handler.get_cached_token()
+    authed = new_token is not None and auth_manager.validate_token(new_token)
+    return authed, auth_manager, cache_handler
 
 
 def play(spotify: Spotify, uri: str) -> tuple[bool, str]:
@@ -102,8 +107,6 @@ def albums(spotify: Spotify) -> dict[str, list[dict]]:
         reverse=True,
     )[:10]
     data = {"all_albums": by_artist, "recent_albums": by_date}
-    with open("blarg.json", "w") as f:
-        json.dump(data, f)
     return data
 
 
