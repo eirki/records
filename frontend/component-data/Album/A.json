@@ -1,34 +1,39 @@
 {
-    "name": "Midnight Sun",
-    "artists": [
-        {
-            "external_urls": {
-                "spotify": "https://open.spotify.com/artist/5xGf0vferh9W3smWe3txU3"
+    "album": {
+        "name": "It's Real",
+        "id": "3qoExOd0YfA7kTBwiUexIT",
+        "uri": "spotify:album:3qoExOd0YfA7kTBwiUexIT",
+        "artists": [
+            {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/2LdMozrLZExZ27oOAnUgkb"
+                },
+                "href": "https://api.spotify.com/v1/artists/2LdMozrLZExZ27oOAnUgkb",
+                "id": "2LdMozrLZExZ27oOAnUgkb",
+                "name": "Ex Hex",
+                "type": "artist",
+                "uri": "spotify:artist:2LdMozrLZExZ27oOAnUgkb"
+            }
+        ],
+        "release_date": "2019-03-22",
+        "images": [
+            {
+                "height": 640,
+                "url": "https://i.scdn.co/image/ab67616d0000b273ea5591fb8d7a2c0fa2a1abcb",
+                "width": 640
             },
-            "href": "https://api.spotify.com/v1/artists/5xGf0vferh9W3smWe3txU3",
-            "id": "5xGf0vferh9W3smWe3txU3",
-            "name": "The GOASTT (The Ghost Of A Saber Tooth Tiger)",
-            "type": "artist",
-            "uri": "spotify:artist:5xGf0vferh9W3smWe3txU3"
-        }
-    ],
-    "release_date": "2014-04-29",
-    "images": [
-        {
-            "height": 640,
-            "url": "https://i.scdn.co/image/ab67616d0000b273b62a5647257ddbaee927861f",
-            "width": 640
-        },
-        {
-            "height": 300,
-            "url": "https://i.scdn.co/image/ab67616d00001e02b62a5647257ddbaee927861f",
-            "width": 300
-        },
-        {
-            "height": 64,
-            "url": "https://i.scdn.co/image/ab67616d00004851b62a5647257ddbaee927861f",
-            "width": 64
-        }
-    ],
-    "added_at": "2020-10-26T09:02:36Z"
+            {
+                "height": 300,
+                "url": "https://i.scdn.co/image/ab67616d00001e02ea5591fb8d7a2c0fa2a1abcb",
+                "width": 300
+            },
+            {
+                "height": 64,
+                "url": "https://i.scdn.co/image/ab67616d00004851ea5591fb8d7a2c0fa2a1abcb",
+                "width": 64
+            }
+        ],
+        "added_at": "2021-05-13T07:00:09Z"
+    },
+    "size": 300
 }

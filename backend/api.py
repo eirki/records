@@ -69,9 +69,18 @@ def check_auth(
 def play(spotify: Spotify, uri: str) -> tuple[bool, str]:
     try:
         spotify.start_playback(context_uri=uri)
+        return True, ""
     except SpotifyException as exc:
-        return False, exc.msg
-    return True, ""
+        try:
+            devices = spotify.devices()["devices"]
+            if devices:
+                device_id = devices[0]["id"]
+                spotify.start_playback(device_id=device_id, context_uri=uri)
+            else:
+                message = exc.msg
+        except SpotifyException as exc_retry:
+            message = exc_retry.msg
+    return False, message
 
 
 def albums(spotify: Spotify) -> dict[str, list[dict]]:

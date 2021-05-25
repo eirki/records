@@ -9,7 +9,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from spotipy import Spotify
 
-from . import api, dev
+from . import api, dev, version
 
 DEBUG_MODE = "--reload" in sys.argv
 
@@ -24,6 +24,11 @@ if DEBUG_MODE:
         "/node_modules", StaticFiles(directory="node_modules"), name="node_modules"
     )
     app.include_router(dev.router)
+
+
+@app.route("/version")
+def version_page(spotify_token: Optional[str] = Cookie(None)) -> JSONResponse:
+    return JSONResponse({"version": version.version})
 
 
 @app.get("/redirect")
@@ -75,3 +80,11 @@ async def play(uri: str, spotify_token: Optional[str] = Cookie(None)):
         set_token_cookie(response, cache)
         cache.delete_cached_token()
     return response
+
+
+@app.get("/devices")
+async def devices(spotify_token: Optional[str] = Cookie(None)):
+    spotify_token_j = json.loads(spotify_token) if spotify_token else None
+    authed, auth_manager, cache = api.check_auth(spotify_token_j)
+    spotify = Spotify(auth_manager=auth_manager)
+    return spotify.devices()

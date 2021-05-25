@@ -25,3 +25,4 @@ node_modules
 frontend/dist
 .cache*
 node_modules
+frontend/component-data/*
