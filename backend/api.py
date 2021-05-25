@@ -7,6 +7,7 @@ from typing import Optional, TypedDict
 
 import spotipy
 from spotipy import Spotify
+from spotipy.exceptions import SpotifyException
 from spotipy.oauth2 import SpotifyOAuth
 
 from . import config
@@ -60,8 +61,12 @@ def check_auth() -> tuple[bool, SpotifyOAuth]:
     return authed, auth_manager
 
 
-def play(spotify: Spotify, uri: str) -> None:
-    spotify.start_playback(context_uri=uri)
+def play(spotify: Spotify, uri: str) -> tuple[bool, str]:
+    try:
+        spotify.start_playback(context_uri=uri)
+    except SpotifyException as exc:
+        return False, exc.msg
+    return True, ""
 
 
 def albums(spotify: Spotify) -> dict[str, list[dict]]:

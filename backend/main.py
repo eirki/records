@@ -59,5 +59,8 @@ async def play(uri: str):
     if not authed:
         return JSONResponse({"success": False}, status_code=500)
     spotify = Spotify(auth_manager=auth_manager)
-    api.play(spotify, uri)
-    return JSONResponse({"success": True}, status_code=200)
+    success, message = api.play(spotify, uri)
+    status_code = 200 if success else 500
+    return JSONResponse(
+        {"success": success, "message": message}, status_code=status_code
+    )

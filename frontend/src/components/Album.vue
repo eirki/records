@@ -32,6 +32,14 @@
 </template>
 
 <script>
+import Toasted from "vue-toasted";
+import Vue from "vue";
+Vue.use(Toasted, {
+  theme: "toasted-primary",
+  position: "bottom-center",
+  duration: 5000,
+});
+
 function checkLocation(self) {
   let { left, top, bottom, right } = self.$refs.elem.getBoundingClientRect();
   self.topHalf = self.parent_height / 2 > (top + bottom) / 2;
@@ -56,9 +64,11 @@ export default {
       uri: this.album.uri,
       images: this.album.images,
       name: this.album.name,
+      artists: this.album.artists,
       playUrl: "",
       topHalf: false,
       leftHalf: false,
+      playingMessage: "",
     };
   },
   computed: {
@@ -85,6 +95,11 @@ export default {
     let tmp = new URL("http://example.com");
     tmp.search = new URLSearchParams({ uri: this.uri }).toString();
     this.playUrl = "/play" + tmp.search;
+
+    this.playingMessage =
+      `<div><div><b>${this.name}</b></div> <div>` +
+      this.artists.map((artist) => artist.name).join("<br>") +
+      "</div></div>";
   },
   mounted() {
     checkLocation(this);
@@ -95,17 +110,18 @@ export default {
   },
   methods: {
     play() {
-      console.log("playing");
+      Vue.toasted.clear();
+      Vue.toasted.show(this.playingMessage);
       fetch(this.playUrl)
-        .then((response) => {
-          if (response.ok) {
-            return response.json();
-          } else {
-            throw response;
+        .then((response) => response.json())
+        .then((data) => {
+          if (!data.success) {
+            Vue.toasted.error(data.message);
           }
         })
-        .then((data) => {
-          console.log(data);
+        .catch((error) => {
+          console.log(error);
+          Vue.toasted.error("Failed: Internal Server Error");
         });
     },
   },
@@ -119,12 +135,10 @@ export default {
   box-sizing: border-box;
   cursor: pointer;
 }
+
 .container:hover {
   outline: 1px solid white;
   outline-offset: -3px;
-  /* border: solid;
-   */
-  /* border-color: white; */
 }
 
 .overlay {
@@ -134,3 +148,9 @@ export default {
 }
 </style>
 
+
+<style>
+body {
+  font-family: sans-serif;
+}
+</style>
