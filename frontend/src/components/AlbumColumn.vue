@@ -1,11 +1,12 @@
 <template>
-  <div class="album-grid" ref="elem">
+  <div class="album-grid" :style="{ padding: `${padding}px`, width: '300px' }">
     <div v-for="album in albums" :key="`recent_${album.id}`">
       <Album
         :album="album"
         :size="album_size"
         :padding="padding"
-        :overlay_mult="height < width ? 6 : 5"
+        :overlay_mult="landscape ? 3 : 5"
+        v-on:play="propagatePlay($event)"
       >
       </Album>
     </div>
@@ -16,12 +17,9 @@
 import Album from "./Album.vue";
 
 function checkSize(self) {
-  let { top, left } = self.$refs.elem.getBoundingClientRect();
-  self.width = window.innerWidth - left;
-  self.height = window.innerHeight - top;
-  let size = Math.min(self.height, self.width) / self.albums.length;
-  self.album_size = size;
+  self.landscape = window.innerWidth > window.innerHeight;
 }
+
 export default {
   components: {
     Album,
@@ -32,9 +30,8 @@ export default {
   },
   data() {
     return {
-      album_size: 0,
-      width: 0,
-      height: 0,
+      landscape: window.innerWidth > window.innerHeight,
+      selected_album_id: this.albums[0].id,
     };
   },
   mounted() {
@@ -44,19 +41,28 @@ export default {
   updated() {
     checkSize(this);
   },
+  computed: {
+    album_size() {
+      return this.landscape ? 150 : 80;
+    },
+  },
+  methods: {
+    propagatePlay(arg) {
+      console.log("handling play");
+      this.$emit("play", arg);
+    },
+  },
 };
 </script>
 
 <style scoped>
-@media screen and (orientation: portrait) {
-  .album-grid {
-    display: flex;
-  }
+.album-grid {
+  display: flex;
 }
+
 @media screen and (orientation: landscape) {
   .album-grid {
-    flex-direction: column;
-    display: flex;
+    flex-wrap: wrap;
   }
 }
 </style>

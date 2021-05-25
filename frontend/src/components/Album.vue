@@ -1,7 +1,11 @@
 <template>
   <div
     class="container"
-    :style="`width: ${size}px; height: ${size}px;padding: ${padding}px`"
+    :style="{
+      width: `${size}px`,
+      height: `${size}px`,
+      padding: `${padding}px`,
+    }"
     ref="elem"
     v-on:click="play"
   >
@@ -62,6 +66,7 @@ export default {
     return {
       showImage: false,
       uri: this.album.uri,
+      id: this.album.id,
       images: this.album.images,
       name: this.album.name,
       artists: this.album.artists,
@@ -110,19 +115,10 @@ export default {
   },
   methods: {
     play() {
+      console.log("emitting play");
+      this.$emit("play", this.id);
       Vue.toasted.clear();
       Vue.toasted.show(this.playingMessage);
-      fetch(this.playUrl)
-        .then((response) => response.json())
-        .then((data) => {
-          if (!data.success) {
-            Vue.toasted.error(data.message);
-          }
-        })
-        .catch((error) => {
-          console.log(error);
-          Vue.toasted.error("Failed: Internal Server Error");
-        });
     },
   },
 };
