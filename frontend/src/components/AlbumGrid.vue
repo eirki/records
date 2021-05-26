@@ -10,7 +10,7 @@
       :parent_height="height"
       :parent_width="width"
       v-on:play="propagatePlay($event)"
-    ></Album>
+    />
   </div>
 </template>
 
@@ -72,7 +72,6 @@ export default {
   },
   methods: {
     propagatePlay(arg) {
-      console.log("handling play");
       this.$emit("play", arg);
     },
   },

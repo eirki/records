@@ -12,7 +12,7 @@
     <img
       class="album-art"
       :src="artUrl"
-      :alt="name"
+      :alt="album_data.name"
       width="100%"
       height="100%"
       @mouseover="showImage = true"
@@ -20,8 +20,8 @@
     />
     <div class="overlay">
       <img
-        :src="this.images[0].url"
-        :alt="name"
+        :src="album_data.images[0].url"
+        :alt="album_data.name"
         :width="overlay_size"
         :height="overlay_size"
         v-show="showImage"
@@ -65,11 +65,12 @@ export default {
   data() {
     return {
       showImage: false,
-      uri: this.album.uri,
-      id: this.album.id,
-      images: this.album.images,
-      name: this.album.name,
-      artists: this.album.artists,
+      album_data: this.album,
+      // uri: this.album.uri,
+      // id: this.album.id,
+      // images: this.album.images,
+      // name: this.album.name,
+      // artists: this.album.artists,
       playUrl: "",
       topHalf: false,
       leftHalf: false,
@@ -88,22 +89,22 @@ export default {
     },
     artUrl() {
       if (this.size <= 64) {
-        return this.images[2].url;
+        return this.album_data.images[2].url;
       } else if (this.size <= 300) {
-        return this.images[1].url;
+        return this.album_data.images[1].url;
       } else {
-        return this.images[0].url;
+        return this.album_data.images[0].url;
       }
     },
   },
   created() {
     let tmp = new URL("http://example.com");
-    tmp.search = new URLSearchParams({ uri: this.uri }).toString();
+    tmp.search = new URLSearchParams({ uri: this.album_data.uri }).toString();
     this.playUrl = "/play" + tmp.search;
 
     this.playingMessage =
-      `<div><div><b>${this.name}</b></div> <div>` +
-      this.artists.map((artist) => artist.name).join("<br>") +
+      `<div><div><b>${this.album_data.name}</b></div> <div>` +
+      this.album_data.artists.map((artist) => artist.name).join("<br>") +
       "</div></div>";
   },
   mounted() {
@@ -115,15 +116,13 @@ export default {
   },
   methods: {
     play() {
-      console.log("emitting play");
-      this.$emit("play", this.id);
+      this.$emit("play", this.album_data);
       Vue.toasted.clear();
       Vue.toasted.show(this.playingMessage);
     },
   },
 };
 </script>
-
 
 <style scoped>
 .container {
@@ -143,7 +142,6 @@ export default {
   z-index: 10;
 }
 </style>
-
 
 <style>
 body {

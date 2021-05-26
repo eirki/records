@@ -1,5 +1,5 @@
 <template>
-  <div class="album-grid" :style="{ padding: `${padding}px`, width: '300px' }">
+  <div class="album-col">
     <div v-for="album in albums" :key="`recent_${album.id}`">
       <Album
         :album="album"
@@ -7,8 +7,7 @@
         :padding="padding"
         :overlay_mult="landscape ? 3 : 5"
         v-on:play="propagatePlay($event)"
-      >
-      </Album>
+      />
     </div>
   </div>
 </template>
@@ -43,12 +42,11 @@ export default {
   },
   computed: {
     album_size() {
-      return this.landscape ? 150 : 80;
+      return this.landscape ? 128 : 80;
     },
   },
   methods: {
     propagatePlay(arg) {
-      console.log("handling play");
       this.$emit("play", arg);
     },
   },
@@ -56,13 +54,13 @@ export default {
 </script>
 
 <style scoped>
-.album-grid {
+.album-col {
   display: flex;
 }
 
 @media screen and (orientation: landscape) {
-  .album-grid {
-    flex-wrap: wrap;
+  .album-col {
+    flex-direction: column;
   }
 }
 </style>

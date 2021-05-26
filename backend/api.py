@@ -8,7 +8,6 @@ import uuid
 
 import spotipy
 from spotipy import Spotify
-from spotipy.exceptions import SpotifyException
 from spotipy.oauth2 import SpotifyOAuth
 
 from . import config
@@ -66,23 +65,6 @@ def check_auth(
     return authed, auth_manager, cache_handler
 
 
-def play(spotify: Spotify, uri: str) -> tuple[bool, str]:
-    try:
-        spotify.start_playback(context_uri=uri)
-        return True, ""
-    except SpotifyException as exc:
-        try:
-            devices = spotify.devices()["devices"]
-            if devices:
-                device_id = devices[0]["id"]
-                spotify.start_playback(device_id=device_id, context_uri=uri)
-            else:
-                message = exc.msg
-        except SpotifyException as exc_retry:
-            message = exc_retry.msg
-    return False, message
-
-
 def albums(spotify: Spotify) -> dict[str, list[dict]]:
     album_data = []
     results = spotify.current_user_saved_albums(limit=20)
@@ -90,7 +72,6 @@ def albums(spotify: Spotify) -> dict[str, list[dict]]:
     while results["next"]:
         results = spotify.next(results)
         album_data.extend(results["items"])
-        print(len(album_data))
     albums = [
         {
             "name": album["album"]["name"],
@@ -114,7 +95,7 @@ def albums(spotify: Spotify) -> dict[str, list[dict]]:
         albums,
         key=itemgetter("added_at"),
         reverse=True,
-    )[:10]
+    )[:3]
     data = {"all_albums": by_artist, "recent_albums": by_date}
     return data
 
