@@ -18,7 +18,7 @@
       @mouseover="showImage = true"
       @mouseleave="showImage = false"
     />
-    <div class="overlay">
+    <div class="overlay" v-if="show_overlay">
       <img
         :src="album_data.images[0].url"
         :alt="album_data.name"
@@ -45,17 +45,17 @@ Vue.use(Toasted, {
 });
 
 function checkLocation(self) {
-  let { left, top, bottom, right } = self.$refs.elem.getBoundingClientRect();
-  self.topHalf = self.parent_height / 2 > (top + bottom) / 2;
-  // console.log(self.topHalf);
-  self.leftHalf = self.parent_width / 2 > (left + right) / 2;
-  // console.log(self.leftHalf);
+  let parent = self.$parent.$refs.elem.getBoundingClientRect();
+  let { left, right, top, bottom } = self.$refs.elem.getBoundingClientRect();
+  self.leftHalf = (left + right) / 2 < (parent.left + parent.right) / 2;
+  self.topHalf = (top + bottom) / 2 < (parent.top + parent.bottom) / 2;
 }
 
 export default {
   props: {
     album: Object,
     size: Number,
+    show_overlay: { type: Boolean, default: true },
     overlay_mult: Number,
     index: Number,
     padding: { type: Number, default: 0 },
@@ -106,10 +106,6 @@ export default {
       `<div><div><b>${this.album_data.name}</b></div> <div>` +
       this.album_data.artists.map((artist) => artist.name).join("<br>") +
       "</div></div>";
-  },
-  mounted() {
-    checkLocation(this);
-    window.addEventListener("resize", () => checkLocation(this));
   },
   updated() {
     checkLocation(this);

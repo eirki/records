@@ -5,7 +5,7 @@
         :album="album"
         :size="album_size"
         :padding="padding"
-        :overlay_mult="landscape ? 3 : 5"
+        :show_overlay="false"
         v-on:play="propagatePlay($event)"
       />
     </div>
