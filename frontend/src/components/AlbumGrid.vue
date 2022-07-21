@@ -14,7 +14,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Album from "./Album.vue";
 import getSquareSize from "../squareSize.js";
 

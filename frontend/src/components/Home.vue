@@ -3,47 +3,28 @@
     <div class="flex-left">
       <div class="flex-left-top">
         <div :style="{ padding: `${padding}px` }">
-          <iframe
-            :src="`https://open.spotify.com/embed/album/${selected_album.id}`"
-            width="300"
-            :height="landscape ? 380 : 80"
-            frameborder="0"
-            allowtransparency="true"
-            allow="encrypted-media"
-          />
+          <iframe :src="`https://open.spotify.com/embed/album/${selected_album.id}`" width="300"
+            :height="landscape ? 380 : 80" frameborder="0" allowtransparency="true" allow="encrypted-media" />
         </div>
-        <AlbumColumn
-          :albums="recent_albums"
-          :padding="padding"
-          v-on:play="handlePlay($event)"
-        />
+        <AlbumColumn :albums="recent_albums" :padding="padding" v-on:play="handlePlay($evepnt)" />
       </div>
-      <img
-        v-if="landscape"
-        :src="selected_album.images[0].url"
-        :alt="selected_album.name"
-        width="100%"
-        height="100%"
+      <img v-if="landscape" :src="selected_album.images[0].url" :alt="selected_album.name" width="100%" height="100%"
         :style="{
           width: `428px`,
           height: `428px`,
           padding: `${padding}px`,
-        }"
-      />
+        }" />
     </div>
     <div>
-      <AlbumGrid
-        :albums="all_albums"
-        :padding="padding"
-        v-on:play="handlePlay($event)"
-      />
+      <AlbumGrid :albums="all_albums" :padding="padding" v-on:play="handlePlay($event)" />
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import AlbumColumn from "./AlbumColumn.vue";
 import AlbumGrid from "./AlbumGrid.vue";
+
 
 function checkSize(self) {
   self.landscape = window.innerWidth > window.innerHeight;
@@ -100,6 +81,7 @@ export default {
 .flex-left-top {
   display: flex;
 }
+
 @media screen and (orientation: portrait) and (max-width: 555px) {
   .flex-left-top {
     flex-direction: column;

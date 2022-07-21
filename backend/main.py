@@ -8,20 +8,13 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from spotipy import Spotify
 
-from . import api, dev, version
+from . import api, version
 
 DEBUG_MODE = "--reload" in sys.argv
 
 app = FastAPI()
-app.mount("/dist", StaticFiles(directory="frontend/dist"), name="dist")
-app.mount("/static", StaticFiles(directory="frontend/static"), name="static")
-templates = Jinja2Templates(directory="frontend/templates")
-
-if DEBUG_MODE:
-    app.mount(
-        "/node_modules", StaticFiles(directory="node_modules"), name="node_modules"
-    )
-    app.include_router(dev.router)
+app.mount("/assets", StaticFiles(directory="frontend/dist/assets"), name="assets")
+templates = Jinja2Templates(directory="frontend/dist")
 
 
 @app.route("/version")

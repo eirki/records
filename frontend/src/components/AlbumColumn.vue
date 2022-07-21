@@ -1,18 +1,13 @@
 <template>
   <div class="album-col">
     <div v-for="album in albums" :key="`recent_${album.id}`">
-      <Album
-        :album="album"
-        :size="album_size"
-        :padding="padding"
-        :show_overlay="false"
-        v-on:play="propagatePlay($event)"
-      />
+      <Album :album="album" :size="album_size" :padding="padding" :show_overlay="false"
+        v-on:play="propagatePlay($event)" />
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Album from "./Album.vue";
 
 function checkSize(self) {

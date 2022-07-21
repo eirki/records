@@ -13,8 +13,6 @@
       class="album-art"
       :src="artUrl"
       :alt="album_data.name"
-      width="100%"
-      height="100%"
       @mouseover="showImage = true"
       @mouseleave="showImage = false"
     />
@@ -35,14 +33,14 @@
   </div>
 </template>
 
-<script>
-import Toasted from "vue-toasted";
-import Vue from "vue";
-Vue.use(Toasted, {
-  theme: "toasted-primary",
-  position: "bottom-center",
-  duration: 5000,
-});
+<script lang="ts">
+// import Toasted from "vue-toasted";
+// import Vue from "vue";
+// Vue.use(Toasted, {
+//   theme: "toasted-primary",
+//   position: "bottom-center",
+//   duration: 5000,
+// });
 
 function checkLocation(self) {
   let parent = self.$parent.$refs.elem.getBoundingClientRect();
@@ -113,8 +111,8 @@ export default {
   methods: {
     play() {
       this.$emit("play", this.album_data);
-      Vue.toasted.clear();
-      Vue.toasted.show(this.playingMessage);
+      // Vue.toasted.clear();
+      // Vue.toasted.show(this.playingMessage);
     },
   },
 };
@@ -136,6 +134,11 @@ export default {
   box-sizing: border-box;
   position: absolute;
   z-index: 10;
+}
+
+.album-art {
+      max-width: 100%;
+    max-height: 100%;
 }
 </style>
 
