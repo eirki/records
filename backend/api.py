@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from operator import itemgetter
 import os
+import random
 from typing import Optional, TypedDict
 import uuid
 
@@ -91,12 +92,26 @@ def albums(spotify: Spotify) -> dict[str, list[dict]]:
             album["release_date"],
         ),
     )
-    by_date = sorted(
-        albums,
-        key=itemgetter("added_at"),
-        reverse=True,
-    )[:3]
-    data = {"all_albums": by_artist, "recent_albums": by_date}
+    by_date = sorted(albums, key=itemgetter("added_at"), reverse=True)[:10]
+
+    artist_ids = list({album["artists"][0]["id"] for album in albums})
+    random.shuffle(artist_ids)
+    artist_ids = artist_ids[:5]
+    recommended_tracks = spotify.recommendations(
+        seed_artists=artist_ids, country="NO", limit=20
+    )
+    album_ids = {album["id"] for album in albums}
+    recommended_albums = [
+        track["album"]
+        for track in recommended_tracks["tracks"]
+        if track["album"]["id"] not in album_ids
+    ]
+
+    data = {
+        "all_albums": by_artist,
+        "recent_albums": by_date,
+        "recommended_albums": recommended_albums,
+    }
     return data
 
 

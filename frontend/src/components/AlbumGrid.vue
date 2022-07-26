@@ -1,31 +1,21 @@
 <template>
-  <div class="d-flex" ref="elem">
-    <Album
-      v-for="album in albums"
-      :key="`all_${album.id}`"
-      :album="album"
-      :size="album_size"
-      :overlay_mult="overlay_mult"
-      :padding="padding"
-      :parent_height="height"
-      :parent_width="width"
-      v-on:play="propagatePlay($event)"
-    />
+  <div class="container">
+    <div class="album-grid">
+      <img v-if="overlayAlbum" class="album-overlay" :src="overlayAlbum.data.images[0].url"
+        :alt="overlayAlbum.data.name" :width="overlaySize" :height="overlaySize" />
+    </div>
+    <div class="album-grid">
+      <Album v-for="(album, index) in albums" :key="`all_${album.id}`" :album="album" :size="cellSize"
+        :padding="padding" :overlayMultiplier=overlayMultiplier :nCols=nCols :nRows=nRows :index=index
+        :nColsAll=nColsAll v-on:play="propagatePlay($event)" v-on:hover="hover($event)"
+        v-on:clearHover="clearHover()" />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Album from "./Album.vue";
-import getSquareSize from "../squareSize.js";
 
-function checkSize(self) {
-  self.width = self.$refs.elem.offsetWidth;
-  let { top, left } = self.$refs.elem.getBoundingClientRect();
-  console.log("top", top, "left", left);
-  self.height = window.innerHeight - top;
-  console.log("height", self.height);
-  console.log("width", self.width);
-}
 
 export default {
   components: {
@@ -33,62 +23,75 @@ export default {
   },
   props: {
     albums: Array,
-    padding: { type: Number, default: 2 },
+    cellSize: Number,
+    overlayMultiplier: Number,
+    nRows: Number,
+    nCols: Number,
+    nColsAll: Number,
+    padding: Number,
+  },
+  computed: {
+    cellSizeStr(): String {
+      return `${this.cellSize}px`
+    },
+    overlaySize() {
+      return this.cellSize * this.overlayMultiplier - this.padding * 2;
+    },
+    overlayColumn() {
+      if (!this.overlayAlbum) {
+        return 1
+      } else if (this.overlayAlbum.leftHalf) {
+        return this.overlayAlbum.colPosition + 2
+      } else {
+        return this.overlayAlbum.colPosition + 1 - this.overlayMultiplier
+      }
+    },
+    overlayRow() {
+      if (!this.overlayAlbum) {
+        return 1
+      } else if (this.overlayAlbum.topHalf) {
+        return this.overlayAlbum.rowPosition + 1
+      } else {
+        return this.overlayAlbum.rowPosition + 2 - this.overlayMultiplier
+      }
+    },
   },
   data() {
     return {
-      height: window.innerHeight,
-      width: window.innerWidth,
-    };
-  },
-  computed: {
-    album_size() {
-      let height = this.height;
-      let width = this.width;
-      let { cellSize } = getSquareSize({
-        y: height,
-        x: width,
-        n: this.albums.length,
-      });
-
-      console.log("cellSize", cellSize);
-      return cellSize;
-    },
-    overlay_mult() {
-      let heigth_with_offset = this.height + this.album_size * 2;
-      let smallest_dimension = Math.min(heigth_with_offset, this.width);
-      let by_2 = smallest_dimension / 2;
-      let by_side = by_2 / this.album_size;
-      let floored = Math.floor(by_side);
-      return floored;
-    },
-  },
-  mounted() {
-    checkSize(this);
-    window.addEventListener("resize", () => checkSize(this));
-  },
-  updated() {
-    checkSize(this);
+      overlayAlbum: null
+    }
   },
   methods: {
     propagatePlay(arg) {
       this.$emit("play", arg);
     },
+    hover(data) {
+      this.overlayAlbum = data
+    },
+    clearHover() {
+      this.overlayAlbum = null
+    },
   },
 };
 </script>
 
-<style scoped>
-.d-flex {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-</style>
 
-<style>
-body {
-  background-color: #333;
-  overflow: hidden;
+<style scoped>
+.container {
+  position: relative;
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(v-bind(nCols), v-bind(cellSizeStr));
+  grid-template-rows: repeat(v-bind(nRows), v-bind(cellSizeStr));
+  position: absolute;
+}
+
+.album-overlay {
+  grid-row-start: v-bind(overlayRow);
+  grid-column-start: v-bind(overlayColumn);
+  padding: 2px;
+  z-index: 1
 }
 </style>

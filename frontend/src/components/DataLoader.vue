@@ -7,6 +7,7 @@ const data = import.meta.env.DEV ?
 </script>
 
 <template>
-    <Home :all_albums="data.all_albums" :recent_albums="data.recent_albums" />
+    <Home :all_albums="data.all_albums" :recent_albums="data.recent_albums"
+        :recommended_albums="data.recommended_albums" />
 </template>
 
