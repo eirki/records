@@ -1,4 +1,7 @@
-export default function ({ x, y, n }) {
+interface args { x: number, y: number, n: number }
+
+
+export default function ({ x, y, n }: args) {
   // https://math.stackexchange.com/a/2570649
   // Compute number of rows and columns, and cell size
   // console.log("x", x, "y", y, "n", n,)

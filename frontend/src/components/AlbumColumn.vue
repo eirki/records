@@ -1,50 +1,55 @@
 <template>
   <div class="albumColumn">
-    <Album v-for="album in albums" class="album" :key="`recent_${album.id}`" :album="album" :size="cellSize"
-      :padding="padding" :overlayMultiplier=overlayMultiplier v-on:play="propagatePlay($event)"
-      v-on:hover="propagateHover($event)" v-on:clearHover="propagateClearHover($event)" />
+    <Album v-for="(album, i) in albums" class="album" :key="i" :album="album" :cellSize="cellSize" :padding="padding"
+      :overlayMultiplier=overlayMultiplier v-on:play="propagatePlay($event)" v-on:hover="propagateHover($event)"
+      v-on:clearHover=propagateClearHover />
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
+import { computed } from 'vue';
+
 import Album from "./Album.vue";
+import type { AlbumT, OverlayT } from '../types.js'
+
+const props = defineProps<{
+  cellSize: number
+  overlayMultiplier: number
+  padding: number
+  albums: [AlbumT]
+  nRows: number
+}>()
+
+const emit = defineEmits<{
+  (e: "play", arg: AlbumT): void
+  (e: "hover", arg: OverlayT): void
+  (e: "clearHover"): void
+}>()
+
+const cellSizeStr = computed(() => `${props.cellSize}px`)
+const nAlbums = computed(() => props.albums.length)
 
 
-export default {
-  components: {
-    Album,
-  },
-  props: {
-    cellSize: Number,
-    overlayMultiplier: Number,
-    padding: Number,
-    albums: Array,
-    nRows: Number,
-  },
-  methods: {
-    propagatePlay(arg) {
-      this.$emit("play", arg);
-    },
-    propagateClearHover() {
-      this.$emit("clearHover");
-    },
-    propagateHover(arg) {
-      this.$emit("hover", arg.data);
-    },
-  },
-  computed: {
-    cellSizeStr(): String {
-      return `${this.cellSize}px`
-    }
-  },
-};
+function propagatePlay(arg: AlbumT) {
+  emit("play", arg);
+}
+
+function propagateHover(arg: OverlayT) {
+  emit("hover", arg);
+}
+
+function propagateClearHover() {
+  emit("clearHover");
+}
+
+
 </script>
 
 <style scoped>
 .albumColumn {
   display: grid;
   grid-template-columns: repeat(1, v-bind(cellSizeStr));
-  grid-template-rows: repeat(v-bind(albums.length), v-bind(cellSizeStr));
+  grid-template-rows: repeat(v-bind(nAlbums), v-bind(cellSizeStr));
   max-height: v-bind(nRows*cellSize);
   overflow-y: scroll;
   scrollbar-width: none;

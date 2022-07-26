@@ -5,74 +5,70 @@
         :alt="overlayAlbum.data.name" :width="overlaySize" :height="overlaySize" />
     </div>
     <div class="album-grid">
-      <Album v-for="(album, index) in albums" :key="`all_${album.id}`" :album="album" :size="cellSize"
-        :padding="padding" :overlayMultiplier=overlayMultiplier :nCols=nCols :nRows=nRows :index=index
-        :nColsAll=nColsAll v-on:play="propagatePlay($event)" v-on:hover="hover($event)"
-        v-on:clearHover="clearHover()" />
+      <Album v-for="(album, i) in albums" :key="i" :album="album" :cellSize="cellSize" :padding="padding"
+        :overlayMultiplier=overlayMultiplier :nCols=nCols :nRows=nRows :index=i :nColsAll=nColsAll
+        v-on:play="propagatePlay($event)" v-on:hover="hover($event)" v-on:clearHover="clearHover" />
     </div>
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
+import { ref, computed } from 'vue';
+import type { Ref } from 'vue';
+
 import Album from "./Album.vue";
+import type { AlbumT, OverlayT } from '../types.js'
 
 
-export default {
-  components: {
-    Album,
-  },
-  props: {
-    albums: Array,
-    cellSize: Number,
-    overlayMultiplier: Number,
-    nRows: Number,
-    nCols: Number,
-    nColsAll: Number,
-    padding: Number,
-  },
-  computed: {
-    cellSizeStr(): String {
-      return `${this.cellSize}px`
-    },
-    overlaySize() {
-      return this.cellSize * this.overlayMultiplier - this.padding * 2;
-    },
-    overlayColumn() {
-      if (!this.overlayAlbum) {
-        return 1
-      } else if (this.overlayAlbum.leftHalf) {
-        return this.overlayAlbum.colPosition + 2
-      } else {
-        return this.overlayAlbum.colPosition + 1 - this.overlayMultiplier
-      }
-    },
-    overlayRow() {
-      if (!this.overlayAlbum) {
-        return 1
-      } else if (this.overlayAlbum.topHalf) {
-        return this.overlayAlbum.rowPosition + 1
-      } else {
-        return this.overlayAlbum.rowPosition + 2 - this.overlayMultiplier
-      }
-    },
-  },
-  data() {
-    return {
-      overlayAlbum: null
-    }
-  },
-  methods: {
-    propagatePlay(arg) {
-      this.$emit("play", arg);
-    },
-    hover(data) {
-      this.overlayAlbum = data
-    },
-    clearHover() {
-      this.overlayAlbum = null
-    },
-  },
-};
+const props = defineProps<{
+  albums: [AlbumT]
+  cellSize: number
+  overlayMultiplier: number
+  padding: number
+  nRows: number
+  nCols: number
+  nColsAll: number
+}>()
+
+const emit = defineEmits<{
+  (e: "play", arg: AlbumT): void
+}>()
+
+const overlayAlbum: Ref<OverlayT | null> = ref(null);
+
+const cellSizeStr = computed(() => `${props.cellSize}px`)
+const overlaySize = computed(() => props.cellSize * props.overlayMultiplier - props.padding * 2)
+const overlayColumn = computed(() => {
+  if (!overlayAlbum.value) {
+    return 1
+  } else if (overlayAlbum.value.leftHalf) {
+    return overlayAlbum.value.colPosition + 2
+  } else {
+    return overlayAlbum.value.colPosition + 1 - props.overlayMultiplier
+  }
+})
+const overlayRow = computed(() => {
+  if (!overlayAlbum.value) {
+    return 1
+  } else if (overlayAlbum.value.topHalf) {
+    return overlayAlbum.value.rowPosition + 1
+  } else {
+    return overlayAlbum.value.rowPosition + 2 - props.overlayMultiplier
+  }
+})
+
+
+function propagatePlay(arg: AlbumT) {
+  emit("play", arg);
+}
+
+function hover(arg: OverlayT) {
+  overlayAlbum.value = arg
+}
+
+function clearHover() {
+  overlayAlbum.value = null
+}
 </script>
 
 

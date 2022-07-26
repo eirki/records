@@ -2,13 +2,15 @@
   <div class="container" :style="{
     padding: `${padding}px`
   }" @click="play">
-    <img class="album-art" :src="artUrl" :alt="album.name" :width=size :height=size @mouseover="hover"
+    <img class="album-art" :src="artUrl" :alt="album.name" :width=cellSize :height=cellSize @mouseover="hover"
       @mouseleave="clearHover" />
 
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
+import { computed } from 'vue';
+import type { AlbumT, OverlayT } from '../types.js'
 // import Toasted from "vue-toasted";
 // import Vue from "vue";
 // Vue.use(Toasted, {
@@ -18,93 +20,70 @@
 // });
 
 
-export default {
-  props: {
-    album: Object,
-    size: Number,
-    overlayMultiplier: Number,
-    index: { type: Number, default: null },
-    nCols: Number,
-    nColsAll: Number,
-    nRows: Number,
-    padding: { type: Number, default: 0 },
-  },
-  data() {
-    return {
-      showImage: false,
-      // uri: this.album.uri,
-      // id: this.album.id,
-      // images: this.album.images,
-      // name: this.album.name,
-      // artists: this.album.artists,
-      playUrl: "",
-      playingMessage: "",
-    };
-  },
-  computed: {
-    colPosition() {
-      return (this.index % this.nCols)
-    },
-    rowPosition() {
-      return (Math.floor(this.index / this.nCols))
-    },
-    leftHalf() {
-      if (this.index === null) {
-        return null
-      }
-      return this.colPosition < Math.floor(this.nCols / 2)
-    },
-    topHalf() {
-      if (this.index === null) {
-        return null
-      }
-      return this.rowPosition < Math.floor(this.nRows / 2)
-    },
-    artUrl() {
-      if (this.size <= 64) {
-        return this.album.images[2].url;
-      } else if (this.size <= 300) {
-        return this.album.images[1].url;
-      } else {
-        return this.album.images[0].url;
-      }
-    },
-  },
-  created() {
-    let tmp = new URL("http://example.com");
-    tmp.search = new URLSearchParams({ uri: this.album.uri }).toString();
-    this.playUrl = "/play" + tmp.search;
+const props = defineProps<{
+  album: AlbumT
+  cellSize: number
+  overlayMultiplier: number
+  padding: number
+  index?: number
+  nRows?: number
+  nCols?: number
+  nColsAll?: number
+}>()
 
-    // this.playingMessage =
-    //   `<div><div><b>${this.album.name}</b></div> <div>` +
-    //   this.album.artists.map((artist) => artist.name).join("<br>") +
-    //   "</div></div>";
-  },
-  methods: {
-    // show() {
-    //   this.showImage = !this.showImage
-    // },
-    hover() {
-      this.$emit("hover", {
-        index: this.index,
-        leftHalf: this.leftHalf,
-        topHalf: this.topHalf,
-        colPosition: this.colPosition,
-        rowPosition: this.rowPosition,
-        data: this.album,
-      });
-    },
-    clearHover() {
-      this.$emit("clearHover");
-    },
-    play() {
-      this.$emit("play", this.album);
-      this.$emit("clearHover");
-      // Vue.toasted.clear();
-      // Vue.toasted.show(this.playingMessage);
-    },
-  },
-};
+const emit = defineEmits<{
+  (e: "play", arg: AlbumT): void
+  (e: "hover", arg: OverlayT): void
+  (e: "clearHover"): void
+}>()
+
+
+const colPosition = computed(() => (props.index === undefined || props.nCols === undefined ? 1 : props.index % props.nCols))
+const rowPosition = computed(() => (props.index === undefined || props.nCols === undefined ? 1 : Math.floor(props.index / props.nCols)))
+const leftHalf = computed(() => {
+  if (props.index === undefined || props.nCols === undefined) {
+    return false
+  }
+  return colPosition.value < Math.floor(props.nCols / 2)
+})
+const topHalf = computed(() => {
+  if (props.index === undefined || props.nRows === undefined) {
+    return false
+  }
+  return rowPosition.value < Math.floor(props.nRows / 2)
+})
+const artUrl = computed(() => {
+  if (props.cellSize <= 64) {
+    return props.album.images[2].url;
+  } else if (props.cellSize <= 300) {
+    return props.album.images[1].url;
+  } else {
+    return props.album.images[0].url;
+  }
+})
+
+function hover() {
+  let arg: OverlayT = {
+    leftHalf: leftHalf.value,
+    topHalf: topHalf.value,
+    colPosition: colPosition.value,
+    rowPosition: rowPosition.value,
+    data: props.album,
+  }
+  emit("hover", arg);
+}
+
+function clearHover() {
+  emit("clearHover");
+}
+
+function play() {
+  emit("play", props.album);
+  emit("clearHover");
+  // Vue.toasted.clear();
+  // Vue.toasted.show(this.playingMessage);
+}
+
 </script>
 
 <style scoped>
