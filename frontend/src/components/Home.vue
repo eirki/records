@@ -65,41 +65,43 @@ function checkSize() {
   let x = window.innerWidth - (8 * 2)
   let n = props.all_albums.length
   let nAdded = 1
-  while (true) {
-    let res = getSquareSize({ y: y, x: x, n: n + nAdded });
-    let colsToAdd = Math.floor(playerMaxWidth.value / res.cellSize) + 2
+  let res
+  let colsToAdd
+  do {
+    res = getSquareSize({ y: y, x: x, n: n + nAdded });
+    colsToAdd = Math.floor(playerMaxWidth.value / res.cellSize) + 2
     if (nAdded < res.nRows * colsToAdd) {
       nAdded++
-      // console.log("nAdded", nAdded)
+      console.log("nAdded", nAdded)
       continue
+    } else {
+      break
     }
+  } while (nAdded < (n * 100))
+  cellSize.value = res.cellSize
+  // console.log("cellSize", cellSize)
+  nRows.value = res.nRows
+  // console.log("nRows", nRows)
+  nCols.value = res.nCols
+  nGridCols.value = nCols.value - colsToAdd
+  // console.log("nGridCols", nGridCols)
+  nLeftCols.value = colsToAdd
+  albumColumnN.value = nRows.value - nLeftCols.value
+  leftColSize.value = `${nLeftCols.value * cellSize.value}px`
+  albumArtSize.value = (cellSize.value * nLeftCols.value) - (padding.value * 2)
+  // console.log("albumArtSize", albumArtSize)
+  playerWidth.value = (cellSize.value * (colsToAdd - 2)) - (padding.value * 2)
+  playerHeight.value = (cellSize.value * (nRows.value - colsToAdd)) - (padding.value * 2)
 
-    cellSize.value = res.cellSize
-    // console.log("cellSize", cellSize)
-    nRows.value = res.nRows
-    // console.log("nRows", nRows)
-    nCols.value = res.nCols
-    nGridCols.value = nCols.value - colsToAdd
-    // console.log("nGridCols", nGridCols)
-    nLeftCols.value = colsToAdd
-    albumColumnN.value = nRows.value - nLeftCols.value
-    leftColSize.value = `${nLeftCols.value * cellSize.value}px`
-    albumArtSize.value = (cellSize.value * nLeftCols.value) - (padding.value * 2)
-    // console.log("albumArtSize", albumArtSize)
-    playerWidth.value = (cellSize.value * (colsToAdd - 2)) - (padding.value * 2)
-    playerHeight.value = (cellSize.value * (nRows.value - colsToAdd)) - (padding.value * 2)
-
-    overlayMultiplier.value = Math.floor(Math.min(nRows.value, nGridCols.value) / 2)
+  overlayMultiplier.value = Math.floor(Math.min(nRows.value, nGridCols.value) / 2)
+  // console.log("overlayMultiplier", overlayMultiplier)
+  if (nRows.value < nGridCols.value) {
+    // vertical overlay can include cellSize of album being hovered
+    overlayMultiplier.value++
     // console.log("overlayMultiplier", overlayMultiplier)
-    if (nRows.value < nGridCols.value) {
-      // vertical overlay can include cellSize of album being hovered
-      overlayMultiplier.value++
-      // console.log("overlayMultiplier", overlayMultiplier)
-    }
-    // console.log("overlayMultiplier", overlayMultiplier)
-    homeOverlaySize.value = cellSize.value * overlayMultiplier.value - padding.value * 2
-    return
   }
+  // console.log("overlayMultiplier", overlayMultiplier)
+  homeOverlaySize.value = cellSize.value * overlayMultiplier.value - padding.value * 2
 }
 
 function handlePlay(album_data: AlbumT) {
