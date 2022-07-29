@@ -16,7 +16,7 @@ const props = defineProps<{
   cellSize: number
   overlayMultiplier: number
   padding: number
-  albums: [AlbumT]
+  albums: AlbumT[]
   nRows: number
 }>()
 

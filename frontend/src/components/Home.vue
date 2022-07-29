@@ -36,9 +36,9 @@ import getSquareSize from "../squareSize.js";
 
 
 const props = defineProps<{
-  all_albums: [AlbumT]
-  recent_albums: [AlbumT]
-  recommended_albums: [AlbumT]
+  all_albums: AlbumT[]
+  recent_albums: AlbumT[]
+  recommended_albums: AlbumT[]
 }>()
 
 const selected_album = ref(props.all_albums[Math.floor(Math.random() * props.all_albums.length)])

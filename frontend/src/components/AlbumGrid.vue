@@ -21,7 +21,7 @@ import type { AlbumT, OverlayT } from '../types.js'
 
 
 const props = defineProps<{
-  albums: [AlbumT]
+  albums: AlbumT[]
   cellSize: number
   overlayMultiplier: number
   padding: number
