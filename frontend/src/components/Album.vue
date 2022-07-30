@@ -3,21 +3,18 @@
     padding: `${padding}px`
   }" @click="play">
     <img class="album-art" :src="artUrl" :alt="album.name" :width=cellSize :height=cellSize @mouseover="hover"
-      @mouseleave="clearHover" />
+      @mouseleave="clearHover" @contextmenu="onContextMenu($event)" />
 
   </div>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue';
+import ContextMenu from '@imengyu/vue3-context-menu'
+import { useToast } from "vue-toastification";
+
+import Spinner from "./Spinner.vue";
 import type { AlbumT, OverlayT } from '../types.js'
-// import Toasted from "vue-toasted";
-// import Vue from "vue";
-// Vue.use(Toasted, {
-//   theme: "toasted-primary",
-//   position: "bottom-center",
-//   duration: 5000,
-// });
 
 
 const props = defineProps<{
@@ -29,14 +26,22 @@ const props = defineProps<{
   nRows?: number
   nCols?: number
   nColsAll?: number
+  isInLibrary: boolean
 }>()
 
 const emit = defineEmits<{
   (e: "play", arg: AlbumT): void
   (e: "hover", arg: OverlayT): void
   (e: "clearHover"): void
+  (e: "refreshAlbums", cb: (() => void)): void
 }>()
 
+let albumDesc = computed(
+  () =>
+    (props.album.artists.length === 1
+      ? props.album.artists[0].name + " - "
+      : "")
+    + `${props.album.name}`)
 
 const colPosition = computed(() => (props.index === undefined || props.nCols === undefined ? 1 : props.index % props.nCols))
 const rowPosition = computed(() => (props.index === undefined || props.nCols === undefined ? 1 : Math.floor(props.index / props.nCols)))
@@ -62,6 +67,9 @@ const artUrl = computed(() => {
   }
 })
 
+const toast = useToast();
+
+
 function hover() {
   let arg: OverlayT = {
     leftHalf: leftHalf.value,
@@ -80,10 +88,78 @@ function clearHover() {
 function play() {
   emit("play", props.album);
   emit("clearHover");
-  // Vue.toasted.clear();
-  // Vue.toasted.show(this.playingMessage);
+  toast(albumDesc.value)
 }
 
+interface arg { remove: boolean }
+function toggleLibrary({ remove }: arg) {
+  let spinnerToastId = toast(Spinner, { timeout: false })
+  let doneCallback = () => {
+    toast.dismiss(spinnerToastId)
+    toast(`${remove ? "Remov" : "Add"}ed ${albumDesc.value}`)
+  }
+  fetch(`/${remove ? "remove" : "add"}_album/${props.album.id}`)
+    .then(res => res.json())
+    .then(data => {
+      if (!data.success) {
+        throw new Error('failed')
+      }
+    })
+    .then(() => emit("refreshAlbums", doneCallback))
+    .catch(error => {
+      console.log(error)
+      toast.dismiss(spinnerToastId)
+      toast.error("Server error")
+    })
+}
+function onContextMenu(e: MouseEvent) {
+  e.preventDefault();
+  ContextMenu.showContextMenu({
+    customClass: "context-menu",
+    iconFontClass: "context-menu__icon",
+    x: e.x,
+    y: e.y,
+    items: [
+      {
+        label: albumDesc.value,
+        disabled: true,
+      },
+      {
+        label: "Go to album",
+        onClick: () => {
+          let url = `https://open.spotify.com/album/${props.album.id}`
+          window.open(url, "_blank")
+        }
+      },
+      props.album.artists.length === 1 ?
+        {
+          label: "Go to artist",
+          onClick: () => {
+            let url = `https://open.spotify.com/artist/${props.album.artists[0].id}`
+            window.open(url, "_blank")
+          }
+        }
+        :
+        {
+          label: "Go to artist",
+          children: props.album.artists.map(artist => ({
+            label: artist.name,
+            onClick: () => {
+              let url = `https://open.spotify.com/artist/${artist.id}`
+              window.open(url, "_blank")
+            }
+          })),
+
+        },
+
+      {
+        label: `${props.isInLibrary ? "Remove from" : "Add to"} library`,
+        onClick: () => toggleLibrary({ remove: props.isInLibrary })
+      }
+
+    ]
+  })
+}
 </script>
 
 <style scoped>

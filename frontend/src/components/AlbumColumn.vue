@@ -1,8 +1,9 @@
 <template>
   <div class="albumColumn">
     <Album v-for="(album, i) in albums" class="album" :key="i" :album="album" :cellSize="cellSize" :padding="padding"
-      :overlayMultiplier=overlayMultiplier v-on:play="propagatePlay($event)" v-on:hover="propagateHover($event)"
-      v-on:clearHover=propagateClearHover />
+      :overlayMultiplier=overlayMultiplier :isInLibrary=areInLibrary v-on:play="propagatePlay($event)"
+      v-on:hover="propagateHover($event)" v-on:clearHover=propagateClearHover
+      v-on:refreshAlbums="propagateRefreshAlbums" />
   </div>
 </template>
 
@@ -18,12 +19,14 @@ const props = defineProps<{
   padding: number
   albums: AlbumT[]
   nRows: number
+  areInLibrary: boolean
 }>()
 
 const emit = defineEmits<{
   (e: "play", arg: AlbumT): void
   (e: "hover", arg: OverlayT): void
   (e: "clearHover"): void
+  (e: "refreshAlbums", cb: (() => void)): void
 }>()
 
 const cellSizeStr = computed(() => `${props.cellSize}px`)
@@ -40,6 +43,10 @@ function propagateHover(arg: OverlayT) {
 
 function propagateClearHover() {
   emit("clearHover");
+}
+
+function propagateRefreshAlbums(cb: (() => void)) {
+  emit("refreshAlbums", cb);
 }
 
 

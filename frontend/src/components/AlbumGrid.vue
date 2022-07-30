@@ -5,9 +5,10 @@
         :alt="overlayAlbum.data.name" :width="overlaySize" :height="overlaySize" />
     </div>
     <div class="album-grid">
-      <Album v-for="(album, i) in albums" :key="i" :album="album" :cellSize="cellSize" :padding="padding"
-        :overlayMultiplier=overlayMultiplier :nCols=nCols :nRows=nRows :index=i :nColsAll=nColsAll
-        v-on:play="propagatePlay($event)" v-on:hover="hover($event)" v-on:clearHover="clearHover" />
+      <Album v-for="(album, i) in albums" :key="`${i}-${album.id}`" :album="album" :cellSize="cellSize"
+        :padding="padding" :overlayMultiplier=overlayMultiplier :nCols=nCols :nRows=nRows :index=i :nColsAll=nColsAll
+        :isInLibrary=true v-on:play="propagatePlay($event)" v-on:hover="hover($event)" v-on:clearHover="clearHover"
+        v-on:refreshAlbums="propagateRefreshAlbums" />
     </div>
   </div>
 </template>
@@ -32,6 +33,7 @@ const props = defineProps<{
 
 const emit = defineEmits<{
   (e: "play", arg: AlbumT): void
+  (e: "refreshAlbums", arg: (() => void)): void
 }>()
 
 const overlayAlbum: Ref<OverlayT | null> = ref(null);
@@ -69,6 +71,11 @@ function hover(arg: OverlayT) {
 function clearHover() {
   overlayAlbum.value = null
 }
+
+function propagateRefreshAlbums(cb: (() => void)) {
+  emit("refreshAlbums", cb);
+}
+
 </script>
 
 

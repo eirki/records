@@ -15,6 +15,7 @@ from . import config
 
 scope = [
     "user-library-read",
+    "user-library-modify",
     "user-read-playback-state",
     "user-modify-playback-state",
     "user-read-currently-playing",
@@ -113,6 +114,14 @@ def albums(spotify: Spotify) -> dict[str, list[dict]]:
         "recommended_albums": recommended_albums,
     }
     return data
+
+
+def add_album(spotify: Spotify, album_id: str) -> None:
+    spotify.current_user_saved_albums_add([album_id])
+
+
+def remove_album(spotify: Spotify, album_id: str) -> None:
+    spotify.current_user_saved_albums_delete([album_id])
 
 
 class AlbumResponse(TypedDict):

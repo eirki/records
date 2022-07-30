@@ -5,13 +5,14 @@
         :height="playerHeight" frameborder="0" allowtransparency="true" allow="encrypted-media" />
       <AlbumColumn :padding="padding" :cellSize=cellSize :overlayMultiplier=overlayMultiplier :nRows="nRows - nLeftCols"
         v-on:play="handlePlay($event)" v-on:clearHover="clearHover" v-on:hover="hover($event)"
-        class="albumColumn recentAlbums" :albums="recent_albums" />
+        v-on:refreshAlbums=refreshAlbums :areInLibrary=true class="albumColumn recentAlbums" :albums="recent_albums" />
       <AlbumColumn :padding="padding" :cellSize=cellSize :overlayMultiplier=overlayMultiplier :nRows="nRows - nLeftCols"
         v-on:play="handlePlay($event)" v-on:clearHover="clearHover" v-on:hover="hover($event)"
-        class="albumColumn recommendedAlbums" :albums="recommended_albums" />
+        v-on:refreshAlbums=refreshAlbums :areInLibrary=false class="albumColumn recommendedAlbums"
+        :albums="recommended_albums" />
 
       <img class="albumArt" :src="selected_album.images[0].url" :alt="selected_album.name" :width=albumArtSize
-        :height=albumArtSize />
+        :height=albumArtSize @contextmenu="onAlbumArtContextMenu($event)" />
     </div>
     <div class="overlayGrid">
       <img v-if="overlayAlbum" class="album-overlay" :src="overlayAlbum.images[0].url" :alt="overlayAlbum.name"
@@ -27,6 +28,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import type { Ref } from 'vue';
+import ContextMenu from '@imengyu/vue3-context-menu'
 
 import AlbumColumn from "./AlbumColumn.vue";
 import AlbumGrid from "./AlbumGrid.vue";
@@ -41,7 +43,14 @@ const props = defineProps<{
   recommended_albums: AlbumT[]
 }>()
 
-const selected_album = ref(props.all_albums[Math.floor(Math.random() * props.all_albums.length)])
+const all_albums = ref(props.all_albums)
+const recent_albums = ref(props.recent_albums)
+const recommended_albums = ref(props.recommended_albums)
+
+function randomAlbum() {
+  return all_albums.value[Math.floor(Math.random() * all_albums.value.length)]
+}
+const selected_album = ref(randomAlbum())
 const playerMaxWidth = ref(400);
 const padding = ref(2);
 const cellSize = ref(0);
@@ -63,7 +72,7 @@ const homeOverlaySize = ref(0);
 function checkSize() {
   let y = window.innerHeight - (8 * 2)
   let x = window.innerWidth - (8 * 2)
-  let n = props.all_albums.length
+  let n = all_albums.value.length
   let nAdded = 1
   let res
   let colsToAdd
@@ -72,7 +81,6 @@ function checkSize() {
     colsToAdd = Math.floor(playerMaxWidth.value / res.cellSize) + 2
     if (nAdded < res.nRows * colsToAdd) {
       nAdded++
-      console.log("nAdded", nAdded)
       continue
     } else {
       break
@@ -104,6 +112,21 @@ function checkSize() {
   homeOverlaySize.value = cellSize.value * overlayMultiplier.value - padding.value * 2
 }
 
+function onAlbumArtContextMenu(e: MouseEvent) {
+  e.preventDefault();
+  ContextMenu.showContextMenu({
+    customClass: "context-menu",
+    iconFontClass: "context-menu__icon",
+    x: e.x,
+    y: e.y,
+    items: [
+      {
+        label: "Shuffle album",
+        onClick: () => selected_album.value = randomAlbum(),
+      }
+    ]
+  })
+}
 function handlePlay(album_data: AlbumT) {
   selected_album.value = album_data;
 }
@@ -116,6 +139,16 @@ function clearHover() {
   overlayAlbum.value = null
 }
 
+function refreshAlbums(callback: (() => void)) {
+  fetch(`/albums`).then(res => res.json()).then(data => {
+    all_albums.value = data.all_albums
+    recent_albums.value = data.recent_albums
+    recommended_albums.value = data.recommended_albums
+    checkSize()
+    callback()
+  })
+}
+
 checkSize()
 window.addEventListener("resize", checkSize);
 
@@ -125,6 +158,31 @@ window.addEventListener("resize", checkSize);
 body {
   overflow: hidden;
   background-color: #333;
+}
+
+
+.Vue-Toastification__toast--default.custom-toast {
+  background-color: #333;
+  color: white;
+  border-radius: 0px;
+}
+
+.Vue-Toastification__toast--error.custom-toast {
+  background-color: #333;
+  color: white;
+  border-radius: 0px;
+}
+
+.context-menu {
+  border-radius: 0px;
+}
+
+.context-menu__icon {
+  max-width: 0px;
+}
+
+.mx-context-menu-item.disabled {
+  cursor: default;
 }
 </style>
 <style scoped>
