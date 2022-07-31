@@ -3,7 +3,8 @@ import { ref, onMounted } from 'vue';
 import type { Ref } from 'vue';
 
 import Spinner from "./components/Spinner.vue";
-import Home from "./components/Home.vue"
+import Desktop from "../views/Desktop.vue"
+import Mobile from "../views/Mobile.vue"
 
 const inputData: Ref<any | null> = ref(null)
 
@@ -19,11 +20,13 @@ onMounted(() => {
   getAlbumsFunc().then(data => inputData.value = data)
 })
 
+const isMobile = window.matchMedia("(any-hover: none)").matches
+
 </script>
 
 <template>
   <Spinner v-if="!inputData" />
-  <Home v-else v-bind="inputData" />
+  <component :is="isMobile ? Mobile : Desktop" v-else v-bind="inputData" />
 </template>
 
 <style>

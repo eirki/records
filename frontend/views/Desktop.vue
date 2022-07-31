@@ -30,11 +30,11 @@ import { ref, computed } from 'vue';
 import type { Ref } from 'vue';
 import ContextMenu from '@imengyu/vue3-context-menu'
 
-import AlbumColumn from "./AlbumColumn.vue";
-import AlbumGrid from "./AlbumGrid.vue";
-import type { AlbumT, OverlayT } from '../types.js'
+import AlbumColumn from "../src/components/AlbumColumn.vue";
+import AlbumGrid from "../src/components/AlbumGrid.vue";
+import type { AlbumT, OverlayT } from '../src/types.js'
 
-import getSquareSize from "../squareSize.js";
+import getSquareSize from "../src/squareSize.js";
 
 
 const props = defineProps<{
