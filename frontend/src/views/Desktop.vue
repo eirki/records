@@ -30,8 +30,8 @@ import { ref, computed } from 'vue';
 import type { Ref } from 'vue';
 import ContextMenu from '@imengyu/vue3-context-menu'
 
-import AlbumColumn from "./AlbumColumn.vue";
-import AlbumGrid from "./AlbumGrid.vue";
+import AlbumColumn from "../components/AlbumColumn.vue";
+import AlbumGrid from "../components/AlbumGrid.vue";
 import type { AlbumT, OverlayT } from '../types.js'
 
 import getSquareSize from "../squareSize.js";

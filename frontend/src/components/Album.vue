@@ -16,8 +16,7 @@ import { useToast } from "vue-toastification";
 import Spinner from "./Spinner.vue";
 import type { AlbumT, OverlayT } from '../types.js'
 
-
-const props = defineProps<{
+export interface Props {
   album: AlbumT
   cellSize: number
   overlayMultiplier: number
@@ -27,7 +26,11 @@ const props = defineProps<{
   nCols?: number
   nColsAll?: number
   isInLibrary: boolean
-}>()
+  useBigArt?: boolean
+}
+const props = withDefaults(defineProps<Props>(), {
+  useBigArt: false
+})
 
 const emit = defineEmits<{
   (e: "play", arg: AlbumT): void
@@ -58,9 +61,9 @@ const topHalf = computed(() => {
   return rowPosition.value < Math.floor(props.nRows / 2)
 })
 const artUrl = computed(() => {
-  if (props.cellSize <= 64) {
-    return props.album.images[2].url;
-  } else if (props.cellSize <= 300) {
+  if (props.useBigArt || props.cellSize > 300) {
+    return props.album.images[0].url;
+  } else if (props.cellSize > 64) {
     return props.album.images[1].url;
   } else {
     return props.album.images[0].url;
@@ -91,6 +94,7 @@ function play() {
   toast(albumDesc.value)
 }
 
+
 interface arg { remove: boolean }
 function toggleLibrary({ remove }: arg) {
   let spinnerToastId = toast(Spinner, { timeout: false })
@@ -112,6 +116,8 @@ function toggleLibrary({ remove }: arg) {
       toast.error("Server error")
     })
 }
+
+
 function onContextMenu(e: MouseEvent) {
   e.preventDefault();
   ContextMenu.showContextMenu({
