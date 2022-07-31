@@ -155,12 +155,6 @@ window.addEventListener("resize", checkSize);
 </script>
 
 <style>
-body {
-  overflow: hidden;
-  background-color: #333;
-}
-
-
 .Vue-Toastification__toast--default.custom-toast {
   background-color: #333;
   color: white;

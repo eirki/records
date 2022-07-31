@@ -2,10 +2,9 @@ import json
 import sys
 from typing import Optional
 
-from fastapi import Cookie, FastAPI, HTTPException, Request
-from fastapi.responses import JSONResponse, RedirectResponse
+from fastapi import Cookie, FastAPI, HTTPException
+from fastapi.responses import FileResponse, JSONResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
 from spotipy import Spotify
 
 from . import api, version
@@ -14,7 +13,6 @@ DEBUG_MODE = "--reload" in sys.argv
 
 app = FastAPI()
 app.mount("/assets", StaticFiles(directory="frontend/dist/assets"), name="assets")
-templates = Jinja2Templates(directory="frontend/dist")
 
 
 @app.route("/version")
@@ -38,17 +36,12 @@ def set_token_cookie(response, cache: api.CacheHandler) -> None:
 
 
 @app.get("/")
-async def root(request: Request, spotify_token: Optional[str] = Cookie(None)):
+async def root(spotify_token: Optional[str] = Cookie(None)):
     spotify_token_j = json.loads(spotify_token) if spotify_token else None
     authed, auth_manager, cache = api.check_auth(spotify_token_j)
     if not authed:
         return RedirectResponse(auth_manager.get_authorize_url())
-    spotify = Spotify(auth_manager=auth_manager)
-    albums = api.albums(spotify)
-    response = templates.TemplateResponse(
-        "index.html",
-        {"request": request, "data": albums},
-    )
+    response = FileResponse("frontend/dist/index.html")
     if cache:
         set_token_cookie(response, cache)
     return response
@@ -103,10 +96,8 @@ async def remove_album(album_id: str, spotify_token: Optional[str] = Cookie(None
 async def authed(spotify_token: Optional[str] = Cookie(None)):
     spotify_token_j = json.loads(spotify_token) if spotify_token else None
     authed, auth_manager, cache = api.check_auth(spotify_token_j)
-    success = authed is not None
-    res = {"success": success}
-    response = JSONResponse(content=res)
+    response = JSONResponse(content={"success": authed is not None})
     if cache:
         set_token_cookie(response, cache)
         cache.delete_cached_token()
-    return res
+    return response
