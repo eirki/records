@@ -20,7 +20,7 @@ cov.xml
 .pytest_cache
 data/
 *,cover
-node_modules
-frontend/node_modules
-frontend/dist
+./node_modules
+./frontend/node_modules
+./frontend/dist
 .cache*

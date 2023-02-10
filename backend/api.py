@@ -67,7 +67,34 @@ def check_auth(
     return authed, auth_manager, cache_handler
 
 
-def albums(spotify: Spotify) -> dict[str, list[dict]]:
+def recommendations(spotify: Spotify, album_id) -> dict[str, list[dict]]:
+    album_tracks = spotify.album_tracks(album_id)
+    album_tracks_ids = [track["id"] for track in album_tracks["items"]][:5]
+    recommended_tracks = spotify.recommendations(
+        seed_tracks=album_tracks_ids, country="NO", limit=20
+    )
+    albums = _get_user_albums(spotify)
+    album_ids = {album["id"] for album in albums}
+    album_names = {album["name"] for album in albums}
+    recommended_albums = []
+
+    for track in recommended_tracks["tracks"]:
+        if (
+            (track["album"]["album_type"] == "ALBUM")
+            and (track["album"].get("is_playable") is not False)
+            and (track["album"]["id"] not in album_ids)
+            and (track["album"]["name"] not in album_names)
+        ):
+            recommended_albums.append(track["album"])
+            album_ids.add(track["id"])
+    recommended_albums = sorted(
+        recommended_albums, key=itemgetter("release_date"), reverse=True
+    )[:10]
+
+    return {"recommended_albums": recommended_albums}
+
+
+def _get_user_albums(spotify: Spotify):
     album_data = []
     results = spotify.current_user_saved_albums(limit=20)
     album_data.extend(results["items"])
@@ -86,6 +113,11 @@ def albums(spotify: Spotify) -> dict[str, list[dict]]:
         }
         for album in album_data
     ]
+    return albums
+
+
+def albums(spotify: Spotify) -> dict[str, list[dict]]:
+    albums = _get_user_albums(spotify)
     by_artist = sorted(
         albums,
         key=lambda album: (

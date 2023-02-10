@@ -12,5 +12,8 @@ build:
 serve:
 	uvicorn backend.main:app --reload
 
+dev-bundle:
+	just build && just serve
+
 test:
 	python -m pytest

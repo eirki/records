@@ -6,10 +6,12 @@
       <AlbumColumn :padding="padding" :cellSize=cellSize :overlayMultiplier=overlayMultiplier :nRows="nRows - nLeftCols"
         v-on:play="handlePlay($event)" v-on:clearHover="clearHover" v-on:hover="hover($event)"
         v-on:refreshAlbums=refreshAlbums :areInLibrary=true class="albumColumn recentAlbums" :albums="recent_albums" />
-      <AlbumColumn :padding="padding" :cellSize=cellSize :overlayMultiplier=overlayMultiplier :nRows="nRows - nLeftCols"
-        v-on:play="handlePlay($event)" v-on:clearHover="clearHover" v-on:hover="hover($event)"
-        v-on:refreshAlbums=refreshAlbums :areInLibrary=false class="albumColumn recommendedAlbums"
-        :albums="recommended_albums" />
+      <AlbumColumn v-if="recommended_albums.length > 0" :padding="padding" :cellSize=cellSize
+        :overlayMultiplier=overlayMultiplier :nRows="nRows - nLeftCols" v-on:play="handlePlay($event)"
+        v-on:clearHover="clearHover" v-on:hover="hover($event)" v-on:refreshAlbums=refreshAlbums :areInLibrary=false
+        class="albumColumn recommendedAlbums" :albums="recommended_albums" />
+      <SkeletonColumn v-else :padding="padding" :cellSize=cellSize :nRows="nRows - nLeftCols"
+        class="albumColumn recommendedAlbums" />
 
       <img class="albumArt" :src="selected_album.images[0].url" :alt="selected_album.name" :width=albumArtSize
         :height=albumArtSize @contextmenu="onAlbumArtContextMenu($event)" />
@@ -31,6 +33,7 @@ import type { Ref } from 'vue';
 import ContextMenu from '@imengyu/vue3-context-menu'
 
 import AlbumColumn from "../components/AlbumColumn.vue";
+import SkeletonColumn from "../components/SkeletonColumn.vue";
 import AlbumGrid from "../components/AlbumGrid.vue";
 import type { AlbumT, OverlayT } from '../types.js'
 
@@ -129,6 +132,10 @@ function onAlbumArtContextMenu(e: MouseEvent) {
 }
 function handlePlay(album_data: AlbumT) {
   selected_album.value = album_data;
+  recommended_albums.value = []
+  fetch(`/recommendations/${album_data.id}`)
+    .then(res => res.json())
+    .then(data => recommended_albums.value = data.recommended_albums)
 }
 
 function hover(arg: OverlayT) {
@@ -143,7 +150,6 @@ function refreshAlbums(callback: (() => void)) {
   fetch(`/albums`).then(res => res.json()).then(data => {
     all_albums.value = data.all_albums
     recent_albums.value = data.recent_albums
-    recommended_albums.value = data.recommended_albums
     checkSize()
     callback()
   })
@@ -211,7 +217,7 @@ window.addEventListener("resize", checkSize);
 
 .albumColumn {
   grid-row-start: 1;
-  grid-row-end: v-bind(albumColumnN+1);
+  grid-row-end: v-bind(albumColumnN + 1);
 }
 
 .recentAlbums {

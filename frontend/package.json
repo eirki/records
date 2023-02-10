@@ -10,6 +10,7 @@
   "dependencies": {
     "@imengyu/vue3-context-menu": "^1.0.9",
     "vue": "^3.2.37",
+    "vue-skeletor": "^1.0.6",
     "vue-toastification": "^2.0.0-rc.5"
   },
   "devDependencies": {
