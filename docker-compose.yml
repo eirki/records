@@ -1,7 +1,7 @@
 version: "3"
 services:
-  records_server:
-    container_name: records_server
+  records:
+    container_name: records
     build: .
     env_file:
       - .env
