@@ -21,8 +21,8 @@
         :width="homeOverlaySize" :height="homeOverlaySize" />
     </div>
 
-    <AlbumGrid class="albumGrid" :albums="all_albums" :padding="padding" v-on:play="handlePlay($event)"
-      :cellSize=cellSize :overlayMultiplier=overlayMultiplier :nRows=nRows :nCols="nCols - nLeftCols" :nColsAll=nCols />
+    <AlbumGrid class="albumGrid" :albums="all_albums" :padding="padding" v-on:play="handlePlay($event)" :cellSize=cellSize
+      :overlayMultiplier=overlayMultiplier :nRows=nRows :nCols="nCols - nLeftCols" :nColsAll=nCols />
   </div>
 </template>
 
@@ -106,8 +106,9 @@ function checkSize() {
 
   overlayMultiplier.value = Math.floor(Math.min(nRows.value, nGridCols.value) / 2)
   // console.log("overlayMultiplier", overlayMultiplier)
-  if (nRows.value < nGridCols.value) {
-    // vertical overlay can include cellSize of album being hovered
+  if ((nRows.value + 1) < nGridCols.value) {
+    // vertical overlay can include cellSize of album being hovered, because it starts at the base of the album being hovered. This rule must
+    // not kick in if difference between nRows and nGridCols is 1 or 0 becayse then the overlay would be too big
     overlayMultiplier.value++
     // console.log("overlayMultiplier", overlayMultiplier)
   }
