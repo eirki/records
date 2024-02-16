@@ -21,8 +21,9 @@
         :width="homeOverlaySize" :height="homeOverlaySize" />
     </div>
 
-    <AlbumGrid class="albumGrid" :albums="all_albums" :padding="padding" v-on:play="handlePlay($event)" :cellSize=cellSize
-      :overlayMultiplier=overlayMultiplier :nRows=nRows :nCols="nCols - nLeftCols" :nColsAll=nCols />
+    <AlbumGrid class="albumGrid" :albums="all_albums" :extraAlbums="recommended_albums" :padding="padding"
+      v-on:play="handlePlay($event)" :cellSize=cellSize :overlayMultiplier=overlayMultiplier :nRows=nRows
+      :nCols="nCols - nLeftCols" :nColsAll=nCols />
   </div>
 </template>
 

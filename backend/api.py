@@ -71,7 +71,7 @@ def recommendations(spotify: Spotify, album_id) -> dict[str, list[dict]]:
     album_tracks = spotify.album_tracks(album_id)
     album_tracks_ids = [track["id"] for track in album_tracks["items"]][:5]
     recommended_tracks = spotify.recommendations(
-        seed_tracks=album_tracks_ids, country="NO", limit=20
+        seed_tracks=album_tracks_ids, country="NO", limit=50
     )
     albums = _get_user_albums(spotify)
     album_ids = {album["id"] for album in albums}

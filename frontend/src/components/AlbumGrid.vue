@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <div class="album-grid">
-      <img v-if="overlayAlbum" class="album-overlay" :src="overlayAlbum.data.images[0].url"
-        :alt="overlayAlbum.data.name" :width="overlaySize" :height="overlaySize" />
+      <img v-if="overlayAlbum" class="album-overlay" :src="overlayAlbum.data.images[0].url" :alt="overlayAlbum.data.name"
+        :width="overlaySize" :height="overlaySize" />
     </div>
     <div class="album-grid">
-      <Album v-for="(album, i) in albums" :key="`${i}-${album.id}`" :album="album" :cellSize="cellSize"
+      <Album v-for="(album, i) in albumsWithExtra" :key="`${i}-${album.id}`" :album="album" :cellSize="cellSize"
         :padding="padding" :overlayMultiplier=overlayMultiplier :nCols=nCols :nRows=nRows :index=i :nColsAll=nColsAll
         :isInLibrary=true v-on:play="propagatePlay($event)" v-on:hover="hover($event)" v-on:clearHover="clearHover"
         v-on:refreshAlbums="propagateRefreshAlbums" />
@@ -23,6 +23,7 @@ import type { AlbumT, OverlayT } from '../types.js'
 
 const props = defineProps<{
   albums: AlbumT[]
+  extraAlbums: AlbumT[]
   cellSize: number
   overlayMultiplier: number
   padding: number
@@ -58,6 +59,9 @@ const overlayRow = computed(() => {
     return overlayAlbum.value.rowPosition + 2 - props.overlayMultiplier
   }
 })
+
+const nExtraAlbums = computed(() => (props.nRows * props.nCols) - props.albums.length)
+const albumsWithExtra = computed(() => props.albums.concat(props.extraAlbums.slice(0, nExtraAlbums.value)))
 
 
 function propagatePlay(arg: AlbumT) {
