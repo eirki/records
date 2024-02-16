@@ -52,7 +52,7 @@ async def albums(spotify_token: Optional[str] = Cookie(None)):
     spotify_token_j = json.loads(spotify_token) if spotify_token else None
     authed, auth_manager, cache = api.check_auth(spotify_token_j)
     if not authed:
-        return RedirectResponse(auth_manager.get_authorize_url())
+        raise HTTPException(status_code=403, detail="Authentication failed")
     spotify = Spotify(auth_manager=auth_manager)
     albums = api.albums(spotify)
     response = JSONResponse(content=albums)
@@ -75,6 +75,7 @@ async def recommendations(album_id: str, spotify_token: Optional[str] = Cookie(N
         set_token_cookie(response, cache)
         cache.delete_cached_token()
     return response
+
 
 @app.get("/add_album/{album_id}")
 async def add_album(album_id: str, spotify_token: Optional[str] = Cookie(None)):
