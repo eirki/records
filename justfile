@@ -10,10 +10,7 @@ build:
 	cd frontend && node_modules/.bin/vite build
 
 serve:
-	uvicorn backend.main:app --reload
+	go run main.go
 
 dev-bundle:
 	just build && just serve
-
-test:
-	python -m pytest

@@ -1,5 +1,20 @@
-# build environment
-FROM node:16.16.0 as build
+FROM golang:1.22 as build_backend
+
+WORKDIR /app
+
+COPY go.mod ./
+COPY go.sum ./
+
+RUN go mod download
+
+COPY main.go .
+COPY backend ./backend
+
+# https://stackoverflow.com/questions/55106186/no-such-file-or-directory-with-docker-scratch-image
+RUN CGO_ENABLED=0 go build -o server
+
+
+FROM node:16.16.0 as build_frontend
 
 # https://stackoverflow.com/questions/44633419/no-access-permission-error-with-npm-global-install-on-docker-image
 USER node
@@ -25,17 +40,15 @@ COPY frontend/vite.config.ts .
 RUN node_modules/.bin/vite build
 
 # prod environment
-FROM python:3.9-slim-buster
+FROM scratch
 
-COPY requirements.txt /tmp/
+WORKDIR /
 
-RUN useradd --create-home appuser
-WORKDIR /home/appuser
-USER appuser
+# https://stackoverflow.com/questions/52969195/docker-container-running-golang-http-client-getting-error-certificate-signed-by
+COPY --from=build_backend /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
+COPY --from=build_backend /app/server ./server
+COPY --from=build_frontend /home/node ./frontend
 
-RUN python -m venv venv && venv/bin/pip install -r /tmp/requirements.txt
+USER 1001
 
-COPY backend ./backend
-COPY --from=build /home/node ./frontend
-
-CMD ["venv/bin/uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "80"]
+ENTRYPOINT ["/server"]
