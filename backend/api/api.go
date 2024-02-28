@@ -109,7 +109,7 @@ func RecommendationEndpoint(w http.ResponseWriter, r *http.Request) {
 	response, err := core.Recommendations(client, seedAlbumId)
 	if err != nil {
 		log.Println("Failure", err)
-		http.Error(w, "Failure", http.StatusForbidden)
+		http.Error(w, "Failure", 400)
 		return
 	}
 	w.Header().Set("Content-Type", "application/json")

@@ -199,8 +199,7 @@ func Recommendations(client *spotify.Client, seedAlbumId spotify.ID) (*Recommend
 	allAlbumsErrChan := make(chan error)
 
 	go func() {
-		log.Println("a")
-		trackPage, err := client.GetAlbumTracks(context.Background(), seedAlbumId)
+		album, err := client.GetAlbum(context.Background(), seedAlbumId)
 		if err != nil {
 			recommendedAlbumsChan <- nil
 			recommendedAlbumsErrChan <- err
@@ -208,7 +207,7 @@ func Recommendations(client *spotify.Client, seedAlbumId spotify.ID) (*Recommend
 		}
 
 		var trackIds []spotify.ID
-		for _, track := range trackPage.Tracks[:5] {
+		for _, track := range album.Tracks.Tracks[:5] {
 			trackIds = append(trackIds, track.ID)
 		}
 		albums, err := getRecommendedAlbums(client, trackIds)
