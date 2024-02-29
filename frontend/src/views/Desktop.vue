@@ -72,14 +72,11 @@ const overlayMultiplier = ref(0);
 const overlayAlbum: Ref<AlbumT | null> = ref(null);
 const homeOverlaySize = ref(0);
 
-
-function checkSize() {
-  let y = window.innerHeight - (8 * 2)
-  let x = window.innerWidth - (8 * 2)
-  let n = all_albums.value.length
+function calculateMaxSquareSize(y: number, x: number, n: number) {
   let nAdded = 1
   let res
   let colsToAdd
+
   do {
     res = getSquareSize({ y: y, x: x, n: n + nAdded });
     colsToAdd = Math.floor(playerMaxWidth.value / res.cellSize) + 2
@@ -90,20 +87,52 @@ function checkSize() {
       break
     }
   } while (nAdded < (n * 100))
+  return { ...res, colsToAdd: colsToAdd, nAdded: nAdded }
+}
+
+function calculateBestSquareSize(y: number, x: number, n: number, nAdded: number) {
+  let res
+  let colsToAdd
+
+  const suggestions = [...Array(20).keys()].map(toAdd => {
+    res = getSquareSize({ y: y, x: x, n: n + nAdded + toAdd });
+    colsToAdd = Math.floor(playerMaxWidth.value / res.cellSize) + 2
+    const width = x - (res.nCols * res.cellSize)
+    const height = y - (res.nRows * res.cellSize)
+    const totalPadding = width + height
+    res = { ...res, colsToAdd: colsToAdd, totalPadding: totalPadding, nAdded: nAdded + toAdd }
+    return res
+  })
+  console.log("sug0", suggestions[0], suggestions[0].totalPadding)
+  suggestions.sort((a, b) => a.totalPadding - b.totalPadding)
+  console.log("sug1", suggestions[0], suggestions[0].totalPadding)
+  return suggestions[0]
+
+}
+
+function checkSize() {
+  let y = window.innerHeight - (8 * 2)
+  let x = window.innerWidth - (8 * 2)
+  let n = all_albums.value.length
+
+  let res = calculateMaxSquareSize(y, x, n)
+  console.log("res0", res)
+  res = calculateBestSquareSize(y, x, n, res.nAdded)
+  console.log("res1", res)
   cellSize.value = res.cellSize
   // console.log("cellSize", cellSize)
   nRows.value = res.nRows
   // console.log("nRows", nRows)
   nCols.value = res.nCols
-  nGridCols.value = nCols.value - colsToAdd
+  nGridCols.value = nCols.value - res.colsToAdd
   // console.log("nGridCols", nGridCols)
-  nLeftCols.value = colsToAdd
+  nLeftCols.value = res.colsToAdd
   albumColumnN.value = nRows.value - nLeftCols.value
   leftColSize.value = `${nLeftCols.value * cellSize.value}px`
   albumArtSize.value = (cellSize.value * nLeftCols.value) - (padding.value * 2)
   // console.log("albumArtSize", albumArtSize)
-  playerWidth.value = (cellSize.value * (colsToAdd - 2)) - (padding.value * 2)
-  playerHeight.value = (cellSize.value * (nRows.value - colsToAdd)) - (padding.value * 2)
+  playerWidth.value = (cellSize.value * (res.colsToAdd - 2)) - (padding.value * 2)
+  playerHeight.value = (cellSize.value * (nRows.value - res.colsToAdd)) - (padding.value * 2)
 
   overlayMultiplier.value = Math.floor(Math.min(nRows.value, nGridCols.value) / 2)
   // console.log("overlayMultiplier", overlayMultiplier)

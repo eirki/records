@@ -100,7 +100,13 @@ func filterRecommendations(recommendedAlbums []spotify.SimpleAlbum, allAlbums []
 
 func getRecommendedAlbums(client *spotify.Client, trackIds []spotify.ID) ([]spotify.SimpleAlbum, error) {
 	seeds := spotify.Seeds{Tracks: trackIds}
-	recommendedTracks, err := client.GetRecommendations(context.Background(), seeds, spotify.NewTrackAttributes(), spotify.Country("NO"))
+	recommendedTracks, err := client.GetRecommendations(
+		context.Background(),
+		seeds,
+		spotify.NewTrackAttributes(),
+		spotify.Country("NO"),
+		spotify.Limit(50),
+	)
 	if err != nil {
 		return nil, err
 	}
