@@ -4,6 +4,7 @@ import (
 	fmt "fmt"
 	log "log"
 	http "net/http"
+	"os"
 
 	godotenv "github.com/joho/godotenv"
 
@@ -12,7 +13,7 @@ import (
 )
 
 func main() {
-	err := godotenv.Load()
+	err := godotenv.Load(".env.local", ".env")
 	if err != nil {
 		log.Println("No .env file found")
 	}
@@ -38,8 +39,9 @@ func main() {
 	http.HandleFunc("/recommendations/", api.RecommendationEndpoint)
 	http.HandleFunc("/add_album/", api.AddAlbumEndpoint)
 	http.HandleFunc("/remove_album/", api.RemoveAlbumEndpoint)
-	fmt.Println("Ready to serve on :5006")
-	err = http.ListenAndServe(":5006", nil)
+	port := os.Getenv("PORT")
+	fmt.Printf("Ready to serve on :%s", port)
+	err = http.ListenAndServe(fmt.Sprintf(":%s", port), nil)
 	if err != nil {
 		log.Println(err)
 	}
