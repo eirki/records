@@ -27,7 +27,7 @@ func InitSpotifyAuth() *spotifyauth.Authenticator {
 	return auth
 }
 
-func InitSpotifyClient(r *http.Request) (*spotify.Client, error) {
+func InitSpotifyClient(r *http.Request, w http.ResponseWriter) (*spotify.Client, error) {
 	cookie, err := r.Cookie("spotify-token")
 	if err != nil {
 		log.Println("No cookie")
@@ -55,7 +55,33 @@ func InitSpotifyClient(r *http.Request) (*spotify.Client, error) {
 		return nil, err
 	}
 
+	err = SetTokenCookie(w, tokenPtr)
+	if err != nil {
+		log.Println("Couldn't set token")
+		return nil, err
+	}
+
 	httpClient := auth.Client(r.Context(), tokenPtr)
 	client := spotify.New(httpClient)
 	return client, nil
+}
+
+func SetTokenCookie(w http.ResponseWriter, token *oauth2.Token) error {
+	tokenJsonBytes, err := json.Marshal(token)
+	if err != nil {
+		return err
+	}
+	tokenBase64 := base64.StdEncoding.EncodeToString(tokenJsonBytes)
+
+	cookie := http.Cookie{
+		Name:     "spotify-token",
+		Value:    tokenBase64,
+		Path:     "/",
+		MaxAge:   3600,
+		HttpOnly: true,
+		Secure:   true,
+		// SameSite: http.SameSiteLaxMode,
+	}
+	http.SetCookie(w, &cookie)
+	return nil
 }

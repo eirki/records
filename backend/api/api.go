@@ -2,7 +2,6 @@ package api
 
 import (
 	context "context"
-	base64 "encoding/base64"
 	json "encoding/json"
 	log "log"
 	http "net/http"
@@ -16,7 +15,7 @@ import (
 
 func CompleteAuthEndpoint(w http.ResponseWriter, r *http.Request) {
 	authenticator := auth.InitSpotifyAuth()
-	tok, err := authenticator.Token(r.Context(), auth.State, r)
+	token, err := authenticator.Token(r.Context(), auth.State, r)
 	if err != nil {
 		log.Println("Couldn't get token", err)
 		http.Error(w, "Couldn't get token", http.StatusForbidden)
@@ -28,24 +27,12 @@ func CompleteAuthEndpoint(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	tokenJsonBytes, err := json.Marshal(tok)
+	err = auth.SetTokenCookie(w, token)
 	if err != nil {
-		log.Println("Couldn't get user", err)
-		http.Error(w, "Couldn't get user", http.StatusForbidden)
-		return
+		log.Println("Couldn't set token", err)
+		http.Error(w, "Couldn't set token", http.StatusForbidden)
 	}
-	tokenBase64 := base64.StdEncoding.EncodeToString(tokenJsonBytes)
 
-	cookie := http.Cookie{
-		Name:     "spotify-token",
-		Value:    tokenBase64,
-		Path:     "/",
-		MaxAge:   3600,
-		HttpOnly: true,
-		Secure:   true,
-		// SameSite: http.SameSiteLaxMode,
-	}
-	http.SetCookie(w, &cookie)
 	http.Redirect(w, r, "/", http.StatusTemporaryRedirect)
 }
 
@@ -54,7 +41,7 @@ type AuthedResponse struct {
 }
 
 func AuthedEndpoint(w http.ResponseWriter, r *http.Request) {
-	client, err := auth.InitSpotifyClient(r)
+	client, err := auth.InitSpotifyClient(r, w)
 	if err != nil {
 		log.Println("Couldn't auth", err)
 		http.Error(w, "Couldn't auth", http.StatusForbidden)
@@ -70,7 +57,7 @@ func AuthedEndpoint(w http.ResponseWriter, r *http.Request) {
 }
 
 func AlbumsEndpoint(w http.ResponseWriter, r *http.Request) {
-	client, err := auth.InitSpotifyClient(r)
+	client, err := auth.InitSpotifyClient(r, w)
 	if err != nil {
 		log.Println("Couldn't auth", err)
 		http.Error(w, "Couldn't auth", http.StatusForbidden)
@@ -100,7 +87,7 @@ func RecommendationEndpoint(w http.ResponseWriter, r *http.Request) {
 	paths := strings.Split(r.URL.Path, "/")
 	seedAlbumId := spotify.ID(paths[2])
 
-	client, err := auth.InitSpotifyClient(r)
+	client, err := auth.InitSpotifyClient(r, w)
 	if err != nil {
 		log.Println("Couldn't auth", err)
 		http.Error(w, "Couldn't auth", http.StatusForbidden)
@@ -128,7 +115,7 @@ func RecommendationEndpoint(w http.ResponseWriter, r *http.Request) {
 func AddAlbumEndpoint(w http.ResponseWriter, r *http.Request) {
 	paths := strings.Split(r.URL.Path, "/")
 	albumId := spotify.ID(paths[2])
-	client, err := auth.InitSpotifyClient(r)
+	client, err := auth.InitSpotifyClient(r, w)
 	if err != nil {
 		log.Println("Couldn't auth", err)
 		http.Error(w, "Couldn't auth", http.StatusForbidden)
@@ -147,7 +134,7 @@ func AddAlbumEndpoint(w http.ResponseWriter, r *http.Request) {
 func RemoveAlbumEndpoint(w http.ResponseWriter, r *http.Request) {
 	paths := strings.Split(r.URL.Path, "/")
 	albumId := spotify.ID(paths[2])
-	client, err := auth.InitSpotifyClient(r)
+	client, err := auth.InitSpotifyClient(r, w)
 	if err != nil {
 		log.Println("Couldn't auth", err)
 		http.Error(w, "Couldn't auth", http.StatusForbidden)

@@ -18,7 +18,7 @@ func main() {
 	}
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		_, err := auth.InitSpotifyClient(r)
+		_, err := auth.InitSpotifyClient(r, w)
 		if err != nil {
 			authenticator := auth.InitSpotifyAuth()
 			url := authenticator.AuthURL(auth.State)
