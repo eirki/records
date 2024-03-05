@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <div class="album-grid">
-      <img v-if="overlayAlbum" class="album-overlay" :src="overlayAlbum.data.images[0].url" :alt="overlayAlbum.data.name"
-        :width="overlaySize" :height="overlaySize" />
+      <img v-if="overlayAlbum" class="album-overlay" :src="overlayAlbum.data.images[0].url"
+        :alt="overlayAlbum.data.name" :width="overlaySize" :height="overlaySize" />
     </div>
     <div class="album-grid">
       <Album v-for="(album, i) in albumsWithExtra" :key="`${i}-${album.id}`" :album="album" :cellSize="cellSize"
