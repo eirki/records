@@ -11,6 +11,8 @@ export interface AlbumT {
     uri: string
     images: [ImageT, ImageT, ImageT]
     artists: ArtistT[]
+    releaseDate: string
+    addedAt: string
 }
 
 export interface OverlayT {

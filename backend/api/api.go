@@ -3,8 +3,10 @@ package api
 import (
 	context "context"
 	json "encoding/json"
+	"fmt"
 	log "log"
 	http "net/http"
+	"strconv"
 	strings "strings"
 
 	spotify "github.com/zmb3/spotify/v2"
@@ -56,7 +58,48 @@ func AuthedEndpoint(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(AuthedResponse{Success: true})
 }
 
-func AlbumsEndpoint(w http.ResponseWriter, r *http.Request) {
+func PaginatedAlbumsEndpoint(w http.ResponseWriter, r *http.Request) {
+	fmt.Println(r.URL.Path)
+	paths := strings.Split(r.URL.Path, "/")
+	fmt.Println(paths)
+	offset, err := strconv.Atoi(paths[2])
+	if err != nil {
+		log.Println("Error parsing offset", err)
+		http.Error(w, "Error parsing offset", http.StatusForbidden)
+		return
+	}
+	client, err := auth.InitSpotifyClient(r, w)
+	if err != nil {
+		log.Println("Couldn't auth", err)
+		http.Error(w, "Couldn't auth", http.StatusForbidden)
+		return
+	}
+	response, err := core.PaginatedAlbums(client, offset)
+	if err != nil {
+		log.Println("Failure getting albums page", err)
+		http.Error(w, "Failure getting albums page", http.StatusForbidden)
+		return
+	}
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(http.StatusCreated)
+	// json.NewEncoder(w).Encode(response)
+	asJson, err := json.MarshalIndent(response, "", "    ")
+	if err != nil {
+		log.Println("Couldn't serialize", err)
+		http.Error(w, "Couldn't serialize", http.StatusForbidden)
+		return
+	}
+	w.Write(asJson)
+}
+
+func RandomSavedAlbumEndpoint(w http.ResponseWriter, r *http.Request) {
+	paths := strings.Split(r.URL.Path, "/")
+	total, err := strconv.Atoi(paths[2])
+	if err != nil {
+		log.Println("Error parsing total", err)
+		http.Error(w, "Error parsing total", http.StatusForbidden)
+		return
+	}
 	client, err := auth.InitSpotifyClient(r, w)
 	if err != nil {
 		log.Println("Couldn't auth", err)
@@ -64,10 +107,10 @@ func AlbumsEndpoint(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	response, err := core.Albums(client)
+	response, err := core.RandomSavedAlbum(client, total)
 	if err != nil {
-		log.Println("Failure", err)
-		http.Error(w, "Failure", http.StatusForbidden)
+		log.Println("Failure getting saved album", err)
+		http.Error(w, "Failure getting saved album", http.StatusForbidden)
 		return
 	}
 	w.Header().Set("Content-Type", "application/json")
@@ -85,6 +128,7 @@ func AlbumsEndpoint(w http.ResponseWriter, r *http.Request) {
 
 func RecommendationEndpoint(w http.ResponseWriter, r *http.Request) {
 	paths := strings.Split(r.URL.Path, "/")
+	fmt.Println(paths)
 	seedAlbumId := spotify.ID(paths[2])
 
 	client, err := auth.InitSpotifyClient(r, w)
@@ -95,8 +139,8 @@ func RecommendationEndpoint(w http.ResponseWriter, r *http.Request) {
 	}
 	response, err := core.Recommendations(client, seedAlbumId)
 	if err != nil {
-		log.Println("Failure", err)
-		http.Error(w, "Failure", 400)
+		log.Println("Failure getting recommendations", err)
+		http.Error(w, "Failure getting recommendations", 400)
 		return
 	}
 	w.Header().Set("Content-Type", "application/json")
@@ -129,8 +173,8 @@ func AddAlbumEndpoint(w http.ResponseWriter, r *http.Request) {
 	}
 	w.WriteHeader(200)
 	w.Write([]byte("done"))
-
 }
+
 func RemoveAlbumEndpoint(w http.ResponseWriter, r *http.Request) {
 	paths := strings.Split(r.URL.Path, "/")
 	albumId := spotify.ID(paths[2])
@@ -149,5 +193,4 @@ func RemoveAlbumEndpoint(w http.ResponseWriter, r *http.Request) {
 	}
 	w.WriteHeader(200)
 	w.Write([]byte("done"))
-
 }

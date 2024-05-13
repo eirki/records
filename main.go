@@ -29,13 +29,19 @@ func main() {
 
 		}
 	})
+	http.HandleFunc("/auth", func(w http.ResponseWriter, r *http.Request) {
+		authenticator := auth.InitSpotifyAuth()
+		url := authenticator.AuthURL(auth.State)
+		http.Redirect(w, r, url, http.StatusTemporaryRedirect)
+	})
 	http.HandleFunc("/assets/", func(w http.ResponseWriter, r *http.Request) {
 		path := "./frontend/dist" + r.URL.Path
 		http.ServeFile(w, r, path)
 	})
 	http.HandleFunc("/redirect", api.CompleteAuthEndpoint)
 	http.HandleFunc("/authed", api.AuthedEndpoint)
-	http.HandleFunc("/albums", api.AlbumsEndpoint)
+	http.HandleFunc("/paginated_albums/", api.PaginatedAlbumsEndpoint)
+	http.HandleFunc("/random_saved_album/", api.RandomSavedAlbumEndpoint)
 	http.HandleFunc("/recommendations/", api.RecommendationEndpoint)
 	http.HandleFunc("/add_album/", api.AddAlbumEndpoint)
 	http.HandleFunc("/remove_album/", api.RemoveAlbumEndpoint)

@@ -1,25 +1,27 @@
 <template>
   <div class="main-grid">
     <div class="left-grid">
-      <iframe class="player" :src="`https://open.spotify.com/embed/album/${selected_album.id}`" :width="playerWidth"
-        :height="playerHeight" frameborder="0" allowtransparency="true" allow="encrypted-media" />
+      <template v-if="selectedAlbum && playerWidth > 0">
+        <iframe class="player" :src="`https://open.spotify.com/embed/album/${selectedAlbum.id}`" :width="playerWidth"
+          :height="playerHeight" frameborder="0" allowtransparency="true" allow="encrypted-media" />
+      </template>
       <AlbumColumn :padding="padding" :cellSize=cellSize :overlayMultiplier=overlayMultiplier :nRows="nRows - nLeftCols"
         v-on:play="handlePlay($event)" v-on:clearHover="clearHover" v-on:hover="hover($event)"
-        v-on:refreshAlbums=refreshAlbums :areInLibrary=true class="albumColumn recentAlbums" :albums="recent_albums" />
-      <AlbumColumn v-if="recommended_albums.length > 0" :padding="padding" :cellSize=cellSize
+        v-on:refreshAlbums=refreshAlbums :areInLibrary=true class="albumColumn recentAlbums" :albums="recentAlbums" />
+      <AlbumColumn v-if="recommendedAlbums && recommendedAlbums.length > 0" :padding="padding" :cellSize=cellSize
         :overlayMultiplier=overlayMultiplier :nRows="nRows - nLeftCols" v-on:play="handlePlay($event)"
         v-on:clearHover="clearHover" v-on:hover="hover($event)" v-on:refreshAlbums=refreshAlbums :areInLibrary=false
-        class="albumColumn recommendedAlbums" :albums="recommended_albums" />
+        class="albumColumn recommendedAlbums" :albums="recommendedAlbums" />
 
-      <img class="albumArt" :src="selected_album.images[0].url" :alt="selected_album.name" :width=albumArtSize
-        :height=albumArtSize @contextmenu="onAlbumArtContextMenu($event)" />
+      <img class="albumArt" v-if="selectedAlbum" :src="selectedAlbum.images[0].url" :alt="selectedAlbum.name"
+        :width=albumArtSize :height=albumArtSize @contextmenu="onAlbumArtContextMenu($event)" />
     </div>
     <div class="overlayGrid">
       <img v-if="overlayAlbum" class="album-overlay" :src="overlayAlbum.images[0].url" :alt="overlayAlbum.name"
         :width="homeOverlaySize" :height="homeOverlaySize" />
     </div>
 
-    <AlbumGrid class="albumGrid" :albums="all_albums" :extraAlbums="recommended_albums" :padding="padding"
+    <AlbumGrid class="albumGrid" :albums="allAlbums" :extraAlbums="generalRecommendedAlbums" :padding="padding"
       v-on:play="handlePlay($event)" :cellSize=cellSize :overlayMultiplier=overlayMultiplier :nRows=nRows
       :nCols="nCols - nLeftCols" :nColsAll=nCols />
   </div>
@@ -27,31 +29,87 @@
 
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import type { Ref } from 'vue';
 import ContextMenu from '@imengyu/vue3-context-menu'
 
 import AlbumColumn from "../components/AlbumColumn.vue";
 import AlbumGrid from "../components/AlbumGrid.vue";
 import type { AlbumT, OverlayT } from '../types.js'
-
 import getSquareSize from "../squareSize.js";
 
+const allAlbums: Ref<AlbumT[]> = ref([])
+let allAlbumsTitles = new Set<string>()
+const recentAlbums: Ref<AlbumT[]> = ref([])
+const recommendedAlbums: Ref<AlbumT[]> = ref([])
+const generalRecommendedAlbums: Ref<AlbumT[]> = ref([])
+const selectedAlbum: Ref<AlbumT | null> = ref(null)
+const nAlbums = ref(0)
 
-const props = defineProps<{
-  all_albums: AlbumT[]
-  recent_albums: AlbumT[]
-  recommended_albums: AlbumT[]
-}>()
+async function getRecommendedAlbums(seedAlbumId: string): Promise<AlbumT[]> {
+  return fetch(`/recommendations/${seedAlbumId}`)
+    .then(res => res.json())
+    .then(data => filterRecommendedAlbums(data.recommended_albums))
+}
 
-const all_albums = ref(props.all_albums)
-const recent_albums = ref(props.recent_albums)
-const recommended_albums = ref(props.recommended_albums)
+function filterRecommendedAlbums(recommendedAlbums: AlbumT[]): AlbumT[] {
+  return recommendedAlbums.filter(recommendedAlbum => allAlbumsTitles.has(recommendedAlbum.name) === false)
+}
+
+function getRandomAlbum(total: number) {
+  return fetch(`/random_saved_album/${total}`)
+    .then(res => res.json())
+    .then((album: AlbumT) => {
+      selectedAlbum.value = album
+      return getRecommendedAlbums(album.id).then(albums => {
+        recommendedAlbums.value = albums
+      })
+    })
+}
+
+async function populateAlbums() {
+  let offset = 0
+  let data = null
+  do {
+    const res = await fetch(`/paginated_albums/${offset}`);
+    data = await res.json();
+    nAlbums.value = data.total;
+    if (allAlbums.value.length === 0) {
+      // kind of a workaround
+      checkSize()
+      getRandomAlbum(data.total);
+    }
+    let concated = allAlbums.value.concat(data.albums);
+    function cleanName(name: string) {
+      name = name.toLowerCase();
+      name = name.replace("the ", "");
+      return name;
+    }
+    concated.sort((a, b) => {
+      const aName = cleanName(a.artists[0].name);
+      const bName = cleanName(b.artists[0].name);
+      if (aName !== bName) {
+        return aName.localeCompare(bName);
+      } else {
+        return a.releaseDate.localeCompare(b.releaseDate);
+      }
+    });
+    allAlbums.value = concated;
+    offset = allAlbums.value.length
+  } while (data?.has_next)
+  recentAlbums.value = [...allAlbums.value].sort((a, b) => b.addedAt.localeCompare(a.addedAt));
+  allAlbumsTitles = new Set(allAlbums.value.map(album => album.name))
+  getRecommendedAlbums(getRandom(data.albums).id).then(albums => {
+    generalRecommendedAlbums.value = albums
+  })
+}
 
 function randomAlbum() {
-  return all_albums.value[Math.floor(Math.random() * all_albums.value.length)]
+  return allAlbums.value[Math.floor(Math.random() * allAlbums.value.length)]
 }
-const selected_album = ref(randomAlbum())
+
+
+
 const playerMaxWidth = ref(400);
 const padding = ref(2);
 const cellSize = ref(0);
@@ -100,9 +158,7 @@ function calculateBestSquareSize(y: number, x: number, n: number, nAdded: number
     res = { ...res, colsToAdd: colsToAdd, totalPadding: totalPadding, nAdded: nAdded + toAdd }
     return res
   })
-  console.log("sug0", suggestions[0], suggestions[0].totalPadding)
   suggestions.sort((a, b) => a.totalPadding - b.totalPadding)
-  console.log("sug1", suggestions[0], suggestions[0].totalPadding)
   return suggestions[0]
 
 }
@@ -110,12 +166,10 @@ function calculateBestSquareSize(y: number, x: number, n: number, nAdded: number
 function checkSize() {
   let y = window.innerHeight - (8 * 2)
   let x = window.innerWidth - (8 * 2)
-  let n = all_albums.value.length
+  let n = nAlbums.value
 
   let res = calculateMaxSquareSize(y, x, n)
-  console.log("res0", res)
   res = calculateBestSquareSize(y, x, n, res.nAdded)
-  console.log("res1", res)
   cellSize.value = res.cellSize
   // console.log("cellSize", cellSize)
   nRows.value = res.nRows
@@ -159,10 +213,12 @@ function onAlbumArtContextMenu(e: MouseEvent) {
   })
 }
 function handlePlay(album_data: AlbumT) {
-  selected_album.value = album_data;
-  fetch(`/recommendations/${album_data.id}`)
-    .then(res => res.json())
-    .then(data => recommended_albums.value = data.recommended_albums)
+  selectedAlbum.value = album_data;
+  recommendedAlbums.value = []
+  getRecommendedAlbums(album_data.id).then(albums => {
+    recommendedAlbums.value = albums
+  })
+
 }
 
 function hover(arg: OverlayT) {
@@ -175,14 +231,23 @@ function clearHover() {
 
 function refreshAlbums(callback: (() => void)) {
   fetch(`/albums`).then(res => res.json()).then(data => {
-    all_albums.value = data.all_albums
-    recent_albums.value = data.recent_albums
+    allAlbums.value = data.allAlbums
+    recentAlbums.value = data.recentAlbums
     checkSize()
     callback()
   })
 }
 
-checkSize()
+
+function getRandom(list: any) {
+  return list[Math.floor((Math.random() * list.length))];
+}
+
+
+onMounted(() => {
+  populateAlbums()
+})
+
 window.addEventListener("resize", checkSize);
 
 </script>
