@@ -1,0 +1,35 @@
+{
+    "name": "Wolfmother (EE Version)",
+    "artists": [
+        {
+            "name": "Wolfmother",
+            "id": "3yEnArbNHyTCwMRvD9SBy4",
+            "uri": "spotify:artist:3yEnArbNHyTCwMRvD9SBy4",
+            "href": "https://api.spotify.com/v1/artists/3yEnArbNHyTCwMRvD9SBy4",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/artist/3yEnArbNHyTCwMRvD9SBy4"
+            }
+        }
+    ],
+    "id": "4GZgE3SCBK9jDV05K5mGkH",
+    "uri": "spotify:album:4GZgE3SCBK9jDV05K5mGkH",
+    "images": [
+        {
+            "height": 640,
+            "width": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273e7cab25e36a024d7d29d17a6"
+        },
+        {
+            "height": 300,
+            "width": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02e7cab25e36a024d7d29d17a6"
+        },
+        {
+            "height": 64,
+            "width": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851e7cab25e36a024d7d29d17a6"
+        }
+    ],
+    "addedAt": "2016-11-15T13:24:33Z",
+    "releaseDate": "2006-01-01"
+}

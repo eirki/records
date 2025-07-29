@@ -14,7 +14,7 @@ COPY backend ./backend
 RUN CGO_ENABLED=0 go build -o server
 
 
-FROM node:16.16.0 as build_frontend
+FROM node:20.18.1 as build_frontend
 
 # https://stackoverflow.com/questions/44633419/no-access-permission-error-with-npm-global-install-on-docker-image
 USER node
@@ -36,7 +36,6 @@ COPY frontend/index.html .
 COPY frontend/tsconfig.json .
 COPY frontend/tsconfig.node.json .
 COPY frontend/vite.config.ts .
-# RUN node_modules/.bin/vue-tsc --noEmit
 RUN node_modules/.bin/vite build
 
 # prod environment

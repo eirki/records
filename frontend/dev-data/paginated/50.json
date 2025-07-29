@@ -1,0 +1,1802 @@
+{
+    "albums": [
+        {
+            "name": "Born Under Saturn",
+            "artists": [
+                {
+                    "name": "Django Django",
+                    "id": "2ARO60gI5do88ho6azmzab",
+                    "uri": "spotify:artist:2ARO60gI5do88ho6azmzab",
+                    "href": "https://api.spotify.com/v1/artists/2ARO60gI5do88ho6azmzab",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/2ARO60gI5do88ho6azmzab"
+                    }
+                }
+            ],
+            "id": "24cGQaWNqMwLipOpN5sKHI",
+            "uri": "spotify:album:24cGQaWNqMwLipOpN5sKHI",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273d1a59a922f004c0965c1acf8"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02d1a59a922f004c0965c1acf8"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851d1a59a922f004c0965c1acf8"
+                }
+            ],
+            "addedAt": "2016-11-15T13:14:21Z",
+            "releaseDate": "2015-05-01"
+        },
+        {
+            "name": "Get To Heaven (Deluxe)",
+            "artists": [
+                {
+                    "name": "Everything Everything",
+                    "id": "1HOeqtP7tHkKNJNLzQ2tnr",
+                    "uri": "spotify:artist:1HOeqtP7tHkKNJNLzQ2tnr",
+                    "href": "https://api.spotify.com/v1/artists/1HOeqtP7tHkKNJNLzQ2tnr",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/1HOeqtP7tHkKNJNLzQ2tnr"
+                    }
+                }
+            ],
+            "id": "1oScYOf8ImO6L9bdvhep1J",
+            "uri": "spotify:album:1oScYOf8ImO6L9bdvhep1J",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273889741e4d5cfc40e4610770c"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02889741e4d5cfc40e4610770c"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851889741e4d5cfc40e4610770c"
+                }
+            ],
+            "addedAt": "2018-10-17T11:06:12Z",
+            "releaseDate": "2015-06-22"
+        },
+        {
+            "name": "The Bones Of What You Believe",
+            "artists": [
+                {
+                    "name": "CHVRCHES",
+                    "id": "3CjlHNtplJyTf9npxaPl5w",
+                    "uri": "spotify:artist:3CjlHNtplJyTf9npxaPl5w",
+                    "href": "https://api.spotify.com/v1/artists/3CjlHNtplJyTf9npxaPl5w",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/3CjlHNtplJyTf9npxaPl5w"
+                    }
+                }
+            ],
+            "id": "03U41p2XNP3oP3REeEDMrQ",
+            "uri": "spotify:album:03U41p2XNP3oP3REeEDMrQ",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273ff7e0dbc7da86345516bb0a9"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02ff7e0dbc7da86345516bb0a9"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851ff7e0dbc7da86345516bb0a9"
+                }
+            ],
+            "addedAt": "2016-11-15T13:14:21Z",
+            "releaseDate": "2013-01-01"
+        },
+        {
+            "name": "Sounds Of Silence",
+            "artists": [
+                {
+                    "name": "Simon \u0026 Garfunkel",
+                    "id": "70cRZdQywnSFp9pnc2WTCE",
+                    "uri": "spotify:artist:70cRZdQywnSFp9pnc2WTCE",
+                    "href": "https://api.spotify.com/v1/artists/70cRZdQywnSFp9pnc2WTCE",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/70cRZdQywnSFp9pnc2WTCE"
+                    }
+                }
+            ],
+            "id": "07RAGILF28QweYQSZasr5k",
+            "uri": "spotify:album:07RAGILF28QweYQSZasr5k",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b27344a8aa7ac5c2e2defbfd702b"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e0244a8aa7ac5c2e2defbfd702b"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d0000485144a8aa7ac5c2e2defbfd702b"
+                }
+            ],
+            "addedAt": "2016-11-15T13:14:21Z",
+            "releaseDate": "1966-01-17"
+        },
+        {
+            "name": "Purr",
+            "artists": [
+                {
+                    "name": "Dance Hall Crashers",
+                    "id": "7cIsuRDa9Q68n6Ui6GZsVj",
+                    "uri": "spotify:artist:7cIsuRDa9Q68n6Ui6GZsVj",
+                    "href": "https://api.spotify.com/v1/artists/7cIsuRDa9Q68n6Ui6GZsVj",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/7cIsuRDa9Q68n6Ui6GZsVj"
+                    }
+                }
+            ],
+            "id": "3aNL3G2hozBlUBruIJc0SM",
+            "uri": "spotify:album:3aNL3G2hozBlUBruIJc0SM",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b27334114ad110ab8004c5c8f2c0"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e0234114ad110ab8004c5c8f2c0"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d0000485134114ad110ab8004c5c8f2c0"
+                }
+            ],
+            "addedAt": "2016-11-15T13:14:21Z",
+            "releaseDate": "1999"
+        },
+        {
+            "name": "Step Up Your Game",
+            "artists": [
+                {
+                    "name": "Gerilja",
+                    "id": "1OPBKPgqguelzVZtQ0Hj4Y",
+                    "uri": "spotify:artist:1OPBKPgqguelzVZtQ0Hj4Y",
+                    "href": "https://api.spotify.com/v1/artists/1OPBKPgqguelzVZtQ0Hj4Y",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/1OPBKPgqguelzVZtQ0Hj4Y"
+                    }
+                }
+            ],
+            "id": "0W2QFTq4CoH9jf5mibiKrG",
+            "uri": "spotify:album:0W2QFTq4CoH9jf5mibiKrG",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273e29e092d65e191b0acb27de1"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02e29e092d65e191b0acb27de1"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851e29e092d65e191b0acb27de1"
+                }
+            ],
+            "addedAt": "2016-11-15T13:14:21Z",
+            "releaseDate": "2013-05-20"
+        },
+        {
+            "name": "Frengers: Not Quite Friends But Not Quite Strangers",
+            "artists": [
+                {
+                    "name": "Mew",
+                    "id": "6kDMoHTcBICPILP2aclPWZ",
+                    "uri": "spotify:artist:6kDMoHTcBICPILP2aclPWZ",
+                    "href": "https://api.spotify.com/v1/artists/6kDMoHTcBICPILP2aclPWZ",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/6kDMoHTcBICPILP2aclPWZ"
+                    }
+                }
+            ],
+            "id": "0XJiBmyMDELqCXwZUaG3Rf",
+            "uri": "spotify:album:0XJiBmyMDELqCXwZUaG3Rf",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273ec58fb8535dc6c4f5a06780e"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02ec58fb8535dc6c4f5a06780e"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851ec58fb8535dc6c4f5a06780e"
+                }
+            ],
+            "addedAt": "2016-11-15T13:14:21Z",
+            "releaseDate": "2003-04-07"
+        },
+        {
+            "name": "Good News For People Who Love Bad News",
+            "artists": [
+                {
+                    "name": "Modest Mouse",
+                    "id": "1yAwtBaoHLEDWAnWR87hBT",
+                    "uri": "spotify:artist:1yAwtBaoHLEDWAnWR87hBT",
+                    "href": "https://api.spotify.com/v1/artists/1yAwtBaoHLEDWAnWR87hBT",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/1yAwtBaoHLEDWAnWR87hBT"
+                    }
+                }
+            ],
+            "id": "0TGTGuc2vXv6ZECoAf52N0",
+            "uri": "spotify:album:0TGTGuc2vXv6ZECoAf52N0",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273cc68329bfbf34037df965dc1"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02cc68329bfbf34037df965dc1"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851cc68329bfbf34037df965dc1"
+                }
+            ],
+            "addedAt": "2016-12-02T11:11:34Z",
+            "releaseDate": "2004-04-05"
+        },
+        {
+            "name": "Arriving Somewhere",
+            "artists": [
+                {
+                    "name": "Porcupine Tree",
+                    "id": "5NXHXK6hOCotCF8lvGM1I0",
+                    "uri": "spotify:artist:5NXHXK6hOCotCF8lvGM1I0",
+                    "href": "https://api.spotify.com/v1/artists/5NXHXK6hOCotCF8lvGM1I0",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/5NXHXK6hOCotCF8lvGM1I0"
+                    }
+                }
+            ],
+            "id": "2d7vMJhQRv6MFzkHg4rFXQ",
+            "uri": "spotify:album:2d7vMJhQRv6MFzkHg4rFXQ",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273026a9b0e5c7056143ff2c71f"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02026a9b0e5c7056143ff2c71f"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851026a9b0e5c7056143ff2c71f"
+                }
+            ],
+            "addedAt": "2019-01-17T18:09:15Z",
+            "releaseDate": "2006-01-06"
+        },
+        {
+            "name": "California",
+            "artists": [
+                {
+                    "name": "blink-182",
+                    "id": "6FBDaR13swtiWwGhX1WQsP",
+                    "uri": "spotify:artist:6FBDaR13swtiWwGhX1WQsP",
+                    "href": "https://api.spotify.com/v1/artists/6FBDaR13swtiWwGhX1WQsP",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/6FBDaR13swtiWwGhX1WQsP"
+                    }
+                }
+            ],
+            "id": "4wuYQ9hyF1EGmrtjMpgpE9",
+            "uri": "spotify:album:4wuYQ9hyF1EGmrtjMpgpE9",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2739884fb067234d2036b830429"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e029884fb067234d2036b830429"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048519884fb067234d2036b830429"
+                }
+            ],
+            "addedAt": "2016-11-15T13:14:21Z",
+            "releaseDate": "2016-07-01"
+        },
+        {
+            "name": "MTV Unplugged In New York",
+            "artists": [
+                {
+                    "name": "Nirvana",
+                    "id": "6olE6TJLqED3rqDCT0FyPh",
+                    "uri": "spotify:artist:6olE6TJLqED3rqDCT0FyPh",
+                    "href": "https://api.spotify.com/v1/artists/6olE6TJLqED3rqDCT0FyPh",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
+                    }
+                }
+            ],
+            "id": "5pbjLidJuoty9QUOy6X682",
+            "uri": "spotify:album:5pbjLidJuoty9QUOy6X682",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273f411d2833d932f4d84d616ef"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02f411d2833d932f4d84d616ef"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851f411d2833d932f4d84d616ef"
+                }
+            ],
+            "addedAt": "2016-11-15T13:14:21Z",
+            "releaseDate": "1994-11-01"
+        },
+        {
+            "name": "Djangology (feat. Stéphane Grappelli)",
+            "artists": [
+                {
+                    "name": "Django Reinhardt",
+                    "id": "5Z1XZyEFY0dewG8faEIiEx",
+                    "uri": "spotify:artist:5Z1XZyEFY0dewG8faEIiEx",
+                    "href": "https://api.spotify.com/v1/artists/5Z1XZyEFY0dewG8faEIiEx",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/5Z1XZyEFY0dewG8faEIiEx"
+                    }
+                },
+                {
+                    "name": "Quintette du Hot Club de France",
+                    "id": "6ufQwLbg8fB1I6aRQb3aUn",
+                    "uri": "spotify:artist:6ufQwLbg8fB1I6aRQb3aUn",
+                    "href": "https://api.spotify.com/v1/artists/6ufQwLbg8fB1I6aRQb3aUn",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/6ufQwLbg8fB1I6aRQb3aUn"
+                    }
+                }
+            ],
+            "id": "3bMdsH6llaI2OTGulHDYEK",
+            "uri": "spotify:album:3bMdsH6llaI2OTGulHDYEK",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2737b09153a52253370a2579f37"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e027b09153a52253370a2579f37"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048517b09153a52253370a2579f37"
+                }
+            ],
+            "addedAt": "2020-12-09T18:09:52Z",
+            "releaseDate": "2002-07-08"
+        },
+        {
+            "name": "Crystal Castles",
+            "artists": [
+                {
+                    "name": "Crystal Castles",
+                    "id": "7K3zpFXBvPcvzhj7zlGJdO",
+                    "uri": "spotify:artist:7K3zpFXBvPcvzhj7zlGJdO",
+                    "href": "https://api.spotify.com/v1/artists/7K3zpFXBvPcvzhj7zlGJdO",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/7K3zpFXBvPcvzhj7zlGJdO"
+                    }
+                }
+            ],
+            "id": "75olNPlDKi2XQhTD9IPlVC",
+            "uri": "spotify:album:75olNPlDKi2XQhTD9IPlVC",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2735885a208aad0fbf70736bfab"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e025885a208aad0fbf70736bfab"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048515885a208aad0fbf70736bfab"
+                }
+            ],
+            "addedAt": "2016-11-15T13:14:21Z",
+            "releaseDate": "2008-03-16"
+        },
+        {
+            "name": "4",
+            "artists": [
+                {
+                    "name": "Kite",
+                    "id": "0nhhoDCycjsJVHS8sk4vzW",
+                    "uri": "spotify:artist:0nhhoDCycjsJVHS8sk4vzW",
+                    "href": "https://api.spotify.com/v1/artists/0nhhoDCycjsJVHS8sk4vzW",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/0nhhoDCycjsJVHS8sk4vzW"
+                    }
+                }
+            ],
+            "id": "1GrfYZSn0DVd4aGZ8YIkCC",
+            "uri": "spotify:album:1GrfYZSn0DVd4aGZ8YIkCC",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2733ec6e851206cdd581f466e99"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e023ec6e851206cdd581f466e99"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048513ec6e851206cdd581f466e99"
+                }
+            ],
+            "addedAt": "2016-11-15T13:14:21Z",
+            "releaseDate": "2011-10-01"
+        },
+        {
+            "name": "Six Degrees of Inner Turbulence",
+            "artists": [
+                {
+                    "name": "Dream Theater",
+                    "id": "2aaLAng2L2aWD2FClzwiep",
+                    "uri": "spotify:artist:2aaLAng2L2aWD2FClzwiep",
+                    "href": "https://api.spotify.com/v1/artists/2aaLAng2L2aWD2FClzwiep",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/2aaLAng2L2aWD2FClzwiep"
+                    }
+                }
+            ],
+            "id": "4INFVEhhhnLiqNR4MVPaX8",
+            "uri": "spotify:album:4INFVEhhhnLiqNR4MVPaX8",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273dbad6ff2ddf326bc6adf3f75"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02dbad6ff2ddf326bc6adf3f75"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851dbad6ff2ddf326bc6adf3f75"
+                }
+            ],
+            "addedAt": "2016-11-21T19:00:36Z",
+            "releaseDate": "2002-01-22"
+        },
+        {
+            "name": "Meatbodies",
+            "artists": [
+                {
+                    "name": "Meatbodies",
+                    "id": "21ltygJ3rGHmnqaUzqnsku",
+                    "uri": "spotify:artist:21ltygJ3rGHmnqaUzqnsku",
+                    "href": "https://api.spotify.com/v1/artists/21ltygJ3rGHmnqaUzqnsku",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/21ltygJ3rGHmnqaUzqnsku"
+                    }
+                }
+            ],
+            "id": "2Uzzcp0yajAHVOGNNaovDU",
+            "uri": "spotify:album:2Uzzcp0yajAHVOGNNaovDU",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273566a8383087840779241e5ac"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02566a8383087840779241e5ac"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851566a8383087840779241e5ac"
+                }
+            ],
+            "addedAt": "2025-03-13T14:12:05Z",
+            "releaseDate": "2014-10-14"
+        },
+        {
+            "name": "Frances the Mute",
+            "artists": [
+                {
+                    "name": "The Mars Volta",
+                    "id": "75U40yZLLPglFgXbDVnmVs",
+                    "uri": "spotify:artist:75U40yZLLPglFgXbDVnmVs",
+                    "href": "https://api.spotify.com/v1/artists/75U40yZLLPglFgXbDVnmVs",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/75U40yZLLPglFgXbDVnmVs"
+                    }
+                }
+            ],
+            "id": "30iqYID1JMBXLVFfErwTSd",
+            "uri": "spotify:album:30iqYID1JMBXLVFfErwTSd",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273a6fb6a5868d334326c641fa4"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02a6fb6a5868d334326c641fa4"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851a6fb6a5868d334326c641fa4"
+                }
+            ],
+            "addedAt": "2022-01-13T18:04:07Z",
+            "releaseDate": "2005-02-10"
+        },
+        {
+            "name": "An Awesome Wave",
+            "artists": [
+                {
+                    "name": "alt-J",
+                    "id": "3XHO7cRUPCLOr6jwp8vsx5",
+                    "uri": "spotify:artist:3XHO7cRUPCLOr6jwp8vsx5",
+                    "href": "https://api.spotify.com/v1/artists/3XHO7cRUPCLOr6jwp8vsx5",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/3XHO7cRUPCLOr6jwp8vsx5"
+                    }
+                }
+            ],
+            "id": "7HOzvP7Ta2lLueojdlJtdZ",
+            "uri": "spotify:album:7HOzvP7Ta2lLueojdlJtdZ",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273d381b6e0d9ffb31c47080079"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02d381b6e0d9ffb31c47080079"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851d381b6e0d9ffb31c47080079"
+                }
+            ],
+            "addedAt": "2016-11-15T13:14:21Z",
+            "releaseDate": "2012-05-28"
+        },
+        {
+            "name": "Melody's Echo Chamber",
+            "artists": [
+                {
+                    "name": "Melody's Echo Chamber",
+                    "id": "1S0vL284jxZYKtZQ2jsQ2X",
+                    "uri": "spotify:artist:1S0vL284jxZYKtZQ2jsQ2X",
+                    "href": "https://api.spotify.com/v1/artists/1S0vL284jxZYKtZQ2jsQ2X",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/1S0vL284jxZYKtZQ2jsQ2X"
+                    }
+                }
+            ],
+            "id": "2tvHcQfvtXvmFHIGyBiPVt",
+            "uri": "spotify:album:2tvHcQfvtXvmFHIGyBiPVt",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b27388bf1dd8b0ec7390aed00ba0"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e0288bf1dd8b0ec7390aed00ba0"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d0000485188bf1dd8b0ec7390aed00ba0"
+                }
+            ],
+            "addedAt": "2022-08-09T07:16:48Z",
+            "releaseDate": "2012-09-25"
+        },
+        {
+            "name": "La Di Da Di",
+            "artists": [
+                {
+                    "name": "Battles",
+                    "id": "3EMSpwRtkvUTxfB4aS5xnA",
+                    "uri": "spotify:artist:3EMSpwRtkvUTxfB4aS5xnA",
+                    "href": "https://api.spotify.com/v1/artists/3EMSpwRtkvUTxfB4aS5xnA",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/3EMSpwRtkvUTxfB4aS5xnA"
+                    }
+                }
+            ],
+            "id": "5EKVDFC9xHXLrT90ym194g",
+            "uri": "spotify:album:5EKVDFC9xHXLrT90ym194g",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273aa2301aa2f3cb3ba6dc128d2"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02aa2301aa2f3cb3ba6dc128d2"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851aa2301aa2f3cb3ba6dc128d2"
+                }
+            ],
+            "addedAt": "2021-11-26T17:17:01Z",
+            "releaseDate": "2015-09-18"
+        },
+        {
+            "name": "Glowing in the Dark",
+            "artists": [
+                {
+                    "name": "Django Django",
+                    "id": "2ARO60gI5do88ho6azmzab",
+                    "uri": "spotify:artist:2ARO60gI5do88ho6azmzab",
+                    "href": "https://api.spotify.com/v1/artists/2ARO60gI5do88ho6azmzab",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/2ARO60gI5do88ho6azmzab"
+                    }
+                }
+            ],
+            "id": "3HViIGlk6vd4K4HAbQ1XKg",
+            "uri": "spotify:album:3HViIGlk6vd4K4HAbQ1XKg",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273ab9fad693820e9945a6796a2"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02ab9fad693820e9945a6796a2"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851ab9fad693820e9945a6796a2"
+                }
+            ],
+            "addedAt": "2021-04-12T12:14:49Z",
+            "releaseDate": "2021-02-12"
+        },
+        {
+            "name": "Deloused in the Comatorium",
+            "artists": [
+                {
+                    "name": "The Mars Volta",
+                    "id": "75U40yZLLPglFgXbDVnmVs",
+                    "uri": "spotify:artist:75U40yZLLPglFgXbDVnmVs",
+                    "href": "https://api.spotify.com/v1/artists/75U40yZLLPglFgXbDVnmVs",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/75U40yZLLPglFgXbDVnmVs"
+                    }
+                }
+            ],
+            "id": "4DohPAg657rUPoYuLQu218",
+            "uri": "spotify:album:4DohPAg657rUPoYuLQu218",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2738e931600c60e60d50489437e"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e028e931600c60e60d50489437e"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048518e931600c60e60d50489437e"
+                }
+            ],
+            "addedAt": "2016-11-15T13:14:21Z",
+            "releaseDate": "2003-01-01"
+        },
+        {
+            "name": "Without You I'm Nothing",
+            "artists": [
+                {
+                    "name": "Placebo",
+                    "id": "6RZUqkomCmb8zCRqc9eznB",
+                    "uri": "spotify:artist:6RZUqkomCmb8zCRqc9eznB",
+                    "href": "https://api.spotify.com/v1/artists/6RZUqkomCmb8zCRqc9eznB",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/6RZUqkomCmb8zCRqc9eznB"
+                    }
+                }
+            ],
+            "id": "2cDDG5rnwEgjNL8Q0cO9Zd",
+            "uri": "spotify:album:2cDDG5rnwEgjNL8Q0cO9Zd",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273ac68d5f575b62ee76a235396"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02ac68d5f575b62ee76a235396"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851ac68d5f575b62ee76a235396"
+                }
+            ],
+            "addedAt": "2016-11-15T13:14:21Z",
+            "releaseDate": "1998-10-12"
+        },
+        {
+            "name": "Origin of Symmetry",
+            "artists": [
+                {
+                    "name": "Muse",
+                    "id": "12Chz98pHFMPJEknJQMWvI",
+                    "uri": "spotify:artist:12Chz98pHFMPJEknJQMWvI",
+                    "href": "https://api.spotify.com/v1/artists/12Chz98pHFMPJEknJQMWvI",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/12Chz98pHFMPJEknJQMWvI"
+                    }
+                }
+            ],
+            "id": "1Dh27pjT3IEdiRG9Se5uQn",
+            "uri": "spotify:album:1Dh27pjT3IEdiRG9Se5uQn",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2735225e9931a558f6d2f541a7d"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e025225e9931a558f6d2f541a7d"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048515225e9931a558f6d2f541a7d"
+                }
+            ],
+            "addedAt": "2020-03-28T21:21:23Z",
+            "releaseDate": "2001"
+        },
+        {
+            "name": "You Will Never Know Why (2021 Remaster)",
+            "artists": [
+                {
+                    "name": "Sweet Trip",
+                    "id": "5NtMqQLCzdVvL7F8vFp3zM",
+                    "uri": "spotify:artist:5NtMqQLCzdVvL7F8vFp3zM",
+                    "href": "https://api.spotify.com/v1/artists/5NtMqQLCzdVvL7F8vFp3zM",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/5NtMqQLCzdVvL7F8vFp3zM"
+                    }
+                }
+            ],
+            "id": "0kmPn6M3cue7rec6Unw6BD",
+            "uri": "spotify:album:0kmPn6M3cue7rec6Unw6BD",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2732eea6e2f09819773091ec649"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e022eea6e2f09819773091ec649"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048512eea6e2f09819773091ec649"
+                }
+            ],
+            "addedAt": "2022-04-20T13:13:56Z",
+            "releaseDate": "2009"
+        },
+        {
+            "name": "Iselilja",
+            "artists": [
+                {
+                    "name": "Gåte",
+                    "id": "3YxkGgMvqCQA75aFpy6524",
+                    "uri": "spotify:artist:3YxkGgMvqCQA75aFpy6524",
+                    "href": "https://api.spotify.com/v1/artists/3YxkGgMvqCQA75aFpy6524",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/3YxkGgMvqCQA75aFpy6524"
+                    }
+                }
+            ],
+            "id": "576kGOO7Nla0FTJMIyxcP3",
+            "uri": "spotify:album:576kGOO7Nla0FTJMIyxcP3",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b27387877ac4b118afdcef6ec4b7"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e0287877ac4b118afdcef6ec4b7"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d0000485187877ac4b118afdcef6ec4b7"
+                }
+            ],
+            "addedAt": "2016-11-15T13:14:21Z",
+            "releaseDate": "2004-10-18"
+        },
+        {
+            "name": "Wolfmother (EE Version)",
+            "artists": [
+                {
+                    "name": "Wolfmother",
+                    "id": "3yEnArbNHyTCwMRvD9SBy4",
+                    "uri": "spotify:artist:3yEnArbNHyTCwMRvD9SBy4",
+                    "href": "https://api.spotify.com/v1/artists/3yEnArbNHyTCwMRvD9SBy4",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/3yEnArbNHyTCwMRvD9SBy4"
+                    }
+                }
+            ],
+            "id": "4GZgE3SCBK9jDV05K5mGkH",
+            "uri": "spotify:album:4GZgE3SCBK9jDV05K5mGkH",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273e7cab25e36a024d7d29d17a6"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02e7cab25e36a024d7d29d17a6"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851e7cab25e36a024d7d29d17a6"
+                }
+            ],
+            "addedAt": "2016-11-15T13:24:33Z",
+            "releaseDate": "2006-01-01"
+        },
+        {
+            "name": "Revolver (Remastered)",
+            "artists": [
+                {
+                    "name": "The Beatles",
+                    "id": "3WrFJ7ztbogyGnTHbHJFl2",
+                    "uri": "spotify:artist:3WrFJ7ztbogyGnTHbHJFl2",
+                    "href": "https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2"
+                    }
+                }
+            ],
+            "id": "0PYyrqs9NXtxPhf0CZkq2L",
+            "uri": "spotify:album:0PYyrqs9NXtxPhf0CZkq2L",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273b2c9b12577a82e8b39e3856a"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02b2c9b12577a82e8b39e3856a"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851b2c9b12577a82e8b39e3856a"
+                }
+            ],
+            "addedAt": "2016-11-15T13:14:21Z",
+            "releaseDate": "1966-08-05"
+        },
+        {
+            "name": "In Absentia",
+            "artists": [
+                {
+                    "name": "Porcupine Tree",
+                    "id": "5NXHXK6hOCotCF8lvGM1I0",
+                    "uri": "spotify:artist:5NXHXK6hOCotCF8lvGM1I0",
+                    "href": "https://api.spotify.com/v1/artists/5NXHXK6hOCotCF8lvGM1I0",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/5NXHXK6hOCotCF8lvGM1I0"
+                    }
+                }
+            ],
+            "id": "3Mqfc88llbmxwP6wunfMbW",
+            "uri": "spotify:album:3Mqfc88llbmxwP6wunfMbW",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273084a645f0acdd8ab9c532dd8"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02084a645f0acdd8ab9c532dd8"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851084a645f0acdd8ab9c532dd8"
+                }
+            ],
+            "addedAt": "2016-11-15T13:14:21Z",
+            "releaseDate": "2002-09-24"
+        },
+        {
+            "name": "Mozart: Piano Quartets (Remastered)",
+            "artists": [
+                {
+                    "name": "Wolfgang Amadeus Mozart",
+                    "id": "4NJhFmfw43RLBLjQvxDuRS",
+                    "uri": "spotify:artist:4NJhFmfw43RLBLjQvxDuRS",
+                    "href": "https://api.spotify.com/v1/artists/4NJhFmfw43RLBLjQvxDuRS",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/4NJhFmfw43RLBLjQvxDuRS"
+                    }
+                },
+                {
+                    "name": "Yo-Yo Ma",
+                    "id": "5Dl3HXZjG6ZOWT5cV375lk",
+                    "uri": "spotify:artist:5Dl3HXZjG6ZOWT5cV375lk",
+                    "href": "https://api.spotify.com/v1/artists/5Dl3HXZjG6ZOWT5cV375lk",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/5Dl3HXZjG6ZOWT5cV375lk"
+                    }
+                },
+                {
+                    "name": "Emanuel Ax",
+                    "id": "17yd2V3A2UmwD0a00hmjX5",
+                    "uri": "spotify:artist:17yd2V3A2UmwD0a00hmjX5",
+                    "href": "https://api.spotify.com/v1/artists/17yd2V3A2UmwD0a00hmjX5",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/17yd2V3A2UmwD0a00hmjX5"
+                    }
+                },
+                {
+                    "name": "Isaac Stern",
+                    "id": "3HYV4ZdJ1LSOhPo5ehlEqF",
+                    "uri": "spotify:artist:3HYV4ZdJ1LSOhPo5ehlEqF",
+                    "href": "https://api.spotify.com/v1/artists/3HYV4ZdJ1LSOhPo5ehlEqF",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/3HYV4ZdJ1LSOhPo5ehlEqF"
+                    }
+                },
+                {
+                    "name": "Jaime Laredo",
+                    "id": "3f6FlxZfcsNeOZCXgbp1yW",
+                    "uri": "spotify:artist:3f6FlxZfcsNeOZCXgbp1yW",
+                    "href": "https://api.spotify.com/v1/artists/3f6FlxZfcsNeOZCXgbp1yW",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/3f6FlxZfcsNeOZCXgbp1yW"
+                    }
+                }
+            ],
+            "id": "5VlOwlwHSwGFCGJaNrzIW5",
+            "uri": "spotify:album:5VlOwlwHSwGFCGJaNrzIW5",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2733eda371105fc7e76fb917e66"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e023eda371105fc7e76fb917e66"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048513eda371105fc7e76fb917e66"
+                }
+            ],
+            "addedAt": "2019-09-21T11:21:13Z",
+            "releaseDate": "1997"
+        },
+        {
+            "name": "Sticky Tracks",
+            "artists": [
+                {
+                    "name": "AdhesiveWombat",
+                    "id": "38dU5p05IqvPXp2pajCFSi",
+                    "uri": "spotify:artist:38dU5p05IqvPXp2pajCFSi",
+                    "href": "https://api.spotify.com/v1/artists/38dU5p05IqvPXp2pajCFSi",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/38dU5p05IqvPXp2pajCFSi"
+                    }
+                }
+            ],
+            "id": "3nmK6Fo8dhzDcsIIon0eyh",
+            "uri": "spotify:album:3nmK6Fo8dhzDcsIIon0eyh",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b27392907cb5bf4fd2bae4c0e889"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e0292907cb5bf4fd2bae4c0e889"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d0000485192907cb5bf4fd2bae4c0e889"
+                }
+            ],
+            "addedAt": "2024-01-25T18:36:40Z",
+            "releaseDate": "2016-05-08"
+        },
+        {
+            "name": "First Impressions Of Earth",
+            "artists": [
+                {
+                    "name": "The Strokes",
+                    "id": "0epOFNiUfyON9EYx7Tpr6V",
+                    "uri": "spotify:artist:0epOFNiUfyON9EYx7Tpr6V",
+                    "href": "https://api.spotify.com/v1/artists/0epOFNiUfyON9EYx7Tpr6V",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/0epOFNiUfyON9EYx7Tpr6V"
+                    }
+                }
+            ],
+            "id": "1HQ61my1h3VWp2EBWKlp0n",
+            "uri": "spotify:album:1HQ61my1h3VWp2EBWKlp0n",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2736898a982ff3c6049ba52586c"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e026898a982ff3c6049ba52586c"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048516898a982ff3c6049ba52586c"
+                }
+            ],
+            "addedAt": "2023-11-17T14:15:56Z",
+            "releaseDate": "2006-01-03"
+        },
+        {
+            "name": "Sadnecessary",
+            "artists": [
+                {
+                    "name": "Milky Chance",
+                    "id": "1hzfo8twXdOegF3xireCYs",
+                    "uri": "spotify:artist:1hzfo8twXdOegF3xireCYs",
+                    "href": "https://api.spotify.com/v1/artists/1hzfo8twXdOegF3xireCYs",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/1hzfo8twXdOegF3xireCYs"
+                    }
+                }
+            ],
+            "id": "1pIsO2loAVLYcjjSVv6oVe",
+            "uri": "spotify:album:1pIsO2loAVLYcjjSVv6oVe",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273bf3bbde54aa69bafa90c6db6"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02bf3bbde54aa69bafa90c6db6"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851bf3bbde54aa69bafa90c6db6"
+                }
+            ],
+            "addedAt": "2016-11-15T13:14:21Z",
+            "releaseDate": "2014-05-12"
+        },
+        {
+            "name": "Oracular Spectacular",
+            "artists": [
+                {
+                    "name": "MGMT",
+                    "id": "0SwO7SWeDHJijQ3XNS7xEE",
+                    "uri": "spotify:artist:0SwO7SWeDHJijQ3XNS7xEE",
+                    "href": "https://api.spotify.com/v1/artists/0SwO7SWeDHJijQ3XNS7xEE",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/0SwO7SWeDHJijQ3XNS7xEE"
+                    }
+                }
+            ],
+            "id": "6mm1Skz3JE6AXneya9Nyiv",
+            "uri": "spotify:album:6mm1Skz3JE6AXneya9Nyiv",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2738b32b139981e79f2ebe005eb"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e028b32b139981e79f2ebe005eb"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048518b32b139981e79f2ebe005eb"
+                }
+            ],
+            "addedAt": "2016-11-15T13:14:21Z",
+            "releaseDate": "2007-12-14"
+        },
+        {
+            "name": "Lateralus",
+            "artists": [
+                {
+                    "name": "TOOL",
+                    "id": "2yEwvVSSSUkcLeSTNyHKh8",
+                    "uri": "spotify:artist:2yEwvVSSSUkcLeSTNyHKh8",
+                    "href": "https://api.spotify.com/v1/artists/2yEwvVSSSUkcLeSTNyHKh8",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/2yEwvVSSSUkcLeSTNyHKh8"
+                    }
+                }
+            ],
+            "id": "5l5m1hnH4punS1GQXgEi3T",
+            "uri": "spotify:album:5l5m1hnH4punS1GQXgEi3T",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273ca41a947c13b78749c4953b1"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02ca41a947c13b78749c4953b1"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851ca41a947c13b78749c4953b1"
+                }
+            ],
+            "addedAt": "2019-08-02T18:49:13Z",
+            "releaseDate": "2001-05-15"
+        },
+        {
+            "name": "Is This It",
+            "artists": [
+                {
+                    "name": "The Strokes",
+                    "id": "0epOFNiUfyON9EYx7Tpr6V",
+                    "uri": "spotify:artist:0epOFNiUfyON9EYx7Tpr6V",
+                    "href": "https://api.spotify.com/v1/artists/0epOFNiUfyON9EYx7Tpr6V",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/0epOFNiUfyON9EYx7Tpr6V"
+                    }
+                }
+            ],
+            "id": "2yNaksHgeMQM9Quse463b5",
+            "uri": "spotify:album:2yNaksHgeMQM9Quse463b5",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273a388a3f20d1bf2123249cc79"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02a388a3f20d1bf2123249cc79"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851a388a3f20d1bf2123249cc79"
+                }
+            ],
+            "addedAt": "2016-11-28T14:24:39Z",
+            "releaseDate": "2001-07-30"
+        },
+        {
+            "name": "Heidersmenn",
+            "artists": [
+                {
+                    "name": "Stein Torleif Bjella",
+                    "id": "5S2AgI8b86lQyL14ykyYYm",
+                    "uri": "spotify:artist:5S2AgI8b86lQyL14ykyYYm",
+                    "href": "https://api.spotify.com/v1/artists/5S2AgI8b86lQyL14ykyYYm",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/5S2AgI8b86lQyL14ykyYYm"
+                    }
+                }
+            ],
+            "id": "0wS2ASx4xPoKp5LeGzN1BL",
+            "uri": "spotify:album:0wS2ASx4xPoKp5LeGzN1BL",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273e7197c8097138bd445d078b3"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02e7197c8097138bd445d078b3"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851e7197c8097138bd445d078b3"
+                }
+            ],
+            "addedAt": "2016-11-15T13:14:21Z",
+            "releaseDate": "2009"
+        },
+        {
+            "name": "Telekinesis!",
+            "artists": [
+                {
+                    "name": "Telekinesis",
+                    "id": "3faZppLa0MVUYBlyp7zDAo",
+                    "uri": "spotify:artist:3faZppLa0MVUYBlyp7zDAo",
+                    "href": "https://api.spotify.com/v1/artists/3faZppLa0MVUYBlyp7zDAo",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/3faZppLa0MVUYBlyp7zDAo"
+                    }
+                }
+            ],
+            "id": "0iE79jsvSOwMJ15W2WiUu4",
+            "uri": "spotify:album:0iE79jsvSOwMJ15W2WiUu4",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b27351776561121d0b39e4019787"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e0251776561121d0b39e4019787"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d0000485151776561121d0b39e4019787"
+                }
+            ],
+            "addedAt": "2017-07-13T18:47:20Z",
+            "releaseDate": "2009-08-07"
+        },
+        {
+            "name": "Electric Intervals",
+            "artists": [
+                {
+                    "name": "Martyn Heyne",
+                    "id": "6xrIXAjnPpgitqGcPFsl6f",
+                    "uri": "spotify:artist:6xrIXAjnPpgitqGcPFsl6f",
+                    "href": "https://api.spotify.com/v1/artists/6xrIXAjnPpgitqGcPFsl6f",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/6xrIXAjnPpgitqGcPFsl6f"
+                    }
+                }
+            ],
+            "id": "53KOB0snALBLZ3ua1bRTyu",
+            "uri": "spotify:album:53KOB0snALBLZ3ua1bRTyu",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2733e0f00112d68d1293ed46381"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e023e0f00112d68d1293ed46381"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048513e0f00112d68d1293ed46381"
+                }
+            ],
+            "addedAt": "2024-04-05T14:45:02Z",
+            "releaseDate": "2017-11-17"
+        },
+        {
+            "name": "Exotico",
+            "artists": [
+                {
+                    "name": "Temples",
+                    "id": "4ogwGU9VPWrnVBs1GEwZVV",
+                    "uri": "spotify:artist:4ogwGU9VPWrnVBs1GEwZVV",
+                    "href": "https://api.spotify.com/v1/artists/4ogwGU9VPWrnVBs1GEwZVV",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/4ogwGU9VPWrnVBs1GEwZVV"
+                    }
+                }
+            ],
+            "id": "1EIxpqw8tWE001EuJn6cy1",
+            "uri": "spotify:album:1EIxpqw8tWE001EuJn6cy1",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273e119cb85a9b0d5a7e08b7c31"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02e119cb85a9b0d5a7e08b7c31"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851e119cb85a9b0d5a7e08b7c31"
+                }
+            ],
+            "addedAt": "2023-11-28T10:37:03Z",
+            "releaseDate": "2023-04-14"
+        },
+        {
+            "name": "Hand Cranked",
+            "artists": [
+                {
+                    "name": "Bibio",
+                    "id": "0qzzGu8qpbXYpzgV52wOFT",
+                    "uri": "spotify:artist:0qzzGu8qpbXYpzgV52wOFT",
+                    "href": "https://api.spotify.com/v1/artists/0qzzGu8qpbXYpzgV52wOFT",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/0qzzGu8qpbXYpzgV52wOFT"
+                    }
+                }
+            ],
+            "id": "2ZAtvqwMrgnwVu0cyBygfk",
+            "uri": "spotify:album:2ZAtvqwMrgnwVu0cyBygfk",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273ce166928b71aceb90fd9087e"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02ce166928b71aceb90fd9087e"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851ce166928b71aceb90fd9087e"
+                }
+            ],
+            "addedAt": "2023-10-27T18:12:21Z",
+            "releaseDate": "2020-11-13"
+        },
+        {
+            "name": "Cave World",
+            "artists": [
+                {
+                    "name": "Viagra Boys",
+                    "id": "2nAKP6etu8wXNnezKXgqgg",
+                    "uri": "spotify:artist:2nAKP6etu8wXNnezKXgqgg",
+                    "href": "https://api.spotify.com/v1/artists/2nAKP6etu8wXNnezKXgqgg",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/2nAKP6etu8wXNnezKXgqgg"
+                    }
+                }
+            ],
+            "id": "2IC2TP7bnwkfl56vjabLQt",
+            "uri": "spotify:album:2IC2TP7bnwkfl56vjabLQt",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273f77d64b0ee2dc42b32606faa"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02f77d64b0ee2dc42b32606faa"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851f77d64b0ee2dc42b32606faa"
+                }
+            ],
+            "addedAt": "2023-02-13T14:13:44Z",
+            "releaseDate": "2022-07-08"
+        },
+        {
+            "name": "Meir",
+            "artists": [
+                {
+                    "name": "Kvelertak",
+                    "id": "0VE0GTaTSeeGSzrQpLmeb9",
+                    "uri": "spotify:artist:0VE0GTaTSeeGSzrQpLmeb9",
+                    "href": "https://api.spotify.com/v1/artists/0VE0GTaTSeeGSzrQpLmeb9",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/0VE0GTaTSeeGSzrQpLmeb9"
+                    }
+                }
+            ],
+            "id": "1147s32sIAabDpmBeBf2bN",
+            "uri": "spotify:album:1147s32sIAabDpmBeBf2bN",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b27387e9b11459469217d7ca8d0a"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e0287e9b11459469217d7ca8d0a"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d0000485187e9b11459469217d7ca8d0a"
+                }
+            ],
+            "addedAt": "2022-11-30T09:32:51Z",
+            "releaseDate": "2013-03-22"
+        },
+        {
+            "name": "Smash",
+            "artists": [
+                {
+                    "name": "The Offspring",
+                    "id": "5LfGQac0EIXyAN8aUwmNAQ",
+                    "uri": "spotify:artist:5LfGQac0EIXyAN8aUwmNAQ",
+                    "href": "https://api.spotify.com/v1/artists/5LfGQac0EIXyAN8aUwmNAQ",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/5LfGQac0EIXyAN8aUwmNAQ"
+                    }
+                }
+            ],
+            "id": "7IDywTRaCI8qzS3X8tNU3x",
+            "uri": "spotify:album:7IDywTRaCI8qzS3X8tNU3x",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2730158cbde70672dd821972907"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e020158cbde70672dd821972907"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048510158cbde70672dd821972907"
+                }
+            ],
+            "addedAt": "2022-10-17T12:23:30Z",
+            "releaseDate": "1994-04-08"
+        },
+        {
+            "name": "InnerSpeaker",
+            "artists": [
+                {
+                    "name": "Tame Impala",
+                    "id": "5INjqkS1o8h1imAzPqGZBb",
+                    "uri": "spotify:artist:5INjqkS1o8h1imAzPqGZBb",
+                    "href": "https://api.spotify.com/v1/artists/5INjqkS1o8h1imAzPqGZBb",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/5INjqkS1o8h1imAzPqGZBb"
+                    }
+                }
+            ],
+            "id": "1DNSmmRLfv97Yjq7MTFWng",
+            "uri": "spotify:album:1DNSmmRLfv97Yjq7MTFWng",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273176e82d09ac75d62810f0056"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02176e82d09ac75d62810f0056"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851176e82d09ac75d62810f0056"
+                }
+            ],
+            "addedAt": "2022-08-03T11:47:59Z",
+            "releaseDate": "2010-05-21"
+        },
+        {
+            "name": "Tuesday Piano",
+            "artists": [
+                {
+                    "name": "Pelle Kravik",
+                    "id": "6hIiop30XvORf9187OyJBY",
+                    "uri": "spotify:artist:6hIiop30XvORf9187OyJBY",
+                    "href": "https://api.spotify.com/v1/artists/6hIiop30XvORf9187OyJBY",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/6hIiop30XvORf9187OyJBY"
+                    }
+                }
+            ],
+            "id": "2oz7h3W8AzsueNnBMnvOnn",
+            "uri": "spotify:album:2oz7h3W8AzsueNnBMnvOnn",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2731eb83803d8e84d0924190ae8"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e021eb83803d8e84d0924190ae8"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048511eb83803d8e84d0924190ae8"
+                }
+            ],
+            "addedAt": "2022-07-04T16:57:51Z",
+            "releaseDate": "2022-04-20"
+        },
+        {
+            "name": "piano arpeggios \u0026 nylde",
+            "artists": [
+                {
+                    "name": "Pelle Kravik",
+                    "id": "6hIiop30XvORf9187OyJBY",
+                    "uri": "spotify:artist:6hIiop30XvORf9187OyJBY",
+                    "href": "https://api.spotify.com/v1/artists/6hIiop30XvORf9187OyJBY",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/6hIiop30XvORf9187OyJBY"
+                    }
+                }
+            ],
+            "id": "61bt2TPEauvy1KzqWLgWMm",
+            "uri": "spotify:album:61bt2TPEauvy1KzqWLgWMm",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273b7cd2846d675b32e064b1e20"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02b7cd2846d675b32e064b1e20"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851b7cd2846d675b32e064b1e20"
+                }
+            ],
+            "addedAt": "2022-07-04T16:57:47Z",
+            "releaseDate": "2022-06-25"
+        },
+        {
+            "name": "Evenfall",
+            "artists": [
+                {
+                    "name": "Pelle Kravik",
+                    "id": "6hIiop30XvORf9187OyJBY",
+                    "uri": "spotify:artist:6hIiop30XvORf9187OyJBY",
+                    "href": "https://api.spotify.com/v1/artists/6hIiop30XvORf9187OyJBY",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/6hIiop30XvORf9187OyJBY"
+                    }
+                }
+            ],
+            "id": "4UTGhdH7liOIHrAkpxHMow",
+            "uri": "spotify:album:4UTGhdH7liOIHrAkpxHMow",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273521264ad6898f761b2331db4"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02521264ad6898f761b2331db4"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851521264ad6898f761b2331db4"
+                }
+            ],
+            "addedAt": "2022-07-04T16:57:41Z",
+            "releaseDate": "2022-05-22"
+        },
+        {
+            "name": "Krzysztof Pełech Plays Jorge Morel",
+            "artists": [
+                {
+                    "name": "Krzysztof Pełech",
+                    "id": "7psoM946mbR3qh92xx6itd",
+                    "uri": "spotify:artist:7psoM946mbR3qh92xx6itd",
+                    "href": "https://api.spotify.com/v1/artists/7psoM946mbR3qh92xx6itd",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/7psoM946mbR3qh92xx6itd"
+                    }
+                }
+            ],
+            "id": "39c4P07pdiLS2HD9LWdPZe",
+            "uri": "spotify:album:39c4P07pdiLS2HD9LWdPZe",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2730455bfb409c0f87c5849b716"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e020455bfb409c0f87c5849b716"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d000048510455bfb409c0f87c5849b716"
+                }
+            ],
+            "addedAt": "2022-04-12T10:16:04Z",
+            "releaseDate": "2022-02-28"
+        },
+        {
+            "name": "Solo Piano II",
+            "artists": [
+                {
+                    "name": "Chilly Gonzales",
+                    "id": "0qudezVgvl4Chd9BgNFB83",
+                    "uri": "spotify:artist:0qudezVgvl4Chd9BgNFB83",
+                    "href": "https://api.spotify.com/v1/artists/0qudezVgvl4Chd9BgNFB83",
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/0qudezVgvl4Chd9BgNFB83"
+                    }
+                }
+            ],
+            "id": "2ja8SLCZPMkgPHELcdDsgF",
+            "uri": "spotify:album:2ja8SLCZPMkgPHELcdDsgF",
+            "images": [
+                {
+                    "height": 640,
+                    "width": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273d83119eacec3146c77ea9230"
+                },
+                {
+                    "height": 300,
+                    "width": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02d83119eacec3146c77ea9230"
+                },
+                {
+                    "height": 64,
+                    "width": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851d83119eacec3146c77ea9230"
+                }
+            ],
+            "addedAt": "2022-02-21T17:56:47Z",
+            "releaseDate": "2012-08-24"
+        }
+    ],
+    "offset": 50,
+    "has_next": true,
+    "total": 166
+}

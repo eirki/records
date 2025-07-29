@@ -16,9 +16,23 @@ export interface AlbumT {
 }
 
 export interface OverlayT {
-    leftHalf: boolean
-    topHalf: boolean
-    colPosition: number
-    rowPosition: number
-    data: AlbumT
+    overlayColumn: number
+    overlayRow: number
+    album: AlbumT
+    artUrl: string
+}
+
+export interface SizeData {
+    cellSize: number;
+    nRows: number;
+    nCols: number;
+    nSidebarCols: number;
+    nGridCols: number;
+    albumColumnN: number;
+    // leftColSize: number;
+    // albumArtSize: number;
+    // playerWidth: number;
+    // playerHeight: number;
+    overlaySize: number;
+    overlayMultiplier: number;
 }

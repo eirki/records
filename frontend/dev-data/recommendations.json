@@ -1,0 +1,1790 @@
+{
+  "recommended_albums": [
+    {
+      "name": "Hello, Avalanche",
+      "artists": [
+        {
+          "name": "The Octopus Project",
+          "id": "7EFRvnUHNLWOYVPg8AuI7o",
+          "uri": "spotify:artist:7EFRvnUHNLWOYVPg8AuI7o",
+          "href": "https://api.spotify.com/v1/artists/7EFRvnUHNLWOYVPg8AuI7o",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/7EFRvnUHNLWOYVPg8AuI7o"
+          }
+        }
+      ],
+      "id": "7tmoPUVPkqOrLkVa3RwZdK",
+      "uri": "spotify:album:7tmoPUVPkqOrLkVa3RwZdK",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2730cedb85c13de47ff45d61bb6"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e020cedb85c13de47ff45d61bb6"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048510cedb85c13de47ff45d61bb6"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2007-10-16"
+    },
+    {
+      "name": "Exorcise Tape",
+      "artists": [
+        {
+          "name": "DEMON QUEEN",
+          "id": "1sD6yJxdlMAiZYGOqa1Rx3",
+          "uri": "spotify:artist:1sD6yJxdlMAiZYGOqa1Rx3",
+          "href": "https://api.spotify.com/v1/artists/1sD6yJxdlMAiZYGOqa1Rx3",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1sD6yJxdlMAiZYGOqa1Rx3"
+          }
+        },
+        {
+          "name": "TOBACCO",
+          "id": "3ikKyCOrsMeANi0d5u8BCR",
+          "uri": "spotify:artist:3ikKyCOrsMeANi0d5u8BCR",
+          "href": "https://api.spotify.com/v1/artists/3ikKyCOrsMeANi0d5u8BCR",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3ikKyCOrsMeANi0d5u8BCR"
+          }
+        },
+        {
+          "name": "Zackey Force Funk",
+          "id": "18CPbmxYOdkMCEkq3j9CBd",
+          "uri": "spotify:artist:18CPbmxYOdkMCEkq3j9CBd",
+          "href": "https://api.spotify.com/v1/artists/18CPbmxYOdkMCEkq3j9CBd",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/18CPbmxYOdkMCEkq3j9CBd"
+          }
+        }
+      ],
+      "id": "6FaKm8eLybEuKqj6rNHYxz",
+      "uri": "spotify:album:6FaKm8eLybEuKqj6rNHYxz",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273883061ba04518516937de93d"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02883061ba04518516937de93d"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851883061ba04518516937de93d"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2013-08-06"
+    },
+    {
+      "name": "These Wings",
+      "artists": [
+        {
+          "name": "Wise Blood",
+          "id": "7tuBWiixe5LwMEGlrfGSrv",
+          "uri": "spotify:artist:7tuBWiixe5LwMEGlrfGSrv",
+          "href": "https://api.spotify.com/v1/artists/7tuBWiixe5LwMEGlrfGSrv",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/7tuBWiixe5LwMEGlrfGSrv"
+          }
+        }
+      ],
+      "id": "3VH90xB9VCIcsUCZoXujUO",
+      "uri": "spotify:album:3VH90xB9VCIcsUCZoXujUO",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2734038c236462da7ec42e21575"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e024038c236462da7ec42e21575"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048514038c236462da7ec42e21575"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2011-09-05"
+    },
+    {
+      "name": "This is the Second Album of a band called Adebisi Shank",
+      "artists": [
+        {
+          "name": "Adebisi Shank",
+          "id": "5IbVJkPWprYL733JHcFSBR",
+          "uri": "spotify:artist:5IbVJkPWprYL733JHcFSBR",
+          "href": "https://api.spotify.com/v1/artists/5IbVJkPWprYL733JHcFSBR",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5IbVJkPWprYL733JHcFSBR"
+          }
+        }
+      ],
+      "id": "0gcS3GmVvVvUMycxDWdR3R",
+      "uri": "spotify:album:0gcS3GmVvVvUMycxDWdR3R",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273d032e537c686161779bedadc"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02d032e537c686161779bedadc"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851d032e537c686161779bedadc"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2011-03-15"
+    },
+    {
+      "name": "On Belay Belay On",
+      "artists": [
+        {
+          "name": "Wilderness Survival",
+          "id": "5N7D51J2UTQKHk9PkyNQca",
+          "uri": "spotify:artist:5N7D51J2UTQKHk9PkyNQca",
+          "href": "https://api.spotify.com/v1/artists/5N7D51J2UTQKHk9PkyNQca",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5N7D51J2UTQKHk9PkyNQca"
+          }
+        }
+      ],
+      "id": "0TgyqhLZmT0SEVGxospT6G",
+      "uri": "spotify:album:0TgyqhLZmT0SEVGxospT6G",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27339b0fc5ee9aa6c7cb5c4f258"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0239b0fc5ee9aa6c7cb5c4f258"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485139b0fc5ee9aa6c7cb5c4f258"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2010-01-01"
+    },
+    {
+      "name": "Icky Blossoms",
+      "artists": [
+        {
+          "name": "Icky Blossoms",
+          "id": "3SlDsnTkmnKksYwO5HExTt",
+          "uri": "spotify:artist:3SlDsnTkmnKksYwO5HExTt",
+          "href": "https://api.spotify.com/v1/artists/3SlDsnTkmnKksYwO5HExTt",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3SlDsnTkmnKksYwO5HExTt"
+          }
+        }
+      ],
+      "id": "0O2jLXiqvhbAoLVw1H1vwW",
+      "uri": "spotify:album:0O2jLXiqvhbAoLVw1H1vwW",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273b07f38b9637701402b0523b4"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02b07f38b9637701402b0523b4"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851b07f38b9637701402b0523b4"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2012-07-17"
+    },
+    {
+      "name": "Cosmic Surgery",
+      "artists": [
+        {
+          "name": "Neat Beats",
+          "id": "5cCVjEZOzc9HfsjUGCVMd2",
+          "uri": "spotify:artist:5cCVjEZOzc9HfsjUGCVMd2",
+          "href": "https://api.spotify.com/v1/artists/5cCVjEZOzc9HfsjUGCVMd2",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5cCVjEZOzc9HfsjUGCVMd2"
+          }
+        }
+      ],
+      "id": "0zlLi9xAKvF6fDVIW4XZbJ",
+      "uri": "spotify:album:0zlLi9xAKvF6fDVIW4XZbJ",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273044f79ab40a944f5ce6ecd2c"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02044f79ab40a944f5ce6ecd2c"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851044f79ab40a944f5ce6ecd2c"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2011-09-01"
+    },
+    {
+      "name": "Wait Up",
+      "artists": [
+        {
+          "name": "Bogan Via",
+          "id": "3SGrh0j4TdyKv2OKzrFLoz",
+          "uri": "spotify:artist:3SGrh0j4TdyKv2OKzrFLoz",
+          "href": "https://api.spotify.com/v1/artists/3SGrh0j4TdyKv2OKzrFLoz",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3SGrh0j4TdyKv2OKzrFLoz"
+          }
+        }
+      ],
+      "id": "6tylrbI7uTkGSmgW5iGqMI",
+      "uri": "spotify:album:6tylrbI7uTkGSmgW5iGqMI",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27369d84fa72e94c0865ee8a4e8"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0269d84fa72e94c0865ee8a4e8"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485169d84fa72e94c0865ee8a4e8"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2012-10-29"
+    },
+    {
+      "name": "BiRd-BrAiNs",
+      "artists": [
+        {
+          "name": "Tune-Yards",
+          "id": "0asVlqTLu3TimnYVyY5Jxi",
+          "uri": "spotify:artist:0asVlqTLu3TimnYVyY5Jxi",
+          "href": "https://api.spotify.com/v1/artists/0asVlqTLu3TimnYVyY5Jxi",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0asVlqTLu3TimnYVyY5Jxi"
+          }
+        }
+      ],
+      "id": "7oVySVWjCqQwLSuJ7450sV",
+      "uri": "spotify:album:7oVySVWjCqQwLSuJ7450sV",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273ddf67d3a0c1818ca06f23891"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02ddf67d3a0c1818ca06f23891"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851ddf67d3a0c1818ca06f23891"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2009-11-16"
+    },
+    {
+      "name": "AVEC MES MECS",
+      "artists": [
+        {
+          "name": "Humans",
+          "id": "4BCVARfLoVaJDbk5x3Qqmz",
+          "uri": "spotify:artist:4BCVARfLoVaJDbk5x3Qqmz",
+          "href": "https://api.spotify.com/v1/artists/4BCVARfLoVaJDbk5x3Qqmz",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4BCVARfLoVaJDbk5x3Qqmz"
+          }
+        }
+      ],
+      "id": "22BWlnDVxR2ipGgEbpO5eG",
+      "uri": "spotify:album:22BWlnDVxR2ipGgEbpO5eG",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2739bccc5596f4358d7fd33c1ee"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e029bccc5596f4358d7fd33c1ee"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048519bccc5596f4358d7fd33c1ee"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2010-10-12"
+    },
+    {
+      "name": "And Everything Else...",
+      "artists": [
+        {
+          "name": "Nobody",
+          "id": "1ZxaNqrkTzqjsbXrCZM0qy",
+          "uri": "spotify:artist:1ZxaNqrkTzqjsbXrCZM0qy",
+          "href": "https://api.spotify.com/v1/artists/1ZxaNqrkTzqjsbXrCZM0qy",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1ZxaNqrkTzqjsbXrCZM0qy"
+          }
+        }
+      ],
+      "id": "4OHJTs8DqBOP5UwqbiMo6k",
+      "uri": "spotify:album:4OHJTs8DqBOP5UwqbiMo6k",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27397c71503b09b085d1ccc4a33"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0297c71503b09b085d1ccc4a33"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485197c71503b09b085d1ccc4a33"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2005-05-17"
+    },
+    {
+      "name": "Obsidian",
+      "artists": [
+        {
+          "name": "Baths",
+          "id": "5zS8r5hRRk1jzD41yYS1NO",
+          "uri": "spotify:artist:5zS8r5hRRk1jzD41yYS1NO",
+          "href": "https://api.spotify.com/v1/artists/5zS8r5hRRk1jzD41yYS1NO",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5zS8r5hRRk1jzD41yYS1NO"
+          }
+        }
+      ],
+      "id": "6kuAuIJhs1jfKRwUzi1LYG",
+      "uri": "spotify:album:6kuAuIJhs1jfKRwUzi1LYG",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273ca2ad273fb73109aca4c46fb"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02ca2ad273fb73109aca4c46fb"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851ca2ad273fb73109aca4c46fb"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2013-05-28"
+    },
+    {
+      "name": "Ultima II Massage",
+      "artists": [
+        {
+          "name": "TOBACCO",
+          "id": "3ikKyCOrsMeANi0d5u8BCR",
+          "uri": "spotify:artist:3ikKyCOrsMeANi0d5u8BCR",
+          "href": "https://api.spotify.com/v1/artists/3ikKyCOrsMeANi0d5u8BCR",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3ikKyCOrsMeANi0d5u8BCR"
+          }
+        }
+      ],
+      "id": "4BBxAB26ofkXvBmlatzTpW",
+      "uri": "spotify:album:4BBxAB26ofkXvBmlatzTpW",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2737275ff33740a7d446d01c177"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e027275ff33740a7d446d01c177"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048517275ff33740a7d446d01c177"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2014-05-13"
+    },
+    {
+      "name": "Businessmen \u0026 Ghosts",
+      "artists": [
+        {
+          "name": "Working for a Nuclear Free City",
+          "id": "6FEVYVBDwRguK1DTiKef1p",
+          "uri": "spotify:artist:6FEVYVBDwRguK1DTiKef1p",
+          "href": "https://api.spotify.com/v1/artists/6FEVYVBDwRguK1DTiKef1p",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6FEVYVBDwRguK1DTiKef1p"
+          }
+        }
+      ],
+      "id": "4hrHY78RfSECejekOhTdk0",
+      "uri": "spotify:album:4hrHY78RfSECejekOhTdk0",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273368bb43437ba83ed323c8929"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02368bb43437ba83ed323c8929"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851368bb43437ba83ed323c8929"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2008-07-28"
+    },
+    {
+      "name": "Who Speaks to You?",
+      "artists": [
+        {
+          "name": "Zach Schimpf",
+          "id": "4YB7RuaXNc5588KRO33pqz",
+          "uri": "spotify:artist:4YB7RuaXNc5588KRO33pqz",
+          "href": "https://api.spotify.com/v1/artists/4YB7RuaXNc5588KRO33pqz",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4YB7RuaXNc5588KRO33pqz"
+          }
+        }
+      ],
+      "id": "2M05vpRC6Uqd3cn3IAFVMb",
+      "uri": "spotify:album:2M05vpRC6Uqd3cn3IAFVMb",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273702a8510abd21541107eff82"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02702a8510abd21541107eff82"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851702a8510abd21541107eff82"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2016-08-05"
+    },
+    {
+      "name": "New Chain",
+      "artists": [
+        {
+          "name": "Small Black",
+          "id": "1J6xqDysFw6YiQ0vMvIKds",
+          "uri": "spotify:artist:1J6xqDysFw6YiQ0vMvIKds",
+          "href": "https://api.spotify.com/v1/artists/1J6xqDysFw6YiQ0vMvIKds",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1J6xqDysFw6YiQ0vMvIKds"
+          }
+        }
+      ],
+      "id": "5or2os3qY492mbDACWRzeI",
+      "uri": "spotify:album:5or2os3qY492mbDACWRzeI",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273c32b4c14d11879cacd0813a2"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02c32b4c14d11879cacd0813a2"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851c32b4c14d11879cacd0813a2"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2010-10-26"
+    },
+    {
+      "name": "Animal Shapes",
+      "artists": [
+        {
+          "name": "Geographer",
+          "id": "5vvvgOwPjA4R5t07ZXLLwZ",
+          "uri": "spotify:artist:5vvvgOwPjA4R5t07ZXLLwZ",
+          "href": "https://api.spotify.com/v1/artists/5vvvgOwPjA4R5t07ZXLLwZ",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5vvvgOwPjA4R5t07ZXLLwZ"
+          }
+        }
+      ],
+      "id": "3HJdxafUqBb9kApgAWZhzM",
+      "uri": "spotify:album:3HJdxafUqBb9kApgAWZhzM",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2739a11806faf00eb3ce74274f7"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e029a11806faf00eb3ce74274f7"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048519a11806faf00eb3ce74274f7"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2010-08-17"
+    },
+    {
+      "name": "Scissors",
+      "artists": [
+        {
+          "name": "Eight And A Half",
+          "id": "08RN19PqCBY70u4KTV6VjQ",
+          "uri": "spotify:artist:08RN19PqCBY70u4KTV6VjQ",
+          "href": "https://api.spotify.com/v1/artists/08RN19PqCBY70u4KTV6VjQ",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/08RN19PqCBY70u4KTV6VjQ"
+          }
+        }
+      ],
+      "id": "3VE5he1a1RfQak6Y5MjW6f",
+      "uri": "spotify:album:3VE5he1a1RfQak6Y5MjW6f",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2739fe3dd445fd46d2752a1960c"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e029fe3dd445fd46d2752a1960c"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048519fe3dd445fd46d2752a1960c"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2011"
+    },
+    {
+      "name": "Era Extraña",
+      "artists": [
+        {
+          "name": "Neon Indian",
+          "id": "0KydPQPUUoTNhmiHKOg5Er",
+          "uri": "spotify:artist:0KydPQPUUoTNhmiHKOg5Er",
+          "href": "https://api.spotify.com/v1/artists/0KydPQPUUoTNhmiHKOg5Er",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0KydPQPUUoTNhmiHKOg5Er"
+          }
+        }
+      ],
+      "id": "2N9pVEQw0ByXjNn9QSknz3",
+      "uri": "spotify:album:2N9pVEQw0ByXjNn9QSknz3",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27381aaddeaacc1b4006b1d6fb1"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0281aaddeaacc1b4006b1d6fb1"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485181aaddeaacc1b4006b1d6fb1"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2011-09-12"
+    },
+    {
+      "name": "Dunes",
+      "artists": [
+        {
+          "name": "Gardens \u0026 Villa",
+          "id": "5NgfalfOtMDHkJ0SbFAxyA",
+          "uri": "spotify:artist:5NgfalfOtMDHkJ0SbFAxyA",
+          "href": "https://api.spotify.com/v1/artists/5NgfalfOtMDHkJ0SbFAxyA",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5NgfalfOtMDHkJ0SbFAxyA"
+          }
+        }
+      ],
+      "id": "5Lq2z2ZsOU5WHIMBkfckOc",
+      "uri": "spotify:album:5Lq2z2ZsOU5WHIMBkfckOc",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2738e1b1cc65e1440d03e6c14ee"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e028e1b1cc65e1440d03e6c14ee"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048518e1b1cc65e1440d03e6c14ee"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2014-02-04"
+    },
+    {
+      "name": "Mirrored",
+      "artists": [
+        {
+          "name": "Battles",
+          "id": "3EMSpwRtkvUTxfB4aS5xnA",
+          "uri": "spotify:artist:3EMSpwRtkvUTxfB4aS5xnA",
+          "href": "https://api.spotify.com/v1/artists/3EMSpwRtkvUTxfB4aS5xnA",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3EMSpwRtkvUTxfB4aS5xnA"
+          }
+        }
+      ],
+      "id": "4zeMuippZpzmuT8btujzXu",
+      "uri": "spotify:album:4zeMuippZpzmuT8btujzXu",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273839e1481335dd50f6dddac0f"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02839e1481335dd50f6dddac0f"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851839e1481335dd50f6dddac0f"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2007-04-25"
+    },
+    {
+      "name": "Relics",
+      "artists": [
+        {
+          "name": "Faded Paper Figures",
+          "id": "28CxmkDncu1V04LYxfx0eV",
+          "uri": "spotify:artist:28CxmkDncu1V04LYxfx0eV",
+          "href": "https://api.spotify.com/v1/artists/28CxmkDncu1V04LYxfx0eV",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/28CxmkDncu1V04LYxfx0eV"
+          }
+        }
+      ],
+      "id": "6LmL9Gk5EUZYVDPO8lMVWm",
+      "uri": "spotify:album:6LmL9Gk5EUZYVDPO8lMVWm",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273b92927923f68e2d9559b5707"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02b92927923f68e2d9559b5707"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851b92927923f68e2d9559b5707"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2014-08-05"
+    },
+    {
+      "name": "Mountain Game",
+      "artists": [
+        {
+          "name": "Animal Collective",
+          "id": "4kwxTgCKMipBKhSnEstNKj",
+          "uri": "spotify:artist:4kwxTgCKMipBKhSnEstNKj",
+          "href": "https://api.spotify.com/v1/artists/4kwxTgCKMipBKhSnEstNKj",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4kwxTgCKMipBKhSnEstNKj"
+          }
+        }
+      ],
+      "id": "04HUyOYuWk1dos1bQg0g44",
+      "uri": "spotify:album:04HUyOYuWk1dos1bQg0g44",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2732cd66bb99b65af4c06cc73d5"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e022cd66bb99b65af4c06cc73d5"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048512cd66bb99b65af4c06cc73d5"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2016-11-18"
+    },
+    {
+      "name": "Panic Blooms",
+      "artists": [
+        {
+          "name": "Black Moth Super Rainbow",
+          "id": "4UHzJP2iKVf0RhKIv7ZE2l",
+          "uri": "spotify:artist:4UHzJP2iKVf0RhKIv7ZE2l",
+          "href": "https://api.spotify.com/v1/artists/4UHzJP2iKVf0RhKIv7ZE2l",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4UHzJP2iKVf0RhKIv7ZE2l"
+          }
+        }
+      ],
+      "id": "6mbW5syPG6XnS9PbkFZZPl",
+      "uri": "spotify:album:6mbW5syPG6XnS9PbkFZZPl",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27340f3ad7832238c288a745c57"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0240f3ad7832238c288a745c57"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485140f3ad7832238c288a745c57"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2018-05-04"
+    },
+    {
+      "name": "Here We Go Magic",
+      "artists": [
+        {
+          "name": "Here We Go Magic",
+          "id": "4WxjrOJGIngO2hJnlCeK7f",
+          "uri": "spotify:artist:4WxjrOJGIngO2hJnlCeK7f",
+          "href": "https://api.spotify.com/v1/artists/4WxjrOJGIngO2hJnlCeK7f",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4WxjrOJGIngO2hJnlCeK7f"
+          }
+        }
+      ],
+      "id": "2aWGy87G79VI4PFzDN9qyr",
+      "uri": "spotify:album:2aWGy87G79VI4PFzDN9qyr",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273bbbd8867f3d7e9929d1ca667"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02bbbd8867f3d7e9929d1ca667"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851bbbd8867f3d7e9929d1ca667"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2009-02-17"
+    },
+    {
+      "name": "It's Still Like a Secret",
+      "artists": [
+        {
+          "name": "El Ten Eleven",
+          "id": "0d1j4VJ7gzAJaDslzmjTF0",
+          "uri": "spotify:artist:0d1j4VJ7gzAJaDslzmjTF0",
+          "href": "https://api.spotify.com/v1/artists/0d1j4VJ7gzAJaDslzmjTF0",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0d1j4VJ7gzAJaDslzmjTF0"
+          }
+        }
+      ],
+      "id": "0gPcO9iDCScdqgInvGwxCN",
+      "uri": "spotify:album:0gPcO9iDCScdqgInvGwxCN",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273803315abd0c846012a71c978"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02803315abd0c846012a71c978"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851803315abd0c846012a71c978"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2010-11-09"
+    },
+    {
+      "name": "T.I.M.E. Soundtrack (2023 Remaster)",
+      "artists": [
+        {
+          "name": "Odd Nosdam",
+          "id": "5pQjRhCKmFtkDZSy67Z0tp",
+          "uri": "spotify:artist:5pQjRhCKmFtkDZSy67Z0tp",
+          "href": "https://api.spotify.com/v1/artists/5pQjRhCKmFtkDZSy67Z0tp",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5pQjRhCKmFtkDZSy67Z0tp"
+          }
+        }
+      ],
+      "id": "1snoZSmvp4175J11qDKsZG",
+      "uri": "spotify:album:1snoZSmvp4175J11qDKsZG",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273cf5973a5e62341e9694ab888"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02cf5973a5e62341e9694ab888"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851cf5973a5e62341e9694ab888"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2023-06-27"
+    },
+    {
+      "name": "The Way Out",
+      "artists": [
+        {
+          "name": "The Books",
+          "id": "4UvhuGdFf75Cfan7lEU1J1",
+          "uri": "spotify:artist:4UvhuGdFf75Cfan7lEU1J1",
+          "href": "https://api.spotify.com/v1/artists/4UvhuGdFf75Cfan7lEU1J1",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4UvhuGdFf75Cfan7lEU1J1"
+          }
+        }
+      ],
+      "id": "3Ht9pevRimaOYARTDXXWcr",
+      "uri": "spotify:album:3Ht9pevRimaOYARTDXXWcr",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2734ef051cca4aca7529088bf0c"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e024ef051cca4aca7529088bf0c"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048514ef051cca4aca7529088bf0c"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2010-07-20"
+    },
+    {
+      "name": "Relayted",
+      "artists": [
+        {
+          "name": "Gayngs",
+          "id": "3OUN7gnsDijEfvaHpXAAzI",
+          "uri": "spotify:artist:3OUN7gnsDijEfvaHpXAAzI",
+          "href": "https://api.spotify.com/v1/artists/3OUN7gnsDijEfvaHpXAAzI",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3OUN7gnsDijEfvaHpXAAzI"
+          }
+        }
+      ],
+      "id": "0KqFSYXKFKFZVB1M32ZbHZ",
+      "uri": "spotify:album:0KqFSYXKFKFZVB1M32ZbHZ",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273e1d074be947059aadf0014f0"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02e1d074be947059aadf0014f0"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851e1d074be947059aadf0014f0"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2010-05-11"
+    },
+    {
+      "name": "America",
+      "artists": [
+        {
+          "name": "Dan Deacon",
+          "id": "5Z3IWpvwOvoaWodujHw7xh",
+          "uri": "spotify:artist:5Z3IWpvwOvoaWodujHw7xh",
+          "href": "https://api.spotify.com/v1/artists/5Z3IWpvwOvoaWodujHw7xh",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5Z3IWpvwOvoaWodujHw7xh"
+          }
+        }
+      ],
+      "id": "1CubFsGyJZjr1YPOnyc0OF",
+      "uri": "spotify:album:1CubFsGyJZjr1YPOnyc0OF",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273b851417dc7f8e96721a2613f"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02b851417dc7f8e96721a2613f"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851b851417dc7f8e96721a2613f"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2012-08-27"
+    },
+    {
+      "name": "Exorcise Tape",
+      "artists": [
+        {
+          "name": "DEMON QUEEN",
+          "id": "1sD6yJxdlMAiZYGOqa1Rx3",
+          "uri": "spotify:artist:1sD6yJxdlMAiZYGOqa1Rx3",
+          "href": "https://api.spotify.com/v1/artists/1sD6yJxdlMAiZYGOqa1Rx3",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1sD6yJxdlMAiZYGOqa1Rx3"
+          }
+        },
+        {
+          "name": "TOBACCO",
+          "id": "3ikKyCOrsMeANi0d5u8BCR",
+          "uri": "spotify:artist:3ikKyCOrsMeANi0d5u8BCR",
+          "href": "https://api.spotify.com/v1/artists/3ikKyCOrsMeANi0d5u8BCR",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3ikKyCOrsMeANi0d5u8BCR"
+          }
+        },
+        {
+          "name": "Zackey Force Funk",
+          "id": "18CPbmxYOdkMCEkq3j9CBd",
+          "uri": "spotify:artist:18CPbmxYOdkMCEkq3j9CBd",
+          "href": "https://api.spotify.com/v1/artists/18CPbmxYOdkMCEkq3j9CBd",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/18CPbmxYOdkMCEkq3j9CBd"
+          }
+        }
+      ],
+      "id": "6FaKm8eLybEuKqj6rNHYxz",
+      "uri": "spotify:album:6FaKm8eLybEuKqj6rNHYxz",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273883061ba04518516937de93d"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02883061ba04518516937de93d"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851883061ba04518516937de93d"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2013-08-06"
+    },
+    {
+      "name": "Amen \u0026 Goodbye",
+      "artists": [
+        {
+          "name": "Yeasayer",
+          "id": "04HvbIwBccFmRie5ATX4ft",
+          "uri": "spotify:artist:04HvbIwBccFmRie5ATX4ft",
+          "href": "https://api.spotify.com/v1/artists/04HvbIwBccFmRie5ATX4ft",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/04HvbIwBccFmRie5ATX4ft"
+          }
+        }
+      ],
+      "id": "3tKQ1QWgDNRuFQ66fBEv4Z",
+      "uri": "spotify:album:3tKQ1QWgDNRuFQ66fBEv4Z",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2734caf63897de2be6523765631"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e024caf63897de2be6523765631"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048514caf63897de2be6523765631"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2016-04-01"
+    },
+    {
+      "name": "Fever Forms",
+      "artists": [
+        {
+          "name": "The Octopus Project",
+          "id": "7EFRvnUHNLWOYVPg8AuI7o",
+          "uri": "spotify:artist:7EFRvnUHNLWOYVPg8AuI7o",
+          "href": "https://api.spotify.com/v1/artists/7EFRvnUHNLWOYVPg8AuI7o",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/7EFRvnUHNLWOYVPg8AuI7o"
+          }
+        }
+      ],
+      "id": "5CmVNs6uOg0DuGXlJXNsYF",
+      "uri": "spotify:album:5CmVNs6uOg0DuGXlJXNsYF",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2731d7e1e1b32d04ecbb1fc725b"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e021d7e1e1b32d04ecbb1fc725b"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048511d7e1e1b32d04ecbb1fc725b"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2013-07-09"
+    },
+    {
+      "name": "Stay Calm",
+      "artists": [
+        {
+          "name": "Sweet Valley",
+          "id": "0Rh2F37PiLjhYaERywNulu",
+          "uri": "spotify:artist:0Rh2F37PiLjhYaERywNulu",
+          "href": "https://api.spotify.com/v1/artists/0Rh2F37PiLjhYaERywNulu",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/0Rh2F37PiLjhYaERywNulu"
+          }
+        }
+      ],
+      "id": "5qjsm1lAFUWA1vVJSxAIwD",
+      "uri": "spotify:album:5qjsm1lAFUWA1vVJSxAIwD",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273ad909a13027f8050a49c2b9d"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02ad909a13027f8050a49c2b9d"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851ad909a13027f8050a49c2b9d"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2012-08-07"
+    },
+    {
+      "name": "Big Black Delta",
+      "artists": [
+        {
+          "name": "Big Black Delta",
+          "id": "2TXpVEw5FbzDh93tLoDm0i",
+          "uri": "spotify:artist:2TXpVEw5FbzDh93tLoDm0i",
+          "href": "https://api.spotify.com/v1/artists/2TXpVEw5FbzDh93tLoDm0i",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2TXpVEw5FbzDh93tLoDm0i"
+          }
+        }
+      ],
+      "id": "7gsCty4Dtn6qkrg8zRpxk5",
+      "uri": "spotify:album:7gsCty4Dtn6qkrg8zRpxk5",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273344e55d8f6f491dad14354cb"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02344e55d8f6f491dad14354cb"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851344e55d8f6f491dad14354cb"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2013-04-26"
+    },
+    {
+      "name": "Sun Bronzed Greek Gods",
+      "artists": [
+        {
+          "name": "DoM",
+          "id": "3GITSnQeNqTARaxl2tX6Us",
+          "uri": "spotify:artist:3GITSnQeNqTARaxl2tX6Us",
+          "href": "https://api.spotify.com/v1/artists/3GITSnQeNqTARaxl2tX6Us",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/3GITSnQeNqTARaxl2tX6Us"
+          }
+        }
+      ],
+      "id": "45YgsaM5aPDUt8xPbEM0K2",
+      "uri": "spotify:album:45YgsaM5aPDUt8xPbEM0K2",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27360e8e553ddee3f3cabbce243"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0260e8e553ddee3f3cabbce243"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485160e8e553ddee3f3cabbce243"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2010-01-01"
+    },
+    {
+      "name": "Hundred Waters",
+      "artists": [
+        {
+          "name": "Hundred Waters",
+          "id": "108ugtkRFQzP9nGgNiyERO",
+          "uri": "spotify:artist:108ugtkRFQzP9nGgNiyERO",
+          "href": "https://api.spotify.com/v1/artists/108ugtkRFQzP9nGgNiyERO",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/108ugtkRFQzP9nGgNiyERO"
+          }
+        }
+      ],
+      "id": "0UonqDnnHMl948I4GKFy0n",
+      "uri": "spotify:album:0UonqDnnHMl948I4GKFy0n",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273ae11ef2c6cfdce74ad8704db"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02ae11ef2c6cfdce74ad8704db"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851ae11ef2c6cfdce74ad8704db"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2012"
+    },
+    {
+      "name": "Ultramarine",
+      "artists": [
+        {
+          "name": "Young Galaxy",
+          "id": "5xfJLyvC5UElVSiMuLt1ss",
+          "uri": "spotify:artist:5xfJLyvC5UElVSiMuLt1ss",
+          "href": "https://api.spotify.com/v1/artists/5xfJLyvC5UElVSiMuLt1ss",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5xfJLyvC5UElVSiMuLt1ss"
+          }
+        }
+      ],
+      "id": "7iauBTyubJBej88328NP8C",
+      "uri": "spotify:album:7iauBTyubJBej88328NP8C",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273f67ffb0f0457dd657127167c"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02f67ffb0f0457dd657127167c"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851f67ffb0f0457dd657127167c"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2013-04-21"
+    },
+    {
+      "name": "Surf Noir",
+      "artists": [
+        {
+          "name": "Beat Connection",
+          "id": "64xvudklMEbVYMBocLyHSn",
+          "uri": "spotify:artist:64xvudklMEbVYMBocLyHSn",
+          "href": "https://api.spotify.com/v1/artists/64xvudklMEbVYMBocLyHSn",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/64xvudklMEbVYMBocLyHSn"
+          }
+        }
+      ],
+      "id": "5w69I9rYuXrMYA3SAB10PC",
+      "uri": "spotify:album:5w69I9rYuXrMYA3SAB10PC",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2734d284e909d85651757daac94"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e024d284e909d85651757daac94"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048514d284e909d85651757daac94"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2011-04-10"
+    },
+    {
+      "name": "Obscure but Visible",
+      "artists": [
+        {
+          "name": "Computer Magic",
+          "id": "6vhyWw7hIpvfIY9tE94mzP",
+          "uri": "spotify:artist:6vhyWw7hIpvfIY9tE94mzP",
+          "href": "https://api.spotify.com/v1/artists/6vhyWw7hIpvfIY9tE94mzP",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6vhyWw7hIpvfIY9tE94mzP"
+          }
+        }
+      ],
+      "id": "1HwN0u4MC3OGtRFktk43sG",
+      "uri": "spotify:album:1HwN0u4MC3OGtRFktk43sG",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b27303198102d25418f15b87f779"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e0203198102d25418f15b87f779"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d0000485103198102d25418f15b87f779"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2016-09-21"
+    },
+    {
+      "name": "New Medium",
+      "artists": [
+        {
+          "name": "Faded Paper Figures",
+          "id": "28CxmkDncu1V04LYxfx0eV",
+          "uri": "spotify:artist:28CxmkDncu1V04LYxfx0eV",
+          "href": "https://api.spotify.com/v1/artists/28CxmkDncu1V04LYxfx0eV",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/28CxmkDncu1V04LYxfx0eV"
+          }
+        }
+      ],
+      "id": "2KMoKXBmKuGf2j5QTCNY95",
+      "uri": "spotify:album:2KMoKXBmKuGf2j5QTCNY95",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2731eaeed9ac2a6a9264bf654c2"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e021eaeed9ac2a6a9264bf654c2"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048511eaeed9ac2a6a9264bf654c2"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2010-05-25"
+    },
+    {
+      "name": "Keepers",
+      "artists": [
+        {
+          "name": "Deastro",
+          "id": "2dL2iXspP57dHMHT36cX5v",
+          "uri": "spotify:artist:2dL2iXspP57dHMHT36cX5v",
+          "href": "https://api.spotify.com/v1/artists/2dL2iXspP57dHMHT36cX5v",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2dL2iXspP57dHMHT36cX5v"
+          }
+        }
+      ],
+      "id": "63DvSDjiFgYRFFfz8zA3pJ",
+      "uri": "spotify:album:63DvSDjiFgYRFFfz8zA3pJ",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273f58c0a6484fb35e77a748497"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02f58c0a6484fb35e77a748497"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851f58c0a6484fb35e77a748497"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2005-07-02"
+    },
+    {
+      "name": "Hello, Avalanche",
+      "artists": [
+        {
+          "name": "The Octopus Project",
+          "id": "7EFRvnUHNLWOYVPg8AuI7o",
+          "uri": "spotify:artist:7EFRvnUHNLWOYVPg8AuI7o",
+          "href": "https://api.spotify.com/v1/artists/7EFRvnUHNLWOYVPg8AuI7o",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/7EFRvnUHNLWOYVPg8AuI7o"
+          }
+        }
+      ],
+      "id": "7tmoPUVPkqOrLkVa3RwZdK",
+      "uri": "spotify:album:7tmoPUVPkqOrLkVa3RwZdK",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2730cedb85c13de47ff45d61bb6"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e020cedb85c13de47ff45d61bb6"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048510cedb85c13de47ff45d61bb6"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2007-10-16"
+    },
+    {
+      "name": "The Lost Take",
+      "artists": [
+        {
+          "name": "Dosh",
+          "id": "1DLrhgKEsP9M64oMmboEPz",
+          "uri": "spotify:artist:1DLrhgKEsP9M64oMmboEPz",
+          "href": "https://api.spotify.com/v1/artists/1DLrhgKEsP9M64oMmboEPz",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1DLrhgKEsP9M64oMmboEPz"
+          }
+        }
+      ],
+      "id": "2Pgo4SyCh8B2nNt6d5BWPA",
+      "uri": "spotify:album:2Pgo4SyCh8B2nNt6d5BWPA",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273ae661ea2e89727ad0d5ab02d"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02ae661ea2e89727ad0d5ab02d"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851ae661ea2e89727ad0d5ab02d"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2006-10-04"
+    },
+    {
+      "name": "Cosmic Surgery",
+      "artists": [
+        {
+          "name": "Neat Beats",
+          "id": "5cCVjEZOzc9HfsjUGCVMd2",
+          "uri": "spotify:artist:5cCVjEZOzc9HfsjUGCVMd2",
+          "href": "https://api.spotify.com/v1/artists/5cCVjEZOzc9HfsjUGCVMd2",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5cCVjEZOzc9HfsjUGCVMd2"
+          }
+        }
+      ],
+      "id": "0zlLi9xAKvF6fDVIW4XZbJ",
+      "uri": "spotify:album:0zlLi9xAKvF6fDVIW4XZbJ",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273044f79ab40a944f5ce6ecd2c"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02044f79ab40a944f5ce6ecd2c"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851044f79ab40a944f5ce6ecd2c"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2011-09-01"
+    },
+    {
+      "name": "Nightlife",
+      "artists": [
+        {
+          "name": "Phantogram",
+          "id": "1l9d7B8W0IHy3LqWsxP2SH",
+          "uri": "spotify:artist:1l9d7B8W0IHy3LqWsxP2SH",
+          "href": "https://api.spotify.com/v1/artists/1l9d7B8W0IHy3LqWsxP2SH",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1l9d7B8W0IHy3LqWsxP2SH"
+          }
+        }
+      ],
+      "id": "1O2FPFDjmyEOSTfqNuuuNG",
+      "uri": "spotify:album:1O2FPFDjmyEOSTfqNuuuNG",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2732757fdbbd7ee9a09d518577a"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e022757fdbbd7ee9a09d518577a"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048512757fdbbd7ee9a09d518577a"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2011"
+    },
+    {
+      "name": "Spiderman of the Rings",
+      "artists": [
+        {
+          "name": "Dan Deacon",
+          "id": "5Z3IWpvwOvoaWodujHw7xh",
+          "uri": "spotify:artist:5Z3IWpvwOvoaWodujHw7xh",
+          "href": "https://api.spotify.com/v1/artists/5Z3IWpvwOvoaWodujHw7xh",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/5Z3IWpvwOvoaWodujHw7xh"
+          }
+        }
+      ],
+      "id": "5LkriWWhISFWAKfrBt2WC7",
+      "uri": "spotify:album:5LkriWWhISFWAKfrBt2WC7",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2732a4512dd5cfc03d59415a0cd"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e022a4512dd5cfc03d59415a0cd"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048512a4512dd5cfc03d59415a0cd"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2007-05-08"
+    },
+    {
+      "name": "Sound Kapital",
+      "artists": [
+        {
+          "name": "Handsome Furs",
+          "id": "022mO8Zbj0IPDhn3bD3Ukm",
+          "uri": "spotify:artist:022mO8Zbj0IPDhn3bD3Ukm",
+          "href": "https://api.spotify.com/v1/artists/022mO8Zbj0IPDhn3bD3Ukm",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/022mO8Zbj0IPDhn3bD3Ukm"
+          }
+        }
+      ],
+      "id": "1cXLCULlgr8yINxG19qGu2",
+      "uri": "spotify:album:1cXLCULlgr8yINxG19qGu2",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273719f33c6ad66a9b62120f3d8"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02719f33c6ad66a9b62120f3d8"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851719f33c6ad66a9b62120f3d8"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2011-06-28"
+    },
+    {
+      "name": "Cobra Juicy",
+      "artists": [
+        {
+          "name": "Black Moth Super Rainbow",
+          "id": "4UHzJP2iKVf0RhKIv7ZE2l",
+          "uri": "spotify:artist:4UHzJP2iKVf0RhKIv7ZE2l",
+          "href": "https://api.spotify.com/v1/artists/4UHzJP2iKVf0RhKIv7ZE2l",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4UHzJP2iKVf0RhKIv7ZE2l"
+          }
+        }
+      ],
+      "id": "2CFZcziJAbNfuwSl4wpsAo",
+      "uri": "spotify:album:2CFZcziJAbNfuwSl4wpsAo",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273167b208eb24d7a21b0cd9185"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02167b208eb24d7a21b0cd9185"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851167b208eb24d7a21b0cd9185"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2012-10-22"
+    },
+    {
+      "name": "Businessmen \u0026 Ghosts",
+      "artists": [
+        {
+          "name": "Working for a Nuclear Free City",
+          "id": "6FEVYVBDwRguK1DTiKef1p",
+          "uri": "spotify:artist:6FEVYVBDwRguK1DTiKef1p",
+          "href": "https://api.spotify.com/v1/artists/6FEVYVBDwRguK1DTiKef1p",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6FEVYVBDwRguK1DTiKef1p"
+          }
+        }
+      ],
+      "id": "4hrHY78RfSECejekOhTdk0",
+      "uri": "spotify:album:4hrHY78RfSECejekOhTdk0",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b273368bb43437ba83ed323c8929"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e02368bb43437ba83ed323c8929"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d00004851368bb43437ba83ed323c8929"
+        }
+      ],
+      "addedAt": "",
+      "releaseDate": "2008-07-28"
+    }
+  ]
+}

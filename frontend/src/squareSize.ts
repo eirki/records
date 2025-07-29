@@ -2,9 +2,9 @@ interface args { x: number, y: number, n: number }
 
 
 export default function ({ x, y, n }: args) {
+  // Compute number of rows and columns, and cell size,
+  // given height (y), width (x) and number of items (n).
   // https://math.stackexchange.com/a/2570649
-  // Compute number of rows and columns, and cell size
-  // console.log("x", x, "y", y, "n", n,)
   const ratio = x / y;
   // console.log("ratio", ratio)
   const nColsFloat = Math.sqrt(n * ratio);
