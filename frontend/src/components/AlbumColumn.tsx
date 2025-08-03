@@ -48,7 +48,8 @@ export default function main({
     <div
       className="no-scrollbar"
       style={{
-        maxHeight: `${height * sizeData.cellSize}px`,
+        height: `${height * sizeData.cellSize}px`,
+        width: `${sizeData.cellSize}px`,
         overflowY: "scroll",
         scrollSnapType: "y mandatory",
         display: "flex",
